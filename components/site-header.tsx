@@ -16,8 +16,8 @@ export function SiteHeader() {
     <>
       <ScrollProgress />
       <header className="sticky top-0 z-50 border-b border-[#e6e5e0] bg-[#f7f7f4]/95 backdrop-blur-md transition-all">
-        <div className="w-full flex h-16 items-center justify-between px-6 sm:px-10 lg:px-16">
-          {/* Brand Wordmark: Exact [ PJ ] Prajal Jain format sitting at the far left edge */}
+        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 sm:px-8">
+          {/* Brand Wordmark: Exact [ PJ ] Prajal Jain format */}
           <Link
             href="/"
             className="group flex items-center gap-2.5 rounded-sm focus-visible:outline-none"
@@ -52,7 +52,7 @@ export function SiteHeader() {
             })}
           </nav>
 
-          {/* Right Action CTA Button sitting at the far right edge */}
+          {/* Right Action CTA Button */}
           <div className="hidden items-center gap-3 md:flex">
             <Link
               href="/contact"

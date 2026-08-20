@@ -180,7 +180,7 @@ export function Hero() {
 
   return (
     <section className="relative bg-[#f7f7f4] text-[#26251e] overflow-hidden pt-20 pb-[100px]">
-      <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
+      <div className="mx-auto max-w-6xl px-6 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] items-center gap-12 lg:gap-16">
           {/* LEFT COLUMN — Text Content */}
           <div className="order-1 flex flex-col items-start text-left">
