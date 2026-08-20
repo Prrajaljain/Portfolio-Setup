@@ -38,7 +38,7 @@ export function Timeline() {
               </div>
 
               <p className="text-xs sm:text-sm leading-relaxed text-[#5a5852]">
-                {job.description}
+                {job.summary || job.description}
               </p>
 
               <div className="flex flex-col gap-2.5 rounded-sm border border-[#e6e5e0] bg-[#fafaf7] p-4">

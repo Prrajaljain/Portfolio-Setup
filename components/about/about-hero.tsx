@@ -9,21 +9,29 @@ export function AboutHero() {
         <div className="flex flex-col gap-5">
           <span className="inline-flex w-fit items-center gap-2 rounded-sm border border-[#e6e5e0] bg-[#ffffff] px-3 py-1 text-xs font-mono font-semibold uppercase tracking-wider text-[#5a5852]">
             <Sparkles className="size-3.5 text-[#f54e00]" />
-            Engineering Profile &amp; Background
+            ENGINEERING PROFILE &amp; BACKGROUND
           </span>
 
           <h1 className="text-balance text-3xl font-normal leading-tight tracking-tight sm:text-5xl text-[#26251e]">
-            Deploying Machine Learning to{' '}
+            Making machine learning run on{' '}
             <span className="font-semibold text-[#f54e00]">
-              Real-Time Autonomous Hardware
+              real hardware
             </span>
           </h1>
 
-          <p className="max-w-2xl text-base leading-relaxed text-[#5a5852]">
-            {profile.summary}
-          </p>
+          <div className="space-y-4 text-base leading-relaxed text-[#5a5852]">
+            <p>
+              AI &amp; Robotics engineering student with a mechatronics background. I build computer vision systems that run on embedded boards &mdash; Raspberry Pi, Arduino &mdash; where the model has to work inside real power, timing and thermal limits, not just in a notebook.
+            </p>
+            <p>
+              Diploma in Mechatronics from Indo-German Tool Room, now finishing a B.Tech in Artificial Intelligence at Vishwakarma University.
+            </p>
+            <p>
+              Most AI students have never wired an IMU. Most mechatronics graduates have never trained a model. When a vision system fails in the field, I can tell whether it&apos;s the model, the lighting, or the mounting &mdash; and that&apos;s usually the difference between a demo and a deployment.
+            </p>
+          </div>
 
-          <div className="flex flex-wrap gap-3 font-mono text-xs text-[#5a5852]">
+          <div className="flex flex-wrap gap-3 font-mono text-xs text-[#5a5852] pt-2">
             <span className="inline-flex items-center gap-1.5 rounded-sm border border-[#e6e5e0] bg-[#ffffff] px-3.5 py-1.5 text-[#26251e]">
               <MapPin className="size-3.5 text-[#76b900]" />
               {profile.location}
@@ -39,7 +47,8 @@ export function AboutHero() {
 
           <a
             href={profile.resumeUrl}
-            download
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex w-fit items-center gap-2 rounded-md bg-[#f54e00] px-6 py-3 text-xs font-semibold text-white transition-all hover:bg-[#d04200]"
           >
             <Download className="size-4" />
@@ -50,7 +59,7 @@ export function AboutHero() {
         {/* Profile Card Frame */}
         <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-md border border-[#e6e5e0] bg-[#ffffff] p-2 shadow-sm">
           <div className="nvidia-corner-square" />
-          <div className="relative h-full w-full overflow-hidden rounded-sm">
+          <div className="relative h-full w-full overflow-hidden rounded-sm bg-[#fafaf7]">
             <Image
               src="/images/profile-portrait.png"
               alt={`Portrait of ${profile.name}`}

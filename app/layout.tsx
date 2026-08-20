@@ -18,9 +18,9 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Prajal Jain — AI & Robotics Engineer',
+  title: 'Prajal Jain — AI & Robotics Engineering Student',
   description:
-    'Portfolio of Prajal Jain, an AI & Robotics Engineer specializing in real-time autonomous systems, computer vision, and embedded AI.',
+    'AI & Robotics engineering student. Computer vision on embedded hardware, drone systems, and industrial analytics. Seeking Summer 2027 internships.',
   icons: {
     icon: [
       {

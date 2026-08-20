@@ -1,4 +1,4 @@
-import { ArrowUpRight, Code2, Cpu, Activity, ShieldCheck, Zap } from 'lucide-react'
+import { ArrowUpRight, Code2, Cpu, Activity, ShieldCheck, Zap, Globe } from 'lucide-react'
 import type { projects } from '@/lib/data'
 
 const icons = [Cpu, Activity, ShieldCheck]
@@ -12,7 +12,7 @@ export function ProjectCard({ project, index = 0 }: { project: (typeof projects)
       <div className="nvidia-corner-square" />
 
       {/* Top Banner Header */}
-      <div className="mb-4 flex items-center justify-between pt-2">
+      <div className="mb-3 flex items-center justify-between pt-2">
         <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#26251e]">
           <Icon className="size-4 text-[#76b900]" />
         </div>
@@ -23,21 +23,34 @@ export function ProjectCard({ project, index = 0 }: { project: (typeof projects)
 
       {/* Content details */}
       <div className="flex flex-1 flex-col">
+        <span className="mb-1 font-mono text-[11px] font-semibold text-[#f54e00]">
+          {project.category}
+        </span>
+
         <h3 className="mb-2 text-[18px] font-semibold leading-tight text-[#26251e] transition-colors group-hover:text-[#f54e00]">
           {project.title}
         </h3>
 
-        <p className="mb-4 text-sm leading-relaxed text-[#5a5852]">
+        <p className="mb-3 text-sm leading-relaxed text-[#5a5852]">
           {project.description}
         </p>
 
-        {/* Technical Summary Tag */}
-        <div className="mb-4 rounded-sm border border-[#e6e5e0] bg-[#fafaf7] p-2.5 font-mono text-[11px] text-[#5a5852]">
-          ⚡ Real-Time Edge &amp; Hardware Inference
-        </div>
+        {/* Specs tag */}
+        {project.specs && (
+          <div className="mb-3 rounded-sm border border-[#e6e5e0] bg-[#fafaf7] p-2.5 font-mono text-[11px] text-[#26251e]">
+            ⚙️ <span className="font-semibold">{project.specs}</span>
+          </div>
+        )}
+
+        {/* Fork note if present */}
+        {'note' in project && (project as Record<string, unknown>).note ? (
+          <p className="mb-3 font-mono text-[11px] italic text-[#807d72]">
+            {(project as Record<string, unknown>).note as string}
+          </p>
+        ) : null}
 
         {/* Tech Stack Pills in JetBrains Mono */}
-        <div className="mb-5 flex flex-wrap gap-1.5 font-mono text-[13px]">
+        <div className="mb-5 flex flex-wrap gap-1.5 font-mono text-[11px]">
           {project.tags.map((tag) => (
             <span
               key={tag}
@@ -51,24 +64,26 @@ export function ProjectCard({ project, index = 0 }: { project: (typeof projects)
 
         {/* Action Link Footer */}
         <div className="mt-auto flex items-center justify-between border-t border-[#e6e5e0] pt-3 text-xs">
-          <a
-            href={project.repo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 font-semibold text-[#5a5852] hover:text-[#26251e] transition-colors"
-          >
-            <Code2 className="size-3.5" />
-            <span>Repository</span>
-          </a>
+          {project.repo && (
+            <a
+              href={project.repo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 font-semibold text-[#5a5852] hover:text-[#26251e] transition-colors"
+            >
+              <Code2 className="size-3.5" />
+              <span>Repository</span>
+            </a>
+          )}
 
           <a
             href={project.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 font-semibold text-[#f54e00] hover:text-[#d04200] transition-colors"
+            className="inline-flex items-center gap-1 font-semibold text-[#f54e00] hover:text-[#d04200] transition-colors ml-auto"
           >
-            <span>View Project</span>
-            <ArrowUpRight className="size-3.5" />
+            <span>{project.category.includes('Web') ? 'Live App' : 'View Project'}</span>
+            {project.category.includes('Web') ? <Globe className="size-3.5" /> : <ArrowUpRight className="size-3.5" />}
           </a>
         </div>
       </div>
