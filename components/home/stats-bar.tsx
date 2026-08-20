@@ -1,35 +1,37 @@
-import { stats } from '@/lib/data'
-import { Award, Zap, Cpu, CheckCircle } from 'lucide-react'
+'use client'
 
-const statIcons = [Zap, Cpu, CheckCircle, Award]
+import { motion } from 'framer-motion'
+
+const statsData = [
+  { value: '2', label: 'live deployments' },
+  { value: '4', label: 'open-source repos' },
+  { value: '8.65', label: 'GPA' },
+  { value: '2027', label: 'B.Tech AI' },
+]
 
 export function StatsBar() {
   return (
-    <section className="relative border-y border-[#e6e5e0] bg-[#f7f7f4] py-10">
-      <div className="mx-auto grid max-w-5xl grid-cols-2 gap-4 px-6 sm:grid-cols-4">
-        {stats.map((stat, i) => {
-          const Icon = statIcons[i % statIcons.length]
-          return (
-            <div
-              key={stat.label}
-              className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 transition-all duration-200 hover:border-[#cfcdc4]"
-            >
-              <div className="nvidia-corner-square" />
-              <div className="flex items-center justify-between">
-                <span className="font-mono text-2xl sm:text-3xl font-bold tracking-tight text-[#26251e]">
-                  {stat.value}
-                </span>
-                <div className="flex size-8 items-center justify-center rounded-sm bg-[#fafaf7] text-[#76b900] border border-[#e6e5e0]">
-                  <Icon className="size-4 text-[#76b900]" />
-                </div>
-              </div>
-              <span className="mt-3 text-xs sm:text-sm font-medium leading-snug text-[#5a5852]">
+    <motion.section
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="relative border-y border-[#e6e5e0] bg-[#f7f7f4] py-8"
+    >
+      <div className="mx-auto max-w-5xl px-6">
+        <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 items-center">
+          {statsData.map((stat) => (
+            <div key={stat.label} className="flex flex-col items-start text-left">
+              <span className="font-mono text-3xl sm:text-4xl font-bold tracking-tight text-[#f54e00]">
+                {stat.value}
+              </span>
+              <span className="mt-1 text-xs sm:text-sm font-medium text-[#5a5852]">
                 {stat.label}
               </span>
             </div>
-          )
-        })}
+          ))}
+        </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
