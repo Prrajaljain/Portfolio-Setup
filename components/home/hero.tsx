@@ -9,12 +9,22 @@ import {
   Briefcase,
   Code2,
   Cpu,
+  Send,
 } from 'lucide-react'
 import { profile } from '@/lib/data'
 
-/* ─── Bento Grid Section ({typography.title-md} = 18px, {typography.body-sm} = 14px, {typography.code} = 13px) ─── */
+/* ─── Asymmetric 3-Column Bento Grid Section (Matching Image 2 Structure) ─── */
 function BentoHeroGrid() {
-  const techBadges = ['Python', 'C++', 'ROS2', 'OpenCV', 'TensorFlow', 'FastAPI', 'PyTorch', 'YOLOv8']
+  const techBadges = [
+    { name: 'Python', tag: 'PY' },
+    { name: 'C++', tag: 'C++' },
+    { name: 'ROS2', tag: 'ROS' },
+    { name: 'OpenCV', tag: 'CV' },
+    { name: 'TensorFlow', tag: 'TF' },
+    { name: 'FastAPI', tag: 'API' },
+    { name: 'PyTorch', tag: 'PT' },
+    { name: 'YOLOv8', tag: 'YOLO' },
+  ]
 
   return (
     <motion.div
@@ -23,51 +33,54 @@ function BentoHeroGrid() {
       transition={{ duration: 0.5, delay: 0.2 }}
       className="mt-14 w-full max-w-5xl text-left"
     >
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 items-stretch">
-        {/* Card 1: Hands-On Experience */}
-        <Link
-          href="/experience"
-          className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-6 transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
-        >
-          <div className="nvidia-corner-square" />
-          <div>
-            <div className="mb-4 flex items-center justify-between">
-              <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#26251e]">
-                <Briefcase className="size-4 text-[#76b900]" />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
+        {/* Left Column: 2 Cards Stacked Vertically */}
+        <div className="flex flex-col gap-4 justify-between">
+          {/* Card 1: Background & Journey */}
+          <Link
+            href="/about"
+            className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 h-full transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
+          >
+            <div>
+              <div className="mb-3 flex items-center justify-between">
+                <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#26251e]">
+                  <User className="size-4 text-[#76b900]" />
+                </div>
+                <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#f54e00] transition-colors" />
               </div>
-              <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#f54e00] transition-colors" />
+              <h3 className="text-[18px] font-semibold tracking-tight text-[#26251e] group-hover:text-[#f54e00] transition-colors">
+                Background &amp; Journey
+              </h3>
+              <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[#5a5852]">
+                My education in AI &amp; Mechatronics engineering, core background, and journey.
+              </p>
             </div>
-            <h3 className="text-[18px] font-semibold tracking-tight text-[#26251e] group-hover:text-[#f54e00] transition-colors">
-              Hands-On Experience
-            </h3>
-            <p className="mt-2 text-sm leading-relaxed text-[#5a5852]">
-              Real-world engineering internships in computer vision, edge deployment &amp; ROS2 systems.
-            </p>
-          </div>
-        </Link>
+          </Link>
 
-        {/* Card 2: Background & Journey */}
-        <Link
-          href="/about"
-          className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-6 transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
-        >
-          <div>
-            <div className="mb-4 flex items-center justify-between">
-              <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#26251e]">
-                <User className="size-4 text-[#76b900]" />
+          {/* Card 2: Hands-On Experience */}
+          <Link
+            href="/experience"
+            className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 h-full transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
+          >
+            <div className="nvidia-corner-square" />
+            <div>
+              <div className="mb-3 flex items-center justify-between">
+                <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#26251e]">
+                  <Briefcase className="size-4 text-[#76b900]" />
+                </div>
+                <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#f54e00] transition-colors" />
               </div>
-              <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#f54e00] transition-colors" />
+              <h3 className="text-[18px] font-semibold tracking-tight text-[#26251e] group-hover:text-[#f54e00] transition-colors">
+                Hands-On Experience
+              </h3>
+              <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[#5a5852]">
+                Industry experience in computer vision, edge deployment &amp; ROS2 systems.
+              </p>
             </div>
-            <h3 className="text-[18px] font-semibold tracking-tight text-[#26251e] group-hover:text-[#f54e00] transition-colors">
-              Background &amp; Journey
-            </h3>
-            <p className="mt-2 text-sm leading-relaxed text-[#5a5852]">
-              AI &amp; Mechatronics engineering student background, core focus, and career objectives.
-            </p>
-          </div>
-        </Link>
+          </Link>
+        </div>
 
-        {/* Card 3: Tech Stack & Tools ({typography.code} = 13px JetBrains Mono) */}
+        {/* Center Column: 1 Tall Card Spanning Height */}
         <Link
           href="/about#skills"
           className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-6 transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
@@ -80,44 +93,80 @@ function BentoHeroGrid() {
               </div>
               <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#f54e00] transition-colors" />
             </div>
+
             <h3 className="text-[18px] font-semibold tracking-tight text-[#26251e] group-hover:text-[#f54e00] transition-colors">
               Tech Stack &amp; Tools
             </h3>
-            
-            {/* JetBrains Mono Tool Badges */}
-            <div className="mt-3 flex flex-wrap gap-1.5 font-mono text-[13px]">
+            <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[#5a5852]">
+              Technologies and tools I use to build innovative AI &amp; robotics solutions.
+            </p>
+
+            {/* 4x2 Icon Grid */}
+            <div className="mt-6 grid grid-cols-4 gap-2 font-mono text-[11px]">
               {techBadges.map((badge) => (
-                <span
-                  key={badge}
-                  className="rounded-sm border border-[#e6e5e0] bg-[#fafaf7] px-2 py-0.5 text-[#26251e]"
+                <div
+                  key={badge.name}
+                  className="flex flex-col items-center justify-center rounded-sm border border-[#e6e5e0] bg-[#fafaf7] p-2 text-[#26251e] transition-colors group-hover:border-[#cfcdc4]"
                 >
-                  {badge}
-                </span>
+                  <span className="font-bold text-[#f54e00]">{badge.tag}</span>
+                  <span className="mt-1 text-[10px] text-[#5a5852] font-sans truncate w-full text-center">
+                    {badge.name}
+                  </span>
+                </div>
               ))}
             </div>
           </div>
-        </Link>
 
-        {/* Card 4: Applied AI & Systems */}
-        <Link
-          href="/projects"
-          className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-6 transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
-        >
-          <div>
-            <div className="mb-4 flex items-center justify-between">
-              <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#26251e]">
-                <Cpu className="size-4 text-[#76b900]" />
-              </div>
-              <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#f54e00] transition-colors" />
-            </div>
-            <h3 className="text-[18px] font-semibold tracking-tight text-[#26251e] group-hover:text-[#f54e00] transition-colors">
-              Applied AI &amp; Systems
-            </h3>
-            <p className="mt-2 text-sm leading-relaxed text-[#5a5852]">
-              Production RAG infrastructure, reinforcement learning &amp; edge vision projects.
-            </p>
+          <div className="mt-6 border-t border-[#e6e5e0] pt-3 text-[11px] font-mono text-[#807d72] flex items-center justify-between">
+            <span>EXPLORE ALL TOOLS</span>
+            <span className="text-[#f54e00] font-bold">&rarr;</span>
           </div>
         </Link>
+
+        {/* Right Column: 2 Cards Stacked Vertically */}
+        <div className="flex flex-col gap-4 justify-between">
+          {/* Card 4: Applied AI & Systems */}
+          <Link
+            href="/projects"
+            className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 h-full transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
+          >
+            <div>
+              <div className="mb-3 flex items-center justify-between">
+                <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#26251e]">
+                  <Cpu className="size-4 text-[#76b900]" />
+                </div>
+                <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#f54e00] transition-colors" />
+              </div>
+              <h3 className="text-[18px] font-semibold tracking-tight text-[#26251e] group-hover:text-[#f54e00] transition-colors">
+                Applied AI &amp; Systems
+              </h3>
+              <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[#5a5852]">
+                Production RAG infrastructure, reinforcement learning &amp; edge vision projects.
+              </p>
+            </div>
+          </Link>
+
+          {/* Card 5: Let's Connect */}
+          <Link
+            href="/contact"
+            className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 h-full transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
+          >
+            <div>
+              <div className="mb-3 flex items-center justify-between">
+                <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#26251e]">
+                  <Send className="size-4 text-[#76b900]" />
+                </div>
+                <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#f54e00] transition-colors" />
+              </div>
+              <h3 className="text-[18px] font-semibold tracking-tight text-[#26251e] group-hover:text-[#f54e00] transition-colors">
+                Let&apos;s Connect
+              </h3>
+              <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[#5a5852]">
+                Available for AI &amp; Autonomous Systems engineering projects worldwide.
+              </p>
+            </div>
+          </Link>
+        </div>
       </div>
     </motion.div>
   )
@@ -186,7 +235,7 @@ export function Hero() {
           </a>
         </motion.div>
 
-        {/* Bento Grid */}
+        {/* Asymmetric 5-Card Bento Grid */}
         <BentoHeroGrid />
       </div>
     </section>
