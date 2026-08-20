@@ -184,22 +184,22 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] items-center gap-12 lg:gap-16">
           {/* LEFT COLUMN — Text Content */}
           <div className="order-1 flex flex-col items-start text-left">
-            {/* 1. Greeting Line */}
+            {/* 1. Eyebrow: 13px · monospace · letter-spacing 1.5px · #71717A · mb 20px */}
             <motion.div
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="mb-2 font-mono text-xs font-semibold text-[#807d72] uppercase tracking-wider"
+              className="mb-[20px] font-mono text-[13px] font-medium text-[#71717A] uppercase tracking-[1.5px]"
             >
-              HI, Prajal Jain
+              HI, PRAJAL JAIN
             </motion.div>
 
-            {/* 2. Main Headline */}
+            {/* 2. Headline: 56px · weight 700 · line-height 1.08 · letter-spacing -0.02em · max-width 13ch · mb 24px */}
             <motion.h1
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.05 }}
-              className="text-4xl sm:text-6xl lg:text-[60px] font-bold leading-[1.08] tracking-[-0.03em] text-[#26251e]"
+              className="mb-[24px] max-w-[13ch] text-4xl sm:text-5xl lg:text-[56px] font-bold leading-[1.08] tracking-[-0.02em] text-[#26251e]"
             >
               I build AI that{' '}
               <span className="text-[#f54e00] font-bold">
@@ -207,39 +207,39 @@ export function Hero() {
               </span>
             </motion.h1>
 
-            {/* 3. Subtitle Role Line */}
+            {/* 3. Subtitle: 15px · monospace · weight 500 · orange · green dot 7px (10px gap) · mb 20px */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.08 }}
-              className="mt-3 font-mono text-xs sm:text-sm font-semibold text-[#f54e00] flex items-center gap-2"
+              className="mb-[20px] flex items-center gap-[10px] font-mono text-[15px] font-medium text-[#f54e00]"
             >
-              <span className="size-2 rounded-full bg-[#76b900]" />
+              <span className="size-[7px] shrink-0 rounded-full bg-[#76b900]" />
               <span>AI &amp; Robotics Engineer | Embedded Systems</span>
             </motion.div>
 
-            {/* 4. Description Line */}
+            {/* 4. Tagline: 17px · line-height 1.65 · #52525B · max-width 46ch · mb 36px */}
             <motion.p
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="mt-4 text-base sm:text-lg leading-relaxed text-[#5a5852] max-w-xl"
+              className="mb-[36px] max-w-[46ch] text-[17px] leading-[1.65] text-[#52525B]"
             >
               Computer vision on Raspberry Pi and Arduino, drone systems, and industrial analytics.
             </motion.p>
 
-            {/* 5. Primary Buttons Row: [ Resume ] [ Let's talk ] */}
+            {/* 5. Primary/Secondary Buttons: 15px · weight 600 · padding 13px 24px · radius 8px · gap 12px · mb 14px */}
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className="mt-7 flex flex-wrap items-center gap-3"
+              className="mb-[14px] flex flex-wrap items-center gap-[12px]"
             >
               <a
                 href={profile.resumeUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[#f54e00] px-6 text-sm font-medium text-white transition-colors hover:bg-[#d04200]"
+                className="inline-flex items-center justify-center gap-2 rounded-[8px] bg-[#f54e00] px-[24px] py-[13px] text-[15px] font-semibold text-white transition-colors hover:bg-[#d04200]"
               >
                 <FileText className="size-4" />
                 <span>Resume</span>
@@ -247,49 +247,49 @@ export function Hero() {
 
               <Link
                 href="/contact"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-[#e6e5e0] bg-[#ffffff] px-6 text-sm font-medium text-[#26251e] transition-colors hover:bg-[#fafaf7] hover:border-[#cfcdc4]"
+                className="inline-flex items-center justify-center gap-2 rounded-[8px] border border-[#e6e5e0] bg-[#ffffff] px-[24px] py-[13px] text-[15px] font-semibold text-[#26251e] transition-colors hover:bg-[#fafaf7] hover:border-[#cfcdc4]"
               >
                 <Send className="size-4 text-[#f54e00]" />
                 <span>Let&apos;s talk</span>
               </Link>
             </motion.div>
 
-            {/* 6. Social Buttons Row: [ GitHub ] [ LinkedIn ] */}
+            {/* 6. Social Pills: 13px · padding 10px 18px · radius 8px · gap 12px · mb 44px */}
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.18 }}
-              className="mt-3 flex items-center gap-3 font-mono text-xs"
+              className="mb-[44px] flex items-center gap-[12px] text-[13px]"
             >
               <a
                 href={githubUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-sm border border-[#e6e5e0] bg-[#ffffff] px-4 py-2 font-semibold text-[#26251e] transition-colors hover:border-[#cfcdc4] hover:text-[#f54e00]"
+                className="inline-flex items-center gap-2 rounded-[8px] border border-[#e6e5e0] bg-[#ffffff] px-[18px] py-[10px] text-[13px] font-medium text-[#26251e] transition-colors hover:border-[#cfcdc4] hover:text-[#f54e00]"
               >
-                <span className="text-[10px] font-bold text-[#f54e00]">GH</span>
+                <span className="font-mono text-[10px] font-bold text-[#f54e00]">GH</span>
                 <span>GitHub</span>
-                <ArrowUpRight className="size-3 text-[#807d72]" />
+                <ArrowUpRight className="size-3.5 text-[#807d72]" />
               </a>
 
               <a
                 href={linkedinUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-sm border border-[#e6e5e0] bg-[#ffffff] px-4 py-2 font-semibold text-[#26251e] transition-colors hover:border-[#cfcdc4] hover:text-[#f54e00]"
+                className="inline-flex items-center gap-2 rounded-[8px] border border-[#e6e5e0] bg-[#ffffff] px-[18px] py-[10px] text-[13px] font-medium text-[#26251e] transition-colors hover:border-[#cfcdc4] hover:text-[#f54e00]"
               >
-                <span className="text-[10px] font-bold text-[#f54e00]">IN</span>
+                <span className="font-mono text-[10px] font-bold text-[#f54e00]">IN</span>
                 <span>LinkedIn</span>
-                <ArrowUpRight className="size-3 text-[#807d72]" />
+                <ArrowUpRight className="size-3.5 text-[#807d72]" />
               </a>
             </motion.div>
 
-            {/* 7. Scroll to explore indicator */}
+            {/* 7. Scroll Indicator: 12px · monospace · letter-spacing 1px · #A1A1AA · arrow orange, 4px bounce loop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.25 }}
-              className="mt-8 flex items-center gap-2 text-xs font-mono text-[#807d72]"
+              className="flex items-center gap-2 font-mono text-[12px] tracking-[1px] text-[#A1A1AA]"
             >
               <ArrowDown className="size-3.5 text-[#f54e00] animate-bounce" />
               <span>Scroll to explore</span>
