@@ -179,104 +179,100 @@ export function Hero() {
   const linkedinUrl = profile.socials.find((s) => s.label === 'LinkedIn')?.href ?? 'https://linkedin.com/in/prajaljain23'
 
   return (
-    <section className="relative bg-[#f7f7f4] text-[#26251e] overflow-hidden pt-20 pb-[100px]">
+    <section className="relative bg-[#f7f7f4] text-[#26251e] overflow-hidden pt-16 pb-20">
       <div className="mx-auto max-w-6xl px-6 sm:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] items-center gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-16">
           {/* LEFT COLUMN — Text Content */}
           <div className="order-1 flex flex-col items-start text-left">
-            {/* 1. Eyebrow: 13px · monospace · letter-spacing 1.5px · #71717A · mb 20px */}
+            {/* 1. Eyebrow */}
             <motion.div
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="mb-[20px] font-mono text-[13px] font-medium text-[#71717A] uppercase tracking-[1.5px]"
+              className="mb-4 font-mono text-[13px] font-medium text-[#71717A] uppercase tracking-[1.5px]"
             >
               HI, PRAJAL JAIN
             </motion.div>
 
-            {/* 2. Headline: 56px · weight 700 · line-height 1.08 · letter-spacing -0.02em · max-width 13ch · mb 24px */}
+            {/* 2. Headline: Line 1 crisp black, Line 2 full orange highlight */}
             <motion.h1
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.05 }}
-              className="mb-[24px] max-w-[13ch] text-4xl sm:text-5xl lg:text-[56px] font-bold leading-[1.08] tracking-[-0.02em] text-[#26251e]"
+              className="mb-5 text-4xl sm:text-5xl lg:text-[56px] font-bold leading-[1.08] tracking-[-0.02em] text-[#26251e]"
             >
               I build AI that{' '}
-              <span className="text-[#f54e00] font-bold">
+              <span className="block text-[#f54e00] font-bold">
                 runs on hardware
               </span>
             </motion.h1>
 
-            {/* 3. Subtitle: 15px · monospace · weight 500 · orange · green dot 7px (10px gap) · mb 20px */}
+            {/* 3. Subtitle Role Line */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.08 }}
-              className="mb-[20px] flex items-center gap-[10px] font-mono text-[15px] font-medium text-[#f54e00]"
+              className="mb-5 flex items-center gap-[10px] font-mono text-[15px] font-medium text-[#f54e00]"
             >
               <span className="size-[7px] shrink-0 rounded-full bg-[#76b900]" />
               <span>AI &amp; Robotics Engineer | Embedded Systems</span>
             </motion.div>
 
-            {/* 4. Tagline: 17px · line-height 1.65 · #52525B · max-width 46ch · mb 36px */}
+            {/* 4. Tagline */}
             <motion.p
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="mb-[36px] max-w-[46ch] text-[17px] leading-[1.65] text-[#52525B]"
+              className="mb-8 max-w-[48ch] text-[17px] leading-[1.65] text-[#52525B]"
             >
               Computer vision on Raspberry Pi and Arduino, drone systems, and industrial analytics.
             </motion.p>
 
-            {/* 5. Primary/Secondary Buttons: 15px · weight 600 · padding 13px 24px · radius 8px · gap 12px · mb 14px */}
+            {/* 5. Aligned Button Cluster: All 4 buttons in a clean inline flex row */}
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className="mb-[14px] flex flex-wrap items-center gap-[12px]"
+              className="mb-8 flex flex-wrap items-center gap-3"
             >
+              {/* Primary Resume */}
               <a
                 href={profile.resumeUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-[8px] bg-[#f54e00] px-[24px] py-[13px] text-[15px] font-semibold text-white transition-colors hover:bg-[#d04200]"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[#f54e00] px-5 text-[14px] font-semibold text-white transition-colors hover:bg-[#d04200]"
               >
                 <FileText className="size-4" />
                 <span>Resume</span>
               </a>
 
+              {/* Secondary Let's talk */}
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-[8px] border border-[#e6e5e0] bg-[#ffffff] px-[24px] py-[13px] text-[15px] font-semibold text-[#26251e] transition-colors hover:bg-[#fafaf7] hover:border-[#cfcdc4]"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-[#e6e5e0] bg-[#ffffff] px-5 text-[14px] font-semibold text-[#26251e] transition-colors hover:bg-[#fafaf7] hover:border-[#cfcdc4]"
               >
                 <Send className="size-4 text-[#f54e00]" />
                 <span>Let&apos;s talk</span>
               </Link>
-            </motion.div>
 
-            {/* 6. Social Pills: 13px · padding 10px 18px · radius 8px · gap 12px · mb 44px */}
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.18 }}
-              className="mb-[44px] flex items-center gap-[12px] text-[13px]"
-            >
+              {/* GitHub Pill */}
               <a
                 href={githubUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-[8px] border border-[#e6e5e0] bg-[#ffffff] px-[18px] py-[10px] text-[13px] font-medium text-[#26251e] transition-colors hover:border-[#cfcdc4] hover:text-[#f54e00]"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-[#e6e5e0] bg-[#ffffff] px-4 text-[13px] font-medium text-[#26251e] transition-colors hover:border-[#cfcdc4] hover:text-[#f54e00]"
               >
                 <span className="font-mono text-[10px] font-bold text-[#f54e00]">GH</span>
                 <span>GitHub</span>
                 <ArrowUpRight className="size-3.5 text-[#807d72]" />
               </a>
 
+              {/* LinkedIn Pill */}
               <a
                 href={linkedinUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-[8px] border border-[#e6e5e0] bg-[#ffffff] px-[18px] py-[10px] text-[13px] font-medium text-[#26251e] transition-colors hover:border-[#cfcdc4] hover:text-[#f54e00]"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-[#e6e5e0] bg-[#ffffff] px-4 text-[13px] font-medium text-[#26251e] transition-colors hover:border-[#cfcdc4] hover:text-[#f54e00]"
               >
                 <span className="font-mono text-[10px] font-bold text-[#f54e00]">IN</span>
                 <span>LinkedIn</span>
@@ -284,7 +280,7 @@ export function Hero() {
               </a>
             </motion.div>
 
-            {/* 7. Scroll Indicator */}
+            {/* 6. Scroll Indicator */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -296,19 +292,19 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* RIGHT COLUMN — Portrait Photo */}
+          {/* RIGHT COLUMN — Portrait Photo (Clean 50/50 balance) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="order-2 mx-auto w-full max-w-[280px] lg:max-w-[420px]"
+            className="order-2 mx-auto w-full max-w-[340px] lg:max-w-[400px]"
           >
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[16px] border border-[#e6e5e0] bg-[#ffffff] shadow-[0_8px_32px_rgba(0,0,0,0.08)]">
               <Image
                 src="/images/prajal-headshot.jpg"
                 alt="Prajal Jain — AI & Robotics Engineer"
                 fill
-                sizes="(max-width: 1024px) 280px, 420px"
+                sizes="(max-width: 1024px) 340px, 400px"
                 className="object-cover object-center rounded-[16px]"
                 priority
               />
