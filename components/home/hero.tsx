@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 import { profile } from '@/lib/data'
 
-/* ─── Bento Grid Section (Hybrid Cursor x NVIDIA Hairline Cards) ─── */
+/* ─── Bento Grid Section ({typography.title-md} = 18px, {typography.body-sm} = 14px, {typography.code} = 13px) ─── */
 function BentoHeroGrid() {
   const techBadges = ['Python', 'C++', 'ROS2', 'OpenCV', 'TensorFlow', 'FastAPI', 'PyTorch', 'YOLOv8']
 
@@ -21,26 +21,26 @@ function BentoHeroGrid() {
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className="mt-12 w-full max-w-5xl text-left"
+      className="mt-14 w-full max-w-5xl text-left"
     >
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 items-stretch">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 items-stretch">
         {/* Card 1: Hands-On Experience */}
         <Link
           href="/experience"
-          className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
+          className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-6 transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
         >
           <div className="nvidia-corner-square" />
           <div>
-            <div className="mb-3 flex items-center justify-between">
-              <div className="flex size-8 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#26251e]">
+            <div className="mb-4 flex items-center justify-between">
+              <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#26251e]">
                 <Briefcase className="size-4 text-[#76b900]" />
               </div>
-              <ArrowUpRight className="size-3.5 text-[#807d72] group-hover:text-[#f54e00] transition-colors" />
+              <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#f54e00] transition-colors" />
             </div>
-            <h3 className="text-base font-semibold tracking-tight text-[#26251e] group-hover:text-[#f54e00] transition-colors">
+            <h3 className="text-[18px] font-semibold tracking-tight text-[#26251e] group-hover:text-[#f54e00] transition-colors">
               Hands-On Experience
             </h3>
-            <p className="mt-1.5 text-xs leading-relaxed text-[#5a5852]">
+            <p className="mt-2 text-sm leading-relaxed text-[#5a5852]">
               Real-world engineering internships in computer vision, edge deployment &amp; ROS2 systems.
             </p>
           </div>
@@ -49,47 +49,47 @@ function BentoHeroGrid() {
         {/* Card 2: Background & Journey */}
         <Link
           href="/about"
-          className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
+          className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-6 transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
         >
           <div>
-            <div className="mb-3 flex items-center justify-between">
-              <div className="flex size-8 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#26251e]">
+            <div className="mb-4 flex items-center justify-between">
+              <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#26251e]">
                 <User className="size-4 text-[#76b900]" />
               </div>
-              <ArrowUpRight className="size-3.5 text-[#807d72] group-hover:text-[#f54e00] transition-colors" />
+              <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#f54e00] transition-colors" />
             </div>
-            <h3 className="text-base font-semibold tracking-tight text-[#26251e] group-hover:text-[#f54e00] transition-colors">
+            <h3 className="text-[18px] font-semibold tracking-tight text-[#26251e] group-hover:text-[#f54e00] transition-colors">
               Background &amp; Journey
             </h3>
-            <p className="mt-1.5 text-xs leading-relaxed text-[#5a5852]">
+            <p className="mt-2 text-sm leading-relaxed text-[#5a5852]">
               AI &amp; Mechatronics engineering student background, core focus, and career objectives.
             </p>
           </div>
         </Link>
 
-        {/* Card 3: Tech Stack & Tools (JetBrains Mono Badges) */}
+        {/* Card 3: Tech Stack & Tools ({typography.code} = 13px JetBrains Mono) */}
         <Link
           href="/about#skills"
-          className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
+          className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-6 transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
         >
           <div className="nvidia-corner-square" />
           <div>
-            <div className="mb-3 flex items-center justify-between">
-              <div className="flex size-8 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#26251e]">
+            <div className="mb-4 flex items-center justify-between">
+              <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#26251e]">
                 <Code2 className="size-4 text-[#76b900]" />
               </div>
-              <ArrowUpRight className="size-3.5 text-[#807d72] group-hover:text-[#f54e00] transition-colors" />
+              <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#f54e00] transition-colors" />
             </div>
-            <h3 className="text-base font-semibold tracking-tight text-[#26251e] group-hover:text-[#f54e00] transition-colors">
+            <h3 className="text-[18px] font-semibold tracking-tight text-[#26251e] group-hover:text-[#f54e00] transition-colors">
               Tech Stack &amp; Tools
             </h3>
             
             {/* JetBrains Mono Tool Badges */}
-            <div className="mt-2.5 flex flex-wrap gap-1 font-mono text-[10px]">
+            <div className="mt-3 flex flex-wrap gap-1.5 font-mono text-[13px]">
               {techBadges.map((badge) => (
                 <span
                   key={badge}
-                  className="rounded-sm border border-[#e6e5e0] bg-[#fafaf7] px-1.5 py-0.5 text-[#26251e]"
+                  className="rounded-sm border border-[#e6e5e0] bg-[#fafaf7] px-2 py-0.5 text-[#26251e]"
                 >
                   {badge}
                 </span>
@@ -101,19 +101,19 @@ function BentoHeroGrid() {
         {/* Card 4: Applied AI & Systems */}
         <Link
           href="/projects"
-          className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
+          className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-6 transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
         >
           <div>
-            <div className="mb-3 flex items-center justify-between">
-              <div className="flex size-8 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#26251e]">
+            <div className="mb-4 flex items-center justify-between">
+              <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#26251e]">
                 <Cpu className="size-4 text-[#76b900]" />
               </div>
-              <ArrowUpRight className="size-3.5 text-[#807d72] group-hover:text-[#f54e00] transition-colors" />
+              <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#f54e00] transition-colors" />
             </div>
-            <h3 className="text-base font-semibold tracking-tight text-[#26251e] group-hover:text-[#f54e00] transition-colors">
+            <h3 className="text-[18px] font-semibold tracking-tight text-[#26251e] group-hover:text-[#f54e00] transition-colors">
               Applied AI &amp; Systems
             </h3>
-            <p className="mt-1.5 text-xs leading-relaxed text-[#5a5852]">
+            <p className="mt-2 text-sm leading-relaxed text-[#5a5852]">
               Production RAG infrastructure, reinforcement learning &amp; edge vision projects.
             </p>
           </div>
@@ -126,50 +126,50 @@ function BentoHeroGrid() {
 /* ─── Main Hybrid Hero Section ─── */
 export function Hero() {
   return (
-    <section className="relative pt-12 pb-16 bg-[#f7f7f4] text-[#26251e]">
+    <section className="relative pt-16 pb-20 bg-[#f7f7f4] text-[#26251e]">
       <div className="mx-auto flex max-w-5xl flex-col items-start px-6">
-        {/* Status Chip */}
+        {/* Status Chip ({typography.caption-uppercase} = 11px / font-semibold) */}
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#e6e5e0] bg-[#ffffff] px-3.5 py-1 font-mono text-[11px] font-medium text-[#5a5852]"
+          className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#e6e5e0] bg-[#ffffff] px-3.5 py-1 font-mono text-[11px] font-semibold text-[#5a5852] uppercase tracking-wider"
         >
           <span className="size-2 rounded-full bg-[#76b900]" />
           <span>Summer 2027 Internship Search</span>
         </motion.div>
 
-        {/* Display Headline (Weight 400 with tight letter-spacing) */}
+        {/* Display Headline ({typography.display-mega} = 72px / weight 400 / -2.16px tracking) */}
         <motion.h1
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="max-w-4xl text-left text-3xl font-normal leading-[1.14] tracking-tight sm:text-5xl lg:text-6xl text-[#26251e]"
+          className="max-w-4xl text-left text-4xl font-normal leading-[1.1] tracking-[-0.03em] sm:text-6xl lg:text-[72px] text-[#26251e]"
         >
           Computer vision on embedded hardware, robotics, and industrial data.
         </motion.h1>
 
-        {/* Intro Paragraph */}
+        {/* Intro Paragraph ({typography.body-md} = 16px / 400) */}
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-5 max-w-2xl text-left text-sm sm:text-base leading-relaxed text-[#5a5852]"
+          className="mt-6 max-w-3xl text-left text-base leading-relaxed text-[#5a5852]"
         >
           Hi, I&apos;m Prajal Jain &mdash; an AI &amp; Robotics engineering student looking for a Summer 2027 internship. If you&apos;re building systems where AI models have to run on real hardware (Raspberry Pi, Jetson, edge devices), I&apos;d like to hear from you.
         </motion.p>
 
-        {/* Action Button Row */}
+        {/* Action Button Row ({typography.button} = 14px / font-medium) */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="mt-6 flex items-center gap-3"
+          className="mt-8 flex items-center gap-4"
         >
           {/* Primary CTA (Cursor Orange #f54e00) */}
           <Link
             href="/contact"
-            className="inline-flex h-10 items-center justify-center rounded-md bg-[#f54e00] px-5 py-2 text-xs font-semibold text-white transition-colors hover:bg-[#d04200]"
+            className="inline-flex h-10 items-center justify-center rounded-md bg-[#f54e00] px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#d04200]"
           >
             Get in touch
           </Link>
@@ -179,9 +179,9 @@ export function Hero() {
             href={profile.resumeUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex h-10 items-center justify-center gap-1.5 rounded-md border border-[#e6e5e0] bg-[#ffffff] px-4 py-2 text-xs font-semibold text-[#26251e] transition-colors hover:bg-[#fafaf7] hover:border-[#cfcdc4]"
+            className="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-[#e6e5e0] bg-[#ffffff] px-5 py-2.5 text-sm font-medium text-[#26251e] transition-colors hover:bg-[#fafaf7] hover:border-[#cfcdc4]"
           >
-            <FileText className="size-3.5 text-[#807d72]" />
+            <FileText className="size-4 text-[#807d72]" />
             <span>Read Resume</span>
           </a>
         </motion.div>

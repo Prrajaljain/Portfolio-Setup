@@ -31,8 +31,8 @@ export function SiteHeader() {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-1 md:flex">
+          {/* Desktop Navigation ({typography.nav-link} = 14px / font-medium) */}
+          <nav className="hidden items-center gap-1.5 md:flex">
             {navItems.map((item) => {
               const active = pathname === item.href
               return (
@@ -40,10 +40,10 @@ export function SiteHeader() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    'relative px-3.5 py-1.5 text-xs font-medium transition-all rounded-md',
+                    'relative px-3.5 py-2 text-sm font-medium transition-all rounded-md',
                     active
                       ? 'text-[#f54e00] font-semibold bg-[#ffffff] border border-[#e6e5e0]'
-                      : 'text-[#5a5852] hover:text-[#26251e] hover:bg-[#ffffff]/60',
+                      : 'text-[#5a5852] hover:text-[#26251e] hover:bg-[#ffffff]/70',
                   )}
                 >
                   {item.label}
@@ -52,14 +52,14 @@ export function SiteHeader() {
             })}
           </nav>
 
-          {/* Right Action CTA Button */}
+          {/* Right Action CTA Button ({typography.button} = 14px / font-medium) */}
           <div className="hidden items-center gap-3 md:flex">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-1.5 rounded-md bg-[#f54e00] px-4 py-2 text-xs font-semibold text-white transition-all hover:bg-[#d04200] active:scale-95"
+              className="inline-flex items-center gap-1.5 rounded-md bg-[#f54e00] px-4 py-2 text-sm font-medium text-white transition-all hover:bg-[#d04200] active:scale-95"
             >
               <span>Get in touch</span>
-              <ArrowUpRight className="size-3.5" />
+              <ArrowUpRight className="size-4" />
             </Link>
           </div>
 
@@ -87,7 +87,7 @@ export function SiteHeader() {
                     href={item.href}
                     onClick={() => setOpen(false)}
                     className={cn(
-                      'block rounded-md px-3.5 py-2.5 text-xs font-semibold transition-colors',
+                      'block rounded-md px-3.5 py-2.5 text-sm font-medium transition-colors',
                       pathname === item.href
                         ? 'bg-[#ffffff] text-[#f54e00] border border-[#e6e5e0]'
                         : 'text-[#5a5852] hover:bg-[#ffffff]/60 hover:text-[#26251e]',
@@ -101,7 +101,7 @@ export function SiteHeader() {
                 <Link
                   href="/contact"
                   onClick={() => setOpen(false)}
-                  className="block rounded-md bg-[#f54e00] px-4 py-2.5 text-center text-xs font-semibold text-white"
+                  className="block rounded-md bg-[#f54e00] px-4 py-2.5 text-center text-sm font-medium text-white"
                 >
                   Get in touch
                 </Link>
