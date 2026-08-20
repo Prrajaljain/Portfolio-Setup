@@ -3,7 +3,7 @@ import { profile } from '@/lib/data'
 export function SiteFooter() {
   return (
     <footer className="relative z-20 border-t border-[#e6e5e0] bg-[#f7f7f4] py-8 text-xs text-[#5a5852]">
-      <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-6 sm:flex-row">
+      <div className="w-full flex flex-col items-center justify-between gap-4 px-6 sm:px-10 lg:px-16 sm:flex-row">
         {/* Copyright Text */}
         <p className="text-center sm:text-left font-mono">
           &copy; 2026 {profile.name} &mdash; All Rights Reserved
