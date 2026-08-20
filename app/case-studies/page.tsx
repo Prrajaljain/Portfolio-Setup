@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Sparkles, Cpu, Activity, ShieldCheck, ArrowRight } from 'lucide-react'
+import { Sparkles, ArrowRight } from 'lucide-react'
 import { CtaBanner } from '@/components/cta-banner'
 
 export const metadata: Metadata = {
@@ -57,51 +57,49 @@ const caseStudies = [
 
 export default function CaseStudiesPage() {
   return (
-    <>
-      <section className="relative overflow-hidden border-b border-border/40 bg-gradient-to-b from-background via-card/30 to-background pt-16 pb-20">
-        <div className="absolute left-10 top-10 size-72 rounded-full bg-purple-600/10 blur-3xl pointer-events-none" />
-        <div className="absolute right-10 bottom-10 size-72 rounded-full bg-cyan-600/10 blur-3xl pointer-events-none" />
-
-        <div className="relative z-10 mx-auto max-w-7xl px-6 text-center sm:px-8">
-          <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-primary">
-            <Sparkles className="size-3.5" />
-            Engineering Deep-Dives
+    <div className="relative min-h-screen bg-[#f7f7f4] text-[#26251e]">
+      <section className="relative overflow-hidden border-b border-[#e6e5e0] bg-[#f7f7f4] pt-16 pb-16">
+        <div className="relative z-10 mx-auto max-w-5xl px-6 text-left">
+          <span className="mb-4 inline-flex items-center gap-2 rounded-sm border border-[#e6e5e0] bg-[#ffffff] px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#5a5852]">
+            <Sparkles className="size-3.5 text-[#f54e00]" />
+            ENGINEERING DEEP-DIVES
           </span>
-          <h1 className="mb-5 text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
-            System <span className="text-gradient-purple">Case Studies</span>
+          <h1 className="mb-4 text-4xl font-normal tracking-tight text-[#26251e] sm:text-6xl">
+            System <span className="font-semibold text-[#f54e00]">Case Studies</span>
           </h1>
-          <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
+          <p className="max-w-2xl text-base sm:text-lg leading-relaxed text-[#5a5852]">
             In-depth architectural breakdowns of production AI pipelines, ROS2 navigation stacks, and edge hardware deployments.
           </p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20 sm:px-8">
-        <div className="flex flex-col gap-12">
+      <section className="mx-auto max-w-5xl px-6 py-16">
+        <div className="flex flex-col gap-6">
           {caseStudies.map((cs) => (
             <div
               key={cs.slug}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-card/80 p-8 shadow-2xl backdrop-blur-xl card-elevation-2 transition-all duration-300 hover:border-purple-500/40 sm:p-10"
+              className="group relative overflow-hidden rounded-md border border-[#e6e5e0] bg-[#ffffff] p-6 transition-all duration-200 hover:border-[#cfcdc4] sm:p-8"
             >
-              <div className="flex flex-col gap-6">
-                <div className="flex flex-wrap items-center justify-between gap-4 border-b border-border/40 pb-4">
+              <div className="nvidia-corner-square" />
+              <div className="flex flex-col gap-5">
+                <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#e6e5e0] pb-4">
                   <div>
-                    <span className="rounded-full border border-purple-500/30 bg-purple-500/10 px-3.5 py-1 text-xs font-bold text-purple-300">
+                    <span className="rounded-sm border border-[#e6e5e0] bg-[#fafaf7] px-3 py-1 font-mono text-xs font-semibold text-[#f54e00]">
                       {cs.category}
                     </span>
-                    <h2 className="mt-3 text-2xl font-bold text-foreground sm:text-3xl">
+                    <h2 className="mt-3 text-xl font-semibold text-[#26251e] sm:text-2xl">
                       {cs.title}
                     </h2>
-                    <p className="mt-1 text-sm font-semibold text-muted-foreground font-mono">
+                    <p className="mt-1 text-xs font-medium text-[#5a5852] font-mono">
                       {cs.subtitle}
                     </p>
                   </div>
 
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 font-mono text-xs">
                     {cs.metrics.map((m) => (
                       <span
                         key={m}
-                        className="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 font-mono text-xs font-bold text-emerald-400"
+                        className="rounded-sm border border-[#e6e5e0] bg-[#fafaf7] px-2.5 py-1 text-[#76b900]"
                       >
                         {m}
                       </span>
@@ -111,18 +109,18 @@ export default function CaseStudiesPage() {
 
                 <div className="grid gap-6 lg:grid-cols-[1.2fr_1fr]">
                   <div>
-                    <h3 className="text-sm font-bold uppercase tracking-wider text-primary">Overview</h3>
-                    <p className="mt-2 text-base leading-relaxed text-muted-foreground">
+                    <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-[#26251e]">Overview</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-[#5a5852]">
                       {cs.overview}
                     </p>
                   </div>
 
-                  <div className="rounded-2xl border border-white/5 bg-white/[0.02] p-5">
-                    <h3 className="text-sm font-bold uppercase tracking-wider text-cyan-400">Engineering Highlights</h3>
-                    <ul className="mt-3 flex flex-col gap-2">
+                  <div className="rounded-sm border border-[#e6e5e0] bg-[#fafaf7] p-4">
+                    <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-[#76b900]">Engineering Highlights</h3>
+                    <ul className="mt-2.5 flex flex-col gap-2 font-mono text-xs">
                       {cs.outcomes.map((o) => (
-                        <li key={o} className="flex items-start gap-2 text-xs leading-relaxed text-foreground/90">
-                          <span className="mt-1 size-1.5 rounded-full bg-purple-400 shrink-0" />
+                        <li key={o} className="flex items-start gap-2 text-[#5a5852] leading-relaxed">
+                          <span className="mt-1 size-1.5 rounded-full bg-[#76b900] shrink-0" />
                           <span>{o}</span>
                         </li>
                       ))}
@@ -130,12 +128,12 @@ export default function CaseStudiesPage() {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap items-center justify-between gap-4 border-t border-border/40 pt-4">
-                  <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap items-center justify-between gap-4 border-t border-[#e6e5e0] pt-4 font-mono text-xs">
+                  <div className="flex flex-wrap gap-1.5">
                     {cs.tech.map((t) => (
                       <span
                         key={t}
-                        className="rounded-full border border-border/50 bg-secondary/80 px-3 py-1 font-mono text-xs font-semibold text-muted-foreground"
+                        className="rounded-sm border border-[#e6e5e0] bg-[#fafaf7] px-2 py-0.5 text-[#26251e]"
                       >
                         {t}
                       </span>
@@ -144,10 +142,10 @@ export default function CaseStudiesPage() {
 
                   <a
                     href="/contact"
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-primary transition-transform duration-300 group-hover:translate-x-1"
+                    className="inline-flex items-center gap-1 font-semibold text-[#f54e00] hover:text-[#d04200] transition-colors"
                   >
                     <span>Discuss Similar Architecture</span>
-                    <ArrowRight className="size-4" />
+                    <ArrowRight className="size-3.5" />
                   </a>
                 </div>
               </div>
@@ -157,6 +155,6 @@ export default function CaseStudiesPage() {
       </section>
 
       <CtaBanner />
-    </>
+    </div>
   )
 }
