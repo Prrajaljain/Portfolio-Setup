@@ -1,0 +1,95 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@theme inline {
+  --font-sans: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+
+  /* Hybrid Cursor x NVIDIA Design System Tokens */
+  --color-canvas: #f7f7f4;
+  --color-canvas-soft: #fafaf7;
+  --color-surface-card: #ffffff;
+  --color-surface-strong: #e6e5e0;
+
+  --color-ink: #26251e;
+  --color-body: #5a5852;
+  --color-body-strong: #26251e;
+  --color-muted: #807d72;
+  --color-muted-soft: #a09c92;
+
+  --color-hairline: #e6e5e0;
+  --color-hairline-soft: #efeee8;
+  --color-hairline-strong: #cfcdc4;
+
+  --color-cursor-orange: #f54e00;
+  --color-cursor-orange-active: #d04200;
+  --color-nvidia-green: #76b900;
+  --color-nvidia-green-dark: #5a8d00;
+
+  --color-background: #f7f7f4;
+  --color-foreground: #26251e;
+  --color-card: #ffffff;
+  --color-card-foreground: #26251e;
+  --color-muted-foreground: #807d72;
+  --color-border: #e6e5e0;
+}
+
+:root {
+  color-scheme: light;
+  --background: #f7f7f4;
+  --foreground: #26251e;
+  --card: #ffffff;
+  --card-foreground: #26251e;
+  --primary: #f54e00;
+  --primary-foreground: #ffffff;
+  --secondary: #e6e5e0;
+  --secondary-foreground: #26251e;
+  --muted: #807d72;
+  --muted-foreground: #807d72;
+  --accent: #76b900;
+  --border: #e6e5e0;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-[#e6e5e0] outline-none;
+    box-shadow: none !important; /* Strictly Hairline depth, NO drop shadows */
+  }
+  html {
+    scroll-behavior: smooth !important;
+    background-color: #f7f7f4;
+    color: #26251e;
+  }
+  body {
+    background-color: #f7f7f4;
+    color: #26251e;
+    font-family: var(--font-sans);
+    @apply antialiased selection:bg-[#f54e00]/20 selection:text-[#f54e00];
+  }
+}
+
+@layer utilities {
+  .font-mono-code {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .cursor-hairline-card {
+    background-color: #ffffff;
+    border: 1px solid #e6e5e0;
+    border-radius: 8px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .cursor-hairline-card:hover {
+    border-color: #cfcdc4;
+    transform: translateY(-1px);
+  }
+  .nvidia-corner-square {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 10px;
+    height: 10px;
+    background-color: #76b900;
+  }
+}

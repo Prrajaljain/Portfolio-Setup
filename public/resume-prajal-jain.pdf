@@ -1,0 +1,42 @@
+
+
+PRAJAL JAIN
++91 8766679311|  prrajal.jain@gmail.com|  linkedin.com/in/prajaljain23|  github.com/prajaljain23|  Pune, India
+SUMMARY
+AI & Robotics Engineer with a Diploma in Mechatronics and a B.Tech in Artificial Intelligence.  Special-
+ized in developing real-time autonomous systems, including UAVs and AMRs.  Experienced in integrating neural
+networks with embedded hardware to achieve 96% accuracy in production environments.
+TECHNICAL SKILLS
+AI & Machine LearningYOLOv8, TensorFlow, PyTorch, PPO (Reinforcement Learning), CNNs
+Data AnalyticsStatistical Modeling, EDA, Pandas, NumPy, Matplotlib, SQL
+Computer VisionOpenCV, Image Segmentation, MediaPipe, SLAM, Object Tracking
+Languages & ToolsPython, C++, Linux CLI, Docker, Git, Flask, PostgreSQL
+Robotics & EmbeddedROS2, NVIDIA Jetson, STM32, PLC/SCADA, CAN-bus, I2C/SPI/UART
+PROFESSIONAL EXPERIENCE
+Machine Learning Engineer InternAug 2025 - Dec 2025
+Navikshaa TechnologiesRemote
+•  Optimized YOLOv8 with TensorRT and INT8 Quantization, reaching 60+ FPS on Jetson.
+•  Developed TFLite pipelines with 94% accuracy, reducing latency by 2.5s via pruning.
+•  Implemented real-time collision avoidance stacks on NVIDIA Jetson and Raspberry Pi.
+•  Standardized evaluation via mAP/IoU within Git-managed CI/CD production workflows.
+PROJECTS
+Autonomous Racing Line & Trajectory PredictionCARLA, PPO, ROS2, Python
+•  Modeled a RL agent using PPO in CARLA for path planning and racing trajectory prediction.
+•  Integrated ROS2 nodes for Active Aerodynamics control, bridging simulation with physical servos.
+•  Achieved real-time Sensor Fusion (Lidar/Camera) for low-latency obstacle avoidance and SLAM.
+Industrial AI Waste Sorter (Industry 4.0)PLC, TensorFlow, STM32, OpenCV
+•  Engineered an automated defect detection pipeline with 98% accuracy using CNNs.
+•  Integrated PLC/SCADA via MQTT for real-time telemetry and industrial motor control.
+•  Deployed TinyML models to STM32 MCUs, managing throughput of 30+ items/min.
+Vision-Based Autonomous Drone StackMediaPipe, Kalman Filters, Embedded C++
+•  Developed a navigation stack using Kalman Filters to improve tracking stability by 22%.
+•  Implemented failsafe logic and PID control for stable autonomous flight in high-speed maneuvers.
+EDUCATION
+B.Tech in Artificial Intelligence2024 - 2027
+Vishwakarma University, PuneGPA: 8.71
+Diploma in Mechatronics Engineering2021 - 2024
+Indo-German Tool Room (IGTR), AurangabadGPA: 7.52
+CERTIFICATIONS
+DeepLearning.AI: Neural Networks and Deep Learning Specialization (CNNs, Hyperparameter Tuning)
+Google:  Professional Data Analytics Certificate (Advanced SQL, R Programming, Tableau)
+IBM: Data Science Professional Certificate (Python for Analytics, Linux, and Shell Scripting)

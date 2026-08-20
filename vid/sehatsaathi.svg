@@ -1,0 +1,21 @@
+<svg width="800" height="520" viewBox="0 0 800 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="520" rx="48" fill="#06111F"/>
+  <circle cx="640" cy="102" r="184" fill="#14B8A6" fill-opacity="0.22"/>
+  <circle cx="122" cy="428" r="210" fill="#8B5CF6" fill-opacity="0.22"/>
+  <rect x="94" y="72" width="612" height="376" rx="40" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.18" stroke-width="2"/>
+  <rect x="138" y="116" width="236" height="288" rx="28" fill="#0F172A" stroke="#2DD4BF" stroke-opacity="0.45" stroke-width="2"/>
+  <rect x="186" y="172" width="140" height="34" rx="17" fill="#2DD4BF" fill-opacity="0.18"/>
+  <rect x="186" y="226" width="140" height="34" rx="17" fill="#A78BFA" fill-opacity="0.18"/>
+  <rect x="186" y="280" width="140" height="34" rx="17" fill="#38BDF8" fill-opacity="0.18"/>
+  <path d="M256 337V381" stroke="#2DD4BF" stroke-width="16" stroke-linecap="round"/>
+  <path d="M234 359H278" stroke="#2DD4BF" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="518" cy="250" r="86" fill="#111827" stroke="#A78BFA" stroke-width="3"/>
+  <path d="M518 204V296" stroke="#F8FAFC" stroke-width="18" stroke-linecap="round"/>
+  <path d="M472 250H564" stroke="#F8FAFC" stroke-width="18" stroke-linecap="round"/>
+  <path d="M421 364C462 336 573 335 616 364" stroke="#2DD4BF" stroke-width="12" stroke-linecap="round"/>
+  <path d="M438 392C475 373 559 373 598 392" stroke="#A78BFA" stroke-width="10" stroke-linecap="round"/>
+  <path d="M450 142C464 166 478 166 492 142C506 118 520 118 534 142C548 166 562 166 576 142" stroke="#38BDF8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M450 166C464 190 478 190 492 166C506 142 520 142 534 166C548 190 562 190 576 166" stroke="#2DD4BF" stroke-width="8" stroke-linecap="round"/>
+  <text x="430" y="118" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="28" font-weight="700">SehatSaathi</text>
+  <text x="430" y="426" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="22" font-weight="600">Offline multilingual AI</text>
+</svg>
