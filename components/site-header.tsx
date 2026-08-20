@@ -26,7 +26,7 @@ export function SiteHeader() {
             <div className="flex size-7 items-center justify-center rounded-sm bg-[#26251e] font-mono text-xs font-bold text-[#f7f7f4]">
               {profile.initials}
             </div>
-            <span className="text-base font-semibold tracking-tight text-[#26251e] transition-colors group-hover:text-[#f54e00]">
+            <span className="text-sm font-semibold tracking-tight text-[#26251e] transition-colors group-hover:text-[#f54e00]">
               {profile.name}
             </span>
           </Link>
@@ -40,10 +40,10 @@ export function SiteHeader() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    'relative px-3.5 py-1.5 text-sm font-medium transition-colors rounded-md',
+                    'relative px-3.5 py-1.5 text-xs font-medium transition-all rounded-md',
                     active
-                      ? 'text-[#f54e00] font-semibold bg-[#e6e5e0]/40'
-                      : 'text-[#5a8d00] hover:text-[#26251e] hover:bg-[#e6e5e0]/30',
+                      ? 'text-[#f54e00] font-semibold bg-[#ffffff] border border-[#e6e5e0]'
+                      : 'text-[#5a5852] hover:text-[#26251e] hover:bg-[#ffffff]/60',
                   )}
                 >
                   {item.label}
@@ -87,10 +87,10 @@ export function SiteHeader() {
                     href={item.href}
                     onClick={() => setOpen(false)}
                     className={cn(
-                      'block rounded-md px-3.5 py-2.5 text-sm font-semibold transition-colors',
+                      'block rounded-md px-3.5 py-2.5 text-xs font-semibold transition-colors',
                       pathname === item.href
-                        ? 'bg-[#e6e5e0] text-[#f54e00]'
-                        : 'text-[#5a5852] hover:bg-[#e6e5e0]/50 hover:text-[#26251e]',
+                        ? 'bg-[#ffffff] text-[#f54e00] border border-[#e6e5e0]'
+                        : 'text-[#5a5852] hover:bg-[#ffffff]/60 hover:text-[#26251e]',
                     )}
                   >
                     {item.label}
