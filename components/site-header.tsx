@@ -16,22 +16,27 @@ export function SiteHeader() {
     <>
       <ScrollProgress />
       <header className="sticky top-0 z-50 border-b border-[#e6e5e0] bg-[#f7f7f4]/95 backdrop-blur-md transition-all">
-        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 sm:px-8">
-          {/* Brand Wordmark: Exact [ PJ ] Prajal Jain format */}
+        <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
+          {/* Brand Wordmark */}
           <Link
             href="/"
             className="group flex items-center gap-2.5 rounded-sm focus-visible:outline-none"
             onClick={() => setOpen(false)}
           >
-            <div className="flex size-7 items-center justify-center rounded-[6px] bg-[#26251e] font-mono text-xs font-bold text-[#ffffff]">
+            <div className="flex size-7 items-center justify-center rounded-sm bg-[#26251e] font-mono text-xs font-bold text-[#f7f7f4]">
               {profile.initials}
             </div>
-            <span className="text-sm font-bold tracking-tight text-[#26251e] transition-colors group-hover:text-[#f54e00]">
-              {profile.name}
-            </span>
+            <div className="flex items-center gap-2">
+              <span className="text-sm font-semibold tracking-tight text-[#26251e] transition-colors group-hover:text-[#f54e00]">
+                {profile.name}
+              </span>
+              <span className="hidden xl:inline-block border-l border-[#e6e5e0] pl-2 font-mono text-[11px] text-[#5a5852]">
+                {profile.title}
+              </span>
+            </div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation ({typography.nav-link} = 14px / font-medium) */}
           <nav className="hidden items-center gap-1.5 md:flex">
             {navItems.map((item) => {
               const active = pathname === item.href
@@ -52,7 +57,7 @@ export function SiteHeader() {
             })}
           </nav>
 
-          {/* Right Action CTA Button */}
+          {/* Right Action CTA Button ({typography.button} = 14px / font-medium) */}
           <div className="hidden items-center gap-3 md:flex">
             <Link
               href="/contact"
