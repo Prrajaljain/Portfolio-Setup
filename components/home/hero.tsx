@@ -183,7 +183,7 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] items-start gap-10 lg:gap-14">
           {/* LEFT COLUMN — Text Content */}
           <div className="order-1 flex flex-col items-start text-left">
-            {/* 1. Eyebrow (mb: 12px) */}
+            {/* 1. Eyebrow (12px gap to headline) */}
             <motion.div
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
@@ -193,7 +193,7 @@ export function Hero() {
               HI, PRAJAL JAIN
             </motion.div>
 
-            {/* 2. Headline: 64px · weight 700 · line-height 1.02 · letter-spacing -0.03em (mb: 28px) */}
+            {/* 2. Headline: 64px, leading 1.02, tracking -0.03em (28px gap to role line) */}
             <motion.h1
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
@@ -206,7 +206,7 @@ export function Hero() {
               </span>
             </motion.h1>
 
-            {/* 3. Subtitle / Role Line (mb: 16px) */}
+            {/* 3. Subtitle / Role Line (16px gap to subhead) */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -217,7 +217,7 @@ export function Hero() {
               <span>AI &amp; Robotics &middot; Embedded Systems &middot; Industrial Data Analytics</span>
             </motion.div>
 
-            {/* 4. Subhead Paragraph (mb: 40px) */}
+            {/* 4. Subhead Paragraph (40px gap to button row) */}
             <motion.p
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
@@ -227,14 +227,13 @@ export function Hero() {
               Drones that see. Machines that sort. Data that tells you what the factory floor won&apos;t.
             </motion.p>
 
-            {/* 5. Button Row (mb: 48px) */}
+            {/* 5. Button Row (48px gap to divider rule) */}
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.15 }}
               className="mb-[48px] flex flex-wrap items-center gap-[12px]"
             >
-              {/* Resume — kept as is */}
               <a
                 href={profile.resumeUrl}
                 target="_blank"
@@ -245,7 +244,6 @@ export function Hero() {
                 <span>Resume</span>
               </a>
 
-              {/* Let's talk — kept as is */}
               <Link
                 href="/contact"
                 className="inline-flex h-11 items-center justify-center gap-2 rounded-[8px] border border-[#e6e5e0] bg-[#ffffff] px-[24px] text-[15px] font-semibold text-[#1A1A1A] transition-all hover:bg-[#fafaf7] hover:border-[#cfcdc4] active:scale-95 shadow-sm"
@@ -254,7 +252,6 @@ export function Hero() {
                 <span>Let&apos;s talk</span>
               </Link>
 
-              {/* Secondary buttons: no GH/IN icons, no shadow, 1px border & ↗ arrow only */}
               <a
                 href={githubUrl}
                 target="_blank"
@@ -276,10 +273,10 @@ export function Hero() {
               </a>
             </motion.div>
 
-            {/* 6. Orange Divider Rule (2px, orange #F25C1F, 100% width) */}
+            {/* 6. Orange 2px Divider Rule (100% width of text column) */}
             <div className="w-full h-[2px] bg-[#F25C1F]" />
 
-            {/* 7. Proof Strip (pt: 20px gap after divider) */}
+            {/* 7. Proof Strip (20px gap after divider) */}
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
@@ -315,8 +312,7 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* RIGHT COLUMN — Portrait Photo with Decorative Solid Offset Block */}
-          {/* border-radius 4px, solid #1A1A1A offset 12px right & 12px down, ends ~40px lower than proof strip */}
+          {/* RIGHT COLUMN — Photo Treatment */}
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -327,7 +323,7 @@ export function Hero() {
               {/* Solid Offset Block (#1A1A1A, 12px right & 12px down, rounded 4px) */}
               <div className="absolute inset-0 translate-x-[12px] translate-y-[12px] rounded-[4px] bg-[#1A1A1A]" />
 
-              {/* Photo Card Container (rounded 4px) */}
+              {/* Photo Frame (rounded 4px) */}
               <div className="relative z-10 h-full w-full overflow-hidden rounded-[4px] border border-[#e6e5e0] bg-[#ffffff]">
                 <Image
                   src="/images/prajal-headshot.jpg"
@@ -342,7 +338,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Bento Grid */}
+        {/* Section Bleed at Bottom — Bento Grid seamlessly embedded in background */}
         <BentoHeroGrid />
       </div>
     </section>
