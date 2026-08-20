@@ -180,7 +180,7 @@ export function Hero() {
 
   return (
     <section className="relative bg-[#f7f7f4] text-[#26251e] overflow-hidden pt-16 pb-[100px]">
-      <div className="mx-auto max-w-6xl px-6 sm:px-8">
+      <div className="w-full px-6 sm:px-10 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] items-center gap-12 lg:gap-16">
           {/* LEFT COLUMN — Text Content */}
           <div className="order-1 flex flex-col items-start text-left">
@@ -228,7 +228,7 @@ export function Hero() {
               Computer vision on Raspberry Pi and Arduino, drone systems, and industrial analytics.
             </motion.p>
 
-            {/* 5. Unified Action Buttons & Social Pills Row (Perfectly Aligned & Height-Matched) */}
+            {/* 5. Unified Action Buttons & Social Pills Row */}
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
@@ -293,14 +293,14 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="order-2 mx-auto w-full max-w-[280px] lg:max-w-[380px]"
+            className="order-2 mx-auto w-full max-w-[280px] lg:max-w-[420px]"
           >
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[16px] border border-[#e6e5e0] bg-[#ffffff] shadow-[0_8px_32px_rgba(0,0,0,0.08)]">
               <Image
                 src="/images/prajal-headshot.jpg"
                 alt="Prajal Jain — AI & Robotics Engineer"
                 fill
-                sizes="(max-width: 1024px) 280px, 380px"
+                sizes="(max-width: 1024px) 280px, 420px"
                 className="object-cover object-center rounded-[16px]"
                 priority
               />
