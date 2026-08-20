@@ -26,9 +26,14 @@ export function SiteHeader() {
             <div className="flex size-7 items-center justify-center rounded-sm bg-[#26251e] font-mono text-xs font-bold text-[#f7f7f4]">
               {profile.initials}
             </div>
-            <span className="text-sm font-semibold tracking-tight text-[#26251e] transition-colors group-hover:text-[#f54e00]">
-              {profile.name}
-            </span>
+            <div className="flex items-center gap-2">
+              <span className="text-sm font-semibold tracking-tight text-[#26251e] transition-colors group-hover:text-[#f54e00]">
+                {profile.name}
+              </span>
+              <span className="hidden xl:inline-block border-l border-[#e6e5e0] pl-2 font-mono text-[11px] text-[#5a5852]">
+                {profile.title}
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation ({typography.nav-link} = 14px / font-medium) */}
