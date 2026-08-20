@@ -11,17 +11,17 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <div className="relative min-h-screen bg-[#09090b] text-[#fafafa]">
-      <section className="relative overflow-hidden border-b border-white/10 bg-[#09090b] pt-16 pb-16">
+    <div className="relative min-h-screen bg-[#f7f7f4] text-[#26251e]">
+      <section className="relative overflow-hidden border-b border-[#e6e5e0] bg-[#f7f7f4] pt-16 pb-16">
         <div className="relative z-10 mx-auto max-w-5xl px-6 text-left">
-          <span className="mb-4 inline-flex items-center gap-2 rounded-sm border border-white/10 bg-[#111113] px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#76b900]">
+          <span className="mb-4 inline-flex items-center gap-2 rounded-sm border border-[#e6e5e0] bg-[#ffffff] px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#5a5852]">
             <Cpu className="size-3.5 text-[#76b900]" />
             AI &amp; AUTONOMOUS SYSTEMS PORTFOLIO
           </span>
-          <h1 className="mb-4 text-4xl font-normal tracking-tight text-[#fafafa] sm:text-6xl">
+          <h1 className="mb-4 text-4xl font-normal tracking-tight text-[#26251e] sm:text-6xl">
             Production-Focused <span className="font-semibold text-[#f54e00]">Projects</span>
           </h1>
-          <p className="max-w-2xl text-base sm:text-lg leading-relaxed text-[#a1a1aa]">
+          <p className="max-w-2xl text-base sm:text-lg leading-relaxed text-[#5a5852]">
             A curated selection of real-time ROS2 navigation stacks, computer vision pipelines, and embedded AI platforms deployed at the edge.
           </p>
 
@@ -29,13 +29,13 @@ export default function ProjectsPage() {
             <span className="rounded-sm border border-[#f54e00]/40 bg-[#f54e00]/15 px-3 py-1 font-semibold text-[#f54e00]">
               All Projects ({projects.length})
             </span>
-            <span className="rounded-sm border border-white/10 bg-[#111113] px-3 py-1 text-[#a1a1aa]">
+            <span className="rounded-sm border border-[#e6e5e0] bg-[#ffffff] px-3 py-1 text-[#5a5852]">
               ROS2 &amp; Robotics
             </span>
-            <span className="rounded-sm border border-white/10 bg-[#111113] px-3 py-1 text-[#a1a1aa]">
+            <span className="rounded-sm border border-[#e6e5e0] bg-[#ffffff] px-3 py-1 text-[#5a5852]">
               Computer Vision
             </span>
-            <span className="rounded-sm border border-white/10 bg-[#111113] px-3 py-1 text-[#a1a1aa]">
+            <span className="rounded-sm border border-[#e6e5e0] bg-[#ffffff] px-3 py-1 text-[#5a5852]">
               Embedded Edge AI
             </span>
           </div>
