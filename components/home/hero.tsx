@@ -190,7 +190,7 @@ export function Hero() {
               transition={{ duration: 0.4 }}
               className="mb-[12px] font-mono text-[13px] font-medium text-[#71717A] uppercase tracking-[1.5px]"
             >
-              HI, PRAJAL JAIN
+              HI, I&apos;M PRAJAL JAIN
             </motion.div>
 
             {/* 2. Headline: 64px, leading 1.02, tracking -0.03em (28px gap to role line) */}
