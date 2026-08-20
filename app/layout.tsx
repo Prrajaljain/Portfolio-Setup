@@ -1,19 +1,18 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Space_Grotesk, IBM_Plex_Mono } from 'next/font/google'
+import { Inter, JetBrains_Mono } from 'next/font/google'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import './globals.css'
 
-const _spaceGrotesk = Space_Grotesk({
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
 })
 
-const _plexMono = IBM_Plex_Mono({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
   variable: '--font-mono',
   display: 'swap',
 })
@@ -22,7 +21,6 @@ export const metadata: Metadata = {
   title: 'Prajal Jain — AI & Robotics Engineer',
   description:
     'Portfolio of Prajal Jain, an AI & Robotics Engineer specializing in real-time autonomous systems, computer vision, and embedded AI.',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
@@ -43,8 +41,8 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'dark',
-  themeColor: '#0a0714',
+  colorScheme: 'light',
+  themeColor: '#f7f7f4',
   userScalable: true,
 }
 
@@ -54,8 +52,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`dark ${_spaceGrotesk.variable} ${_plexMono.variable}`}>
-      <body className="bg-background font-sans antialiased">
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+      <body className="bg-[#f7f7f4] font-sans antialiased text-[#26251e]">
         <div className="relative flex min-h-screen flex-col">
           <SiteHeader />
           <main className="flex-1">{children}</main>

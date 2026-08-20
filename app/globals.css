@@ -3,8 +3,8 @@
 @import 'shadcn/tailwind.css';
 
 @theme inline {
-  --font-sans: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+  --font-sans: var(--font-sans), 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: var(--font-mono), 'JetBrains Mono', ui-monospace, monospace;
 
   /* Hybrid Cursor x NVIDIA Design System Tokens */
   --color-canvas: #f7f7f4;
@@ -65,14 +65,14 @@
   body {
     background-color: #f7f7f4;
     color: #26251e;
-    font-family: var(--font-sans);
+    font-family: var(--font-sans), 'Inter', sans-serif;
     @apply antialiased selection:bg-[#f54e00]/20 selection:text-[#f54e00];
   }
 }
 
 @layer utilities {
   .font-mono-code {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-mono), 'JetBrains Mono', monospace;
   }
   .cursor-hairline-card {
     background-color: #ffffff;
