@@ -184,7 +184,7 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] items-center gap-12 lg:gap-16">
           {/* LEFT COLUMN — Text Content */}
           <div className="order-1 flex flex-col items-start text-left">
-            {/* 1. Eyebrow: 13px · monospace · letter-spacing 1.5px · #71717A · mb 16px */}
+            {/* 1. Eyebrow */}
             <motion.div
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
@@ -194,7 +194,7 @@ export function Hero() {
               HI, PRAJAL JAIN
             </motion.div>
 
-            {/* 2. Headline: 56px · weight 700 · line-height 1.08 · letter-spacing -0.02em · clean line break */}
+            {/* 2. Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
@@ -202,30 +202,30 @@ export function Hero() {
               className="mb-[20px] max-w-xl text-4xl sm:text-5xl lg:text-[56px] font-bold leading-[1.08] tracking-[-0.02em] text-[#26251e]"
             >
               I build AI that{' '}
-              <span className="text-[#f54e00] font-bold whitespace-nowrap block sm:inline">
+              <span className="text-[#f54e00] font-bold block">
                 runs on hardware
               </span>
             </motion.h1>
 
-            {/* 3. Subtitle: 15px · monospace · weight 500 · orange · green dot 7px (10px gap) · mb 20px */}
+            {/* 3. Subtitle Line */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.08 }}
-              className="mb-[20px] flex items-center gap-[10px] font-mono text-[15px] font-medium text-[#f54e00]"
+              className="mb-[20px] flex flex-wrap items-center gap-[10px] font-mono text-[13px] sm:text-[14px] font-medium text-[#f54e00]"
             >
               <span className="size-[7px] shrink-0 rounded-full bg-[#76b900]" />
-              <span>AI &amp; Robotics Engineer | Embedded Systems</span>
+              <span>AI &amp; Robotics &middot; Embedded Systems &middot; Industrial Data Analytics</span>
             </motion.div>
 
-            {/* 4. Tagline: 17px · line-height 1.65 · #52525B · max-width 46ch · mb 28px */}
+            {/* 4. Tagline / Description */}
             <motion.p
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="mb-[28px] max-w-[46ch] text-[17px] leading-[1.65] text-[#52525B]"
+              className="mb-[28px] max-w-[48ch] text-[17px] leading-[1.65] text-[#52525B]"
             >
-              Computer vision on Raspberry Pi and Arduino, drone systems, and industrial analytics.
+              Drones that see. Machines that sort. Data that tells you what the factory floor won&apos;t.
             </motion.p>
 
             {/* 5. Unified Action Buttons & Social Pills Row */}
@@ -233,7 +233,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className="mb-[36px] flex flex-wrap items-center gap-[12px]"
+              className="mb-[28px] flex flex-wrap items-center gap-[12px]"
             >
               <a
                 href={profile.resumeUrl}
@@ -276,15 +276,25 @@ export function Hero() {
               </a>
             </motion.div>
 
-            {/* 6. Scroll Indicator */}
+            {/* 6. Proof Strip (3 Columns) */}
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.25 }}
-              className="flex items-center gap-2 font-mono text-[12px] tracking-[1px] text-[#A1A1AA]"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="w-full border-t border-[#e6e5e0] pt-6 grid grid-cols-1 sm:grid-cols-3 gap-6 font-mono text-xs text-[#5a5852]"
             >
-              <ArrowDown className="size-3.5 text-[#f54e00] animate-bounce" />
-              <span>Scroll to explore</span>
+              <div>
+                <span className="font-bold text-[#26251e] block uppercase tracking-wider">INDIAN ARMY</span>
+                <span className="text-[#f54e00] mt-0.5 block font-medium">octocopter demo</span>
+              </div>
+              <div>
+                <span className="font-bold text-[#26251e] block uppercase tracking-wider">NAVRATRI 2025</span>
+                <span className="text-[#f54e00] mt-0.5 block font-medium">5,000+ crowd, live</span>
+              </div>
+              <div>
+                <span className="font-bold text-[#26251e] block uppercase tracking-wider">RISHABH INSTRUMENTS</span>
+                <span className="text-[#f54e00] mt-0.5 block font-medium">telemetry &rarr; dashboards</span>
+              </div>
             </motion.div>
           </div>
 
