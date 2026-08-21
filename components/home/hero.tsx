@@ -162,10 +162,11 @@ export function Hero() {
   const linkedinUrl = profile.socials.find((s) => s.label === 'LinkedIn')?.href ?? 'https://linkedin.com/in/prajaljain23'
 
   return (
-    <section className="relative bg-[#F5F4F0] text-[#1A1A1A] overflow-hidden pt-[48px] md:pt-[64px] pb-[56px] md:pb-[80px] box-border">
-      <div className="mx-auto max-w-6xl px-6 sm:px-8">
+    <section className="relative bg-[#F5F4F0] text-[#1A1A1A] overflow-hidden box-border">
+      {/* 1. Full Screen Hero Landing Viewport (100vh minus 80px header) */}
+      <div className="mx-auto max-w-6xl px-6 sm:px-8 min-h-[calc(100vh-80px)] flex flex-col justify-between pt-8 sm:pt-10 md:pt-12 pb-6">
         {/* Main Hero Split Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] items-start gap-10 lg:gap-14">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] items-center gap-10 lg:gap-14 my-auto">
 
           {/* LEFT COLUMN CONTAINER */}
           <div className="flex flex-col items-start text-left w-full">
@@ -176,7 +177,7 @@ export function Hero() {
             </div>
 
             {/* 2. Headline */}
-            <h1 className="mb-[28px] max-w-xl text-[40px] md:text-[48px] lg:text-[60px] font-bold leading-[1.04] tracking-[-0.03em] text-[#1A1A1A]">
+            <h1 className="mb-[24px] max-w-xl text-[40px] md:text-[48px] lg:text-[58px] font-bold leading-[1.04] tracking-[-0.03em] text-[#1A1A1A]">
               I build AI that{' '}
               <span className="text-[#F25C1F] font-bold block">
                 runs on hardware
@@ -184,7 +185,7 @@ export function Hero() {
             </h1>
 
             {/* 3. Subtitle / Role Line */}
-            <div className="mb-[20px] flex flex-wrap items-center gap-[10px] font-mono text-[13px] sm:text-[14px] font-medium text-[#D94A10]">
+            <div className="mb-[18px] flex flex-wrap items-center gap-[10px] font-mono text-[13px] sm:text-[14px] font-medium text-[#D94A10]">
               <span className="size-[6px] shrink-0 rounded-full bg-[#D94A10]" />
               <span>
                 AI &amp; Robotics &middot; Embedded Systems &middot; Industrial Data Analytics
@@ -192,19 +193,19 @@ export function Hero() {
             </div>
 
             {/* 4. Subhead Paragraph */}
-            <p className="mb-[36px] max-w-[480px] text-[17px] leading-[1.65] text-[#52525B]">
+            <p className="mb-[32px] max-w-[480px] text-[16px] sm:text-[17px] leading-[1.65] text-[#52525B]">
               Drones that see. Machines that sort.<br className="hidden sm:block" />
               Data that tells you what the factory floor won&apos;t.
             </p>
 
             {/* 5. Button Row */}
-            <div className="mb-[40px] flex flex-wrap items-center gap-5 sm:gap-6">
+            <div className="flex flex-wrap items-center gap-5 sm:gap-6">
               {/* Primary button: Resume */}
               <a
                 href={profile.resumeUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex w-auto items-center justify-center gap-2 rounded-md bg-[#F25C1F] px-[24px] py-[14px] text-[15px] font-semibold text-white shadow-rest transition-all duration-200 ease-out hover:bg-[#D94A10] hover:shadow-hover hover:-translate-y-[1px] active:translate-y-0 active:shadow-press focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+                className="inline-flex w-auto items-center justify-center gap-2 rounded-md bg-[#F25C1F] px-[24px] py-[13px] text-[15px] font-semibold text-white shadow-rest transition-all duration-200 ease-out hover:bg-[#D94A10] hover:shadow-hover hover:-translate-y-[1px] active:translate-y-0 active:shadow-press focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
               >
                 <FileText className="size-4" />
                 <span>Resume</span>
@@ -213,7 +214,7 @@ export function Hero() {
               {/* Secondary button: Let's talk */}
               <Link
                 href="/contact"
-                className="inline-flex w-auto items-center justify-center gap-2 rounded-md border border-[#E0DCD6] bg-[#ffffff] px-[24px] py-[14px] text-[15px] font-semibold text-[#1A1A1A] shadow-none transition-all duration-200 ease-out hover:bg-[#1A1A1A] hover:text-[#F5F4F0] hover:border-[#1A1A1A] hover:shadow-rest active:scale-95 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+                className="inline-flex w-auto items-center justify-center gap-2 rounded-md border border-[#E0DCD6] bg-[#ffffff] px-[24px] py-[13px] text-[15px] font-semibold text-[#1A1A1A] shadow-none transition-all duration-200 ease-out hover:bg-[#1A1A1A] hover:text-[#F5F4F0] hover:border-[#1A1A1A] hover:shadow-rest active:scale-95 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
               >
                 <Send className="size-4 text-[#F25C1F]" />
                 <span>Let&apos;s talk</span>
@@ -243,61 +244,16 @@ export function Hero() {
               </div>
             </div>
 
-            {/* 6. Proof Strip & Orange Rule */}
-            <div className="w-full pt-2">
-              <div className="w-full h-[2px] bg-[#F25C1F]" />
-
-              <div className="w-full pt-[24px] pb-[20px] grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 font-mono">
-                <div>
-                  <span className="font-mono text-[11px] font-semibold text-[#8A8580] uppercase tracking-wider block">
-                    Indian Army
-                  </span>
-                  <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1.5 block">
-                    octocopter demo
-                  </span>
-                </div>
-
-                <div>
-                  <span className="font-mono text-[11px] font-semibold text-[#8A8580] uppercase tracking-wider block">
-                    Navratri 2025
-                  </span>
-                  <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1.5 block">
-                    5,000+ crowd, live
-                  </span>
-                </div>
-
-                <div>
-                  <span className="font-mono text-[11px] font-semibold text-[#8A8580] uppercase tracking-wider block">
-                    Rishabh Instruments
-                  </span>
-                  <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1.5 block">
-                    11 dashboards live
-                  </span>
-                </div>
-              </div>
-
-              {/* Scroll Indicator */}
-              <div className="pt-[20px]">
-                <a
-                  href="#bento-grid"
-                  className="inline-flex items-center gap-[10px] font-mono text-[12px] font-medium uppercase tracking-[0.1em] text-[#8A8580] hover:text-[#D94A10] transition-colors cursor-pointer"
-                >
-                  <span className="inline-block animate-arrow-bob select-none text-[#D94A10]">↓</span>
-                  <span>Scroll to explore</span>
-                </a>
-              </div>
-            </div>
-
           </div>
 
           {/* RIGHT COLUMN — Photo Desktop Position */}
-          <div className="hidden lg:block mx-auto w-full max-w-[380px] pt-1">
+          <div className="hidden lg:block mx-auto w-full max-w-[360px]">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[8px] border border-[#E8E4DE] bg-white shadow-rest">
               <Image
                 src="/images/prajal-headshot.jpg"
                 alt="Prajal Jain — AI & Robotics Engineer"
                 fill
-                sizes="380px"
+                sizes="360px"
                 className="object-cover object-center"
                 priority
               />
@@ -306,7 +262,54 @@ export function Hero() {
 
         </div>
 
-        {/* Bento Grid Section */}
+        {/* 6. Proof Strip & Orange Rule (Anchored at bottom of hero viewport) */}
+        <div className="w-full pt-4 pb-2">
+          <div className="w-full h-[2px] bg-[#F25C1F]" />
+
+          <div className="w-full pt-[20px] pb-[16px] grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 font-mono">
+            <div>
+              <span className="font-mono text-[11px] font-semibold text-[#8A8580] uppercase tracking-wider block">
+                Indian Army
+              </span>
+              <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block">
+                octocopter demo
+              </span>
+            </div>
+
+            <div>
+              <span className="font-mono text-[11px] font-semibold text-[#8A8580] uppercase tracking-wider block">
+                Navratri 2025
+              </span>
+              <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block">
+                5,000+ crowd, live
+              </span>
+            </div>
+
+            <div>
+              <span className="font-mono text-[11px] font-semibold text-[#8A8580] uppercase tracking-wider block">
+                Rishabh Instruments
+              </span>
+              <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block">
+                11 dashboards live
+              </span>
+            </div>
+          </div>
+
+          {/* Scroll Indicator */}
+          <div className="pt-[14px]">
+            <a
+              href="#bento-grid"
+              className="inline-flex items-center gap-[10px] font-mono text-[12px] font-medium uppercase tracking-[0.1em] text-[#8A8580] hover:text-[#D94A10] transition-colors cursor-pointer"
+            >
+              <span className="inline-block animate-arrow-bob select-none text-[#D94A10]">↓</span>
+              <span>Scroll to explore</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* 2. Portfolio Bento Grid Section (Starts below the 100vh fold) */}
+      <div className="mx-auto max-w-6xl px-6 sm:px-8 pb-16 md:pb-24">
         <BentoHeroGrid />
       </div>
     </section>
