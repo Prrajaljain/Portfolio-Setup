@@ -66,6 +66,20 @@
   --border-strong: #1A1A1A;
 }
 
+/* Hide scrollbar globally across all browsers */
+*::-webkit-scrollbar,
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+* {
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;  /* Firefox */
+}
+
 @layer base {
   * {
     @apply border-[#E8E4DE] outline-none;
@@ -74,12 +88,6 @@
     scroll-behavior: smooth !important;
     background-color: #F5F4F0;
     color: #1A1A1A;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-  }
-  html::-webkit-scrollbar,
-  body::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
   }
   body {
     background-color: #F5F4F0;
