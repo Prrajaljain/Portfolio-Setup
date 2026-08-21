@@ -162,9 +162,10 @@ export function Hero() {
   return (
     <section className="relative bg-[#F5F4F0] text-[#1A1A1A] overflow-hidden pt-16 pb-[90px]">
       <div className="mx-auto max-w-6xl px-6 sm:px-8">
+        {/* Main Hero Split Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] items-start gap-10 lg:gap-14">
           
-          {/* LEFT COLUMN / MOBILE CONTENT CONTAINER */}
+          {/* LEFT COLUMN CONTAINER */}
           <div className="order-1 flex flex-col items-start text-left w-full">
             
             {/* 1. Eyebrow (12px gap to headline) — order-1 */}
@@ -194,11 +195,11 @@ export function Hero() {
               Data that tells you what the factory floor won&apos;t.
             </p>
 
-            {/* 5. Proof Strip & Orange Rule: order-5 on mobile (below subhead), order-7 on desktop (below buttons) */}
+            {/* 5. Proof Strip & Orange Rule: order-5 on mobile, order-7 on desktop */}
             <div className="order-5 lg:order-7 w-full mb-[40px] lg:mb-0">
               <div className="w-full h-[2px] bg-[#F25C1F]" />
 
-              <div className="w-full pt-[20px] flex flex-col md:grid md:grid-cols-3 gap-4 md:gap-12 font-mono">
+              <div className="w-full pt-[20px] grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 font-mono">
                 <div>
                   <span className="font-mono text-[11px] font-semibold text-[#8A8580] block">
                     Indian Army
@@ -306,8 +307,8 @@ export function Hero() {
 
         </div>
 
-        {/* Scroll to Explore Indicator */}
-        <div className="mt-14 mb-2 flex flex-col items-center justify-center gap-2 text-center">
+        {/* Centered Scroll to Explore Indicator */}
+        <div className="mt-14 mb-4 flex flex-col items-center justify-center gap-2 text-center">
           <span className="font-mono text-[12px] font-medium text-[#71717A] tracking-wider uppercase">
             Scroll to explore
           </span>
@@ -316,7 +317,7 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Section Bleed at Bottom */}
+        {/* Bento Grid Section */}
         <BentoHeroGrid />
       </div>
     </section>
