@@ -182,15 +182,16 @@ export function Hero() {
               </span>
             </h1>
 
-            {/* 3. Subtitle / Role Line: --accent-text #D94A10 (16px gap to subhead) — order-3 */}
+            {/* 3. Subtitle / Role Line: --accent-text #D94A10 for text and preceding bullet dot — order-3 */}
             <div className="order-3 mb-[16px] flex flex-wrap items-center gap-[10px] font-mono text-[13px] sm:text-[14px] font-medium text-[#D94A10]">
-              <span className="size-[7px] shrink-0 rounded-full bg-[#76b900]" />
+              <span className="size-[7px] shrink-0 rounded-full bg-[#D94A10]" />
               <span>AI &amp; Robotics &middot; Embedded Systems &middot; Industrial Data Analytics</span>
             </div>
 
-            {/* 4. Subhead Paragraph: max-w-[32ch] forces break after "Machines that sort." (40px gap on desktop, 32px on mobile) — order-4 */}
-            <p className="order-4 mb-[32px] lg:mb-[40px] max-w-[32ch] text-[17px] leading-[1.65] text-[#52525B]">
-              Drones that see. Machines that sort. Data that tells you what the factory floor won&apos;t.
+            {/* 4. Subhead Paragraph: Explicit <br /> after "Machines that sort.", max-w-[480px] safety bound (40px gap on desktop, 32px on mobile) — order-4 */}
+            <p className="order-4 mb-[32px] lg:mb-[40px] max-w-[480px] text-[17px] leading-[1.65] text-[#52525B]">
+              Drones that see. Machines that sort.<br className="hidden sm:block" />
+              Data that tells you what the factory floor won&apos;t.
             </p>
 
             {/* 5. Proof Strip & Orange Rule: order-5 on mobile (below subhead), order-7 on desktop (below buttons) */}
