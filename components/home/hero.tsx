@@ -276,18 +276,18 @@ export function Hero() {
             {/* 6. Orange 2px Divider Rule (100% width of text column) */}
             <div className="w-full h-[2px] bg-[#F25C1F]" />
 
-            {/* 7. Proof Strip (20px gap after divider) */}
+            {/* 7. Proof Strip (20px gap after divider, 3 equal columns with gap: 48px / gap-12, single line values) */}
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="w-full pt-[20px] grid grid-cols-1 sm:grid-cols-3 gap-6 font-mono"
+              className="w-full pt-[20px] grid grid-cols-1 sm:grid-cols-3 gap-12 font-mono"
             >
               <div>
                 <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#8A8580] block">
                   INDIAN ARMY
                 </span>
-                <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block">
+                <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block whitespace-nowrap">
                   octocopter demo
                 </span>
               </div>
@@ -296,7 +296,7 @@ export function Hero() {
                 <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#8A8580] block">
                   NAVRATRI 2025
                 </span>
-                <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block">
+                <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block whitespace-nowrap">
                   5,000+ crowd, live
                 </span>
               </div>
@@ -305,40 +305,34 @@ export function Hero() {
                 <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#8A8580] block">
                   RISHABH INSTRUMENTS
                 </span>
-                <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block">
-                  telemetry &rarr; dashboards
+                <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block whitespace-nowrap">
+                  11 dashboards live
                 </span>
               </div>
             </motion.div>
           </div>
 
-          {/* RIGHT COLUMN — Photo Treatment */}
+          {/* RIGHT COLUMN — Photo Treatment (Photo sits alone: rounded-4px, no shadow, no border, no offset block, top edge aligned with eyebrow) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="order-2 mx-auto w-full max-w-[320px] lg:max-w-[380px] lg:pt-6"
+            className="order-2 mx-auto w-full max-w-[320px] lg:max-w-[380px] pt-0"
           >
-            <div className="relative aspect-[4/5] w-full">
-              {/* Solid Offset Block (#1A1A1A, 12px right & 12px down, rounded 4px) */}
-              <div className="absolute inset-0 translate-x-[12px] translate-y-[12px] rounded-[4px] bg-[#1A1A1A]" />
-
-              {/* Photo Frame (rounded 4px) */}
-              <div className="relative z-10 h-full w-full overflow-hidden rounded-[4px] border border-[#e6e5e0] bg-[#ffffff]">
-                <Image
-                  src="/images/prajal-headshot.jpg"
-                  alt="Prajal Jain — AI & Robotics Engineer"
-                  fill
-                  sizes="(max-width: 1024px) 320px, 380px"
-                  className="object-cover object-center rounded-[4px]"
-                  priority
-                />
-              </div>
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[4px]">
+              <Image
+                src="/images/prajal-headshot.jpg"
+                alt="Prajal Jain — AI & Robotics Engineer"
+                fill
+                sizes="(max-width: 1024px) 320px, 380px"
+                className="object-cover object-center rounded-[4px]"
+                priority
+              />
             </div>
           </motion.div>
         </div>
 
-        {/* Section Bleed at Bottom — Bento Grid seamlessly embedded in background */}
+        {/* Section Bleed at Bottom */}
         <BentoHeroGrid />
       </div>
     </section>
