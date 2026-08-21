@@ -61,6 +61,12 @@
     scroll-behavior: smooth !important;
     background-color: #f7f7f4;
     color: #26251e;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
   }
   body {
     background-color: #f7f7f4;

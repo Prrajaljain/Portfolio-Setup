@@ -160,7 +160,7 @@ export function Hero() {
   const linkedinUrl = profile.socials.find((s) => s.label === 'LinkedIn')?.href ?? 'https://linkedin.com/in/prajaljain23'
 
   return (
-    <section className="relative bg-[#F5F4F0] text-[#1A1A1A] overflow-hidden pt-8 lg:pt-12 pb-12 lg:pb-16">
+    <section className="relative bg-[#F5F4F0] text-[#1A1A1A] overflow-hidden pt-6 lg:pt-8 pb-10 lg:pb-12">
       <div className="mx-auto max-w-6xl px-6 sm:px-8">
         {/* Main Hero Split Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] items-start gap-8 lg:gap-12">
@@ -174,7 +174,7 @@ export function Hero() {
             </div>
 
             {/* 2. Headline: 40px (<768px), 48px (768px-1024px), 64px (≥1024px) — order-2 */}
-            <h1 className="order-2 mb-5 max-w-xl text-[40px] md:text-[48px] lg:text-[60px] xl:text-[64px] font-bold leading-[1.02] tracking-[-0.03em] text-[#1A1A1A]">
+            <h1 className="order-2 mb-4 max-w-xl text-[38px] md:text-[46px] lg:text-[56px] xl:text-[60px] font-bold leading-[1.02] tracking-[-0.03em] text-[#1A1A1A]">
               I build AI that{' '}
               <span className="text-[#F25C1F] font-bold block">
                 runs on hardware
@@ -182,7 +182,7 @@ export function Hero() {
             </h1>
 
             {/* 3. Subtitle / Role Line: Explicit literal #D94A10 color & 6px bullet circle — order-3 */}
-            <div className="order-3 mb-4 flex flex-wrap items-center gap-[10px] font-mono text-[13px] sm:text-[14px] font-medium text-[#D94A10]" style={{ color: '#D94A10' }}>
+            <div className="order-3 mb-3.5 flex flex-wrap items-center gap-[10px] font-mono text-[13px] sm:text-[14px] font-medium text-[#D94A10]" style={{ color: '#D94A10' }}>
               <span className="size-[6px] shrink-0 rounded-full bg-[#D94A10]" style={{ backgroundColor: '#D94A10' }} />
               <span className="text-[#D94A10]" style={{ color: '#D94A10' }}>
                 AI &amp; Robotics &middot; Embedded Systems &middot; Industrial Data Analytics
@@ -190,16 +190,16 @@ export function Hero() {
             </div>
 
             {/* 4. Subhead Paragraph — order-4 */}
-            <p className="order-4 mb-6 lg:mb-7 max-w-[480px] text-[16px] sm:text-[17px] leading-[1.6] text-[#52525B]">
+            <p className="order-4 mb-5 lg:mb-6 max-w-[480px] text-[16px] sm:text-[17px] leading-[1.6] text-[#52525B]">
               Drones that see. Machines that sort.<br className="hidden sm:block" />
               Data that tells you what the factory floor won&apos;t.
             </p>
 
             {/* 5. Proof Strip & Orange Rule: order-5 on mobile, order-7 on desktop */}
-            <div className="order-5 lg:order-7 w-full mb-6 lg:mb-0">
+            <div className="order-5 lg:order-7 w-full mb-5 lg:mb-0">
               <div className="w-full h-[2px] bg-[#F25C1F]" />
 
-              <div className="w-full pt-[16px] grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 font-mono">
+              <div className="w-full pt-[14px] grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 font-mono">
                 <div>
                   <span className="font-mono text-[11px] font-semibold text-[#8A8580] block">
                     Indian Army
@@ -230,7 +230,7 @@ export function Hero() {
             </div>
 
             {/* 6. Button Row: Identical 14px 24px padding, width: auto, 24px gap */}
-            <div className="order-6 lg:order-5 mb-6 lg:mb-7 flex flex-wrap items-center gap-5 sm:gap-6">
+            <div className="order-6 lg:order-5 mb-5 lg:mb-6 flex flex-wrap items-center gap-5 sm:gap-6">
               {/* Primary button: Resume — solid orange #F25C1F, white text, FileText icon */}
               <a
                 href={profile.resumeUrl}
