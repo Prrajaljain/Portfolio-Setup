@@ -227,12 +227,6 @@ export function Hero() {
                   </span>
                 </div>
               </div>
-
-              {/* 8. Scroll Indicator: Left-aligned to text column, 24px below proof strip, hidden below 768px */}
-              <div className="mt-[24px] hidden md:flex items-center gap-[10px] font-mono text-[11px] font-medium uppercase tracking-[0.08em] text-[#8A8580] text-left">
-                <span className="inline-block animate-arrow-bob select-none">↓</span>
-                <span>Scroll to explore</span>
-              </div>
             </div>
 
             {/* 6. Button Row: (48px gap to orange divider) */}
@@ -311,6 +305,12 @@ export function Hero() {
             </div>
           </div>
 
+        </div>
+
+        {/* Centered Scroll Indicator */}
+        <div className="mt-[24px] hidden md:flex items-center justify-center gap-[10px] font-mono text-[11px] font-medium uppercase tracking-[0.08em] text-[#8A8580] text-center w-full">
+          <span className="inline-block animate-arrow-bob select-none">↓</span>
+          <span>Scroll to explore</span>
         </div>
 
         {/* Bento Grid Section */}
