@@ -6,7 +6,7 @@ export const profile = {
   heroDescription:
     "Hi, I'm Prajal Jain — an AI & Robotics engineering student looking for a Summer 2027 internship. If you're building systems where AI models have to run on real hardware (Raspberry Pi, Arduino, edge devices), I'd like to hear from you.",
   resumeUrl: '/resume-prajal-jain.pdf',
-  location: 'Pune, India',
+  location: 'Nashik, India',
   email: 'prrajal.jain@gmail.com',
   phone: '+91 8766679311',
   summary:
@@ -111,7 +111,7 @@ export const techStack = [
 
 export const experience = [
   {
-    role: 'AI & Data Analyst Intern',
+    role: 'AI & Industrial Data Analyst Intern',
     company: 'Rishabh Instruments Limited',
     period: 'Jun 2026 — Present',
     location: 'Nashik, India · On-site',

@@ -19,7 +19,7 @@ function BentoHeroGrid() {
   ]
 
   return (
-    <div id="bento-grid" className="mt-14 w-full text-left">
+    <div id="bento-grid" className="mt-6 md:mt-8 w-full text-left">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
         {/* Left Column: 2 Cards Stacked Vertically */}
         <div className="flex flex-col gap-6 justify-between">
@@ -162,14 +162,14 @@ export function Hero() {
   const linkedinUrl = profile.socials.find((s) => s.label === 'LinkedIn')?.href ?? 'https://linkedin.com/in/prajaljain23'
 
   return (
-    <section className="relative bg-[#F5F4F0] text-[#1A1A1A] overflow-hidden pt-[56px] pb-[16px] min-h-[100vh] box-border">
+    <section className="relative bg-[#F5F4F0] text-[#1A1A1A] overflow-hidden pt-[40px] md:pt-[52px] pb-[40px] md:pb-[56px] box-border">
       <div className="mx-auto max-w-6xl px-6 sm:px-8">
         {/* Main Hero Split Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] items-start gap-10 lg:gap-14">
-          
+
           {/* LEFT COLUMN CONTAINER */}
           <div className="order-1 flex flex-col items-start text-left w-full">
-            
+
             {/* 1. Eyebrow (12px gap to headline) — order-1 */}
             <div className="order-1 mb-[12px] font-mono text-[13px] font-medium text-[#71717A] uppercase tracking-[1.5px]">
               HI, I&apos;M PRAJAL JAIN
@@ -230,15 +230,18 @@ export function Hero() {
                 </div>
               </div>
 
-              {/* Scroll Indicator: Left-aligned to text column, 24px below proof strip, plain text on cream bg */}
-              <div className="mt-[24px] hidden md:flex items-center gap-[10px] font-mono text-[11px] font-medium uppercase tracking-[0.08em] text-[#8A8580] text-left">
+              {/* Scroll Indicator: Left-aligned to text column, interactive link to bento grid */}
+              <a
+                href="#bento-grid"
+                className="mt-[16px] hidden md:inline-flex items-center gap-[10px] font-mono text-[11px] font-medium uppercase tracking-[0.08em] text-[#8A8580] text-left hover:text-[#D94A10] transition-colors cursor-pointer"
+              >
                 <span className="inline-block animate-arrow-bob select-none">↓</span>
                 <span>Scroll to explore</span>
-              </div>
+              </a>
             </div>
 
-            {/* 6. Button Row: (48px gap to orange divider) */}
-            <div className="order-6 lg:order-5 mb-[48px] flex flex-wrap items-center gap-6">
+            {/* 6. Button Row: (32px gap to orange divider) */}
+            <div className="order-6 lg:order-5 mb-[32px] flex flex-wrap items-center gap-6">
               {/* Primary button: Resume — solid orange #F25C1F, white text, FileText icon */}
               <a
                 href={profile.resumeUrl}

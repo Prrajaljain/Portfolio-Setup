@@ -20,7 +20,7 @@ export function CurrentlySection() {
           <div className="space-y-4 rounded-xl border border-[#e6e5e0] bg-[#ffffff] p-6 sm:p-8">
             <div className="nvidia-corner-square" />
             <p className="text-base sm:text-lg font-medium leading-relaxed text-[#26251e]">
-              <span className="font-semibold text-[#f54e00]">AI &amp; Data Analyst Intern</span> at Rishabh Instruments Limited &mdash; building Power BI dashboards and predictive models on manufacturing telemetry.
+              <span className="font-semibold text-[#f54e00]">AI &amp; Industrial Data Analyst Intern</span> at Rishabh Instruments Limited &mdash; building Power BI dashboards and predictive models on manufacturing telemetry.
             </p>
 
             <div className="pt-2 border-t border-[#e6e5e0] space-y-1 font-mono text-xs sm:text-sm text-[#5a5852]">
