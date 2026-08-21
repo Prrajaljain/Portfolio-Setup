@@ -17,21 +17,21 @@ export function SiteHeader() {
       <ScrollProgress />
       <header className="sticky top-0 z-50 border-b border-[#e6e5e0] bg-[#F5F4F0]/95 backdrop-blur-md transition-all">
         <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6 sm:px-8">
-          {/* Brand Wordmark: Enhanced larger [ PJ ] Prajal Jain format */}
+          {/* Brand Wordmark */}
           <Link
             href="/"
-            className="group flex items-center gap-3 rounded-sm focus-visible:outline-none"
+            className="group flex items-center gap-3 rounded-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
             onClick={() => setOpen(false)}
           >
-            <div className="flex size-9 items-center justify-center rounded-[7px] bg-[#1A1A1A] font-mono text-sm font-bold text-[#ffffff] transition-transform group-hover:scale-105">
+            <div className="flex size-9 items-center justify-center rounded-[7px] bg-[#1A1A1A] font-mono text-sm font-bold text-[#ffffff] transition-transform duration-150 group-hover:scale-105">
               {profile.initials}
             </div>
-            <span className="text-base sm:text-lg font-bold tracking-tight text-[#1A1A1A] transition-colors group-hover:text-[#F25C1F]">
+            <span className="text-base sm:text-lg font-bold tracking-tight text-[#1A1A1A] transition-colors duration-150 group-hover:text-[#F25C1F]">
               {profile.name}
             </span>
           </Link>
 
-          {/* Desktop Navigation: Larger, spacious text and pills */}
+          {/* Desktop Navigation: Nav items 2px underline in #F25C1F grows left to right over 150ms */}
           <nav className="hidden items-center gap-2 sm:gap-3 md:flex">
             {navItems.map((item) => {
               const active = pathname === item.href
@@ -40,9 +40,10 @@ export function SiteHeader() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    'relative px-4 py-2.5 text-[15px] sm:text-[16px] font-medium transition-all rounded-md',
+                    'relative px-4 py-2.5 text-[15px] sm:text-[16px] font-medium transition-colors duration-150 rounded-md focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]',
+                    'after:absolute after:bottom-1.5 after:left-4 after:h-[2px] after:w-0 after:bg-[#F25C1F] after:transition-all after:duration-150 hover:after:w-[calc(100%-2rem)]',
                     active
-                      ? 'text-[#F25C1F] font-semibold bg-[#ffffff] border border-[#e6e5e0] shadow-sm'
+                      ? 'text-[#F25C1F] font-semibold bg-[#ffffff] border border-[#e6e5e0] shadow-sm after:w-[calc(100%-2rem)]'
                       : 'text-[#5a5852] hover:text-[#1A1A1A] hover:bg-[#ffffff]/70',
                   )}
                 >
@@ -52,11 +53,11 @@ export function SiteHeader() {
             })}
           </nav>
 
-          {/* Right Action CTA Button: Prominent & clear */}
+          {/* Right Action CTA Button */}
           <div className="hidden items-center gap-3 md:flex">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-md bg-[#F25C1F] px-5 py-2.5 text-[15px] font-semibold text-white transition-all hover:bg-[#d04200] active:scale-95 shadow-sm"
+              className="inline-flex items-center gap-2 rounded-md bg-[#F25C1F] px-5 py-2.5 text-[15px] font-semibold text-white transition-colors duration-150 hover:bg-[#D94A10] active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
             >
               <span>Get in touch</span>
               <ArrowUpRight className="size-4.5" />
@@ -67,7 +68,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-2 md:hidden">
             <button
               type="button"
-              className="inline-flex items-center justify-center rounded-md p-2.5 text-[#1A1A1A] hover:bg-[#e6e5e0]/50 transition-colors"
+              className="inline-flex items-center justify-center rounded-md p-2.5 text-[#1A1A1A] hover:bg-[#e6e5e0]/50 transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
               aria-label={open ? 'Close menu' : 'Open menu'}
               aria-expanded={open}
               onClick={() => setOpen((v) => !v)}
@@ -87,7 +88,7 @@ export function SiteHeader() {
                     href={item.href}
                     onClick={() => setOpen(false)}
                     className={cn(
-                      'block rounded-md px-4 py-3 text-base font-medium transition-colors',
+                      'block rounded-md px-4 py-3 text-base font-medium transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]',
                       pathname === item.href
                         ? 'bg-[#ffffff] text-[#F25C1F] border border-[#e6e5e0]'
                         : 'text-[#5a5852] hover:bg-[#ffffff]/60 hover:text-[#1A1A1A]',
@@ -101,7 +102,7 @@ export function SiteHeader() {
                 <Link
                   href="/contact"
                   onClick={() => setOpen(false)}
-                  className="block rounded-md bg-[#F25C1F] px-5 py-3 text-center text-base font-semibold text-white"
+                  className="block rounded-md bg-[#F25C1F] px-5 py-3 text-center text-base font-semibold text-white transition-colors duration-150 hover:bg-[#D94A10] focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
                 >
                   Get in touch
                 </Link>

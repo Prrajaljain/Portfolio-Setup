@@ -1,17 +1,6 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
-import {
-  ArrowUpRight,
-  User,
-  Briefcase,
-  Code2,
-  Cpu,
-  Send,
-  FileText,
-} from 'lucide-react'
+import { ArrowUpRight, User, Briefcase, Code2, Cpu, Send, FileText } from 'lucide-react'
 import { profile } from '@/lib/data'
 
 /* ─── Asymmetric 3-Column Bento Grid Section ─── */
@@ -28,28 +17,23 @@ function BentoHeroGrid() {
   ]
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.2 }}
-      className="mt-14 w-full text-left"
-    >
+    <div className="mt-14 w-full text-left">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
         {/* Left Column: 2 Cards Stacked Vertically */}
         <div className="flex flex-col gap-4 justify-between">
           {/* Card 1: Background & Journey */}
           <Link
             href="/about"
-            className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 h-full transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
+            className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 h-full transition-all duration-150 hover:border-[#cfcdc4] hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
           >
             <div>
               <div className="mb-3 flex items-center justify-between">
                 <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#1A1A1A]">
                   <User className="size-4 text-[#76b900]" />
                 </div>
-                <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#F25C1F] transition-colors" />
+                <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#D94A10] transition-colors duration-150" />
               </div>
-              <h3 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#F25C1F] transition-colors">
+              <h3 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#D94A10] transition-colors duration-150">
                 Background &amp; Journey
               </h3>
               <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[#5a5852]">
@@ -61,7 +45,7 @@ function BentoHeroGrid() {
           {/* Card 2: Hands-On Experience */}
           <Link
             href="/experience"
-            className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 h-full transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
+            className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 h-full transition-all duration-150 hover:border-[#cfcdc4] hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
           >
             <div className="nvidia-corner-square" />
             <div>
@@ -69,9 +53,9 @@ function BentoHeroGrid() {
                 <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#1A1A1A]">
                   <Briefcase className="size-4 text-[#76b900]" />
                 </div>
-                <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#F25C1F] transition-colors" />
+                <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#D94A10] transition-colors duration-150" />
               </div>
-              <h3 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#F25C1F] transition-colors">
+              <h3 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#D94A10] transition-colors duration-150">
                 Hands-On Experience
               </h3>
               <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[#5a5852]">
@@ -84,7 +68,7 @@ function BentoHeroGrid() {
         {/* Center Column: 1 Tall Card Spanning Height */}
         <Link
           href="/about#skills"
-          className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-6 transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
+          className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-6 transition-all duration-150 hover:border-[#cfcdc4] hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
         >
           <div className="nvidia-corner-square" />
           <div>
@@ -92,10 +76,10 @@ function BentoHeroGrid() {
               <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#1A1A1A]">
                 <Code2 className="size-4 text-[#76b900]" />
               </div>
-              <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#F25C1F] transition-colors" />
+              <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#D94A10] transition-colors duration-150" />
             </div>
 
-            <h3 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#F25C1F] transition-colors">
+            <h3 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#D94A10] transition-colors duration-150">
               Tech Stack &amp; Tools
             </h3>
             <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[#5a5852]">
@@ -107,9 +91,9 @@ function BentoHeroGrid() {
               {techBadges.map((badge) => (
                 <div
                   key={badge.name}
-                  className="flex flex-col items-center justify-center rounded-sm border border-[#e6e5e0] bg-[#fafaf7] p-2 text-[#1A1A1A] transition-colors group-hover:border-[#cfcdc4]"
+                  className="flex flex-col items-center justify-center rounded-sm border border-[#e6e5e0] bg-[#fafaf7] p-2 text-[#1A1A1A] transition-colors duration-150 group-hover:border-[#cfcdc4]"
                 >
-                  <span className="font-bold text-[#F25C1F]">{badge.tag || badge.fontTag}</span>
+                  <span className="font-bold text-[#D94A10]">{badge.tag || badge.fontTag}</span>
                   <span className="mt-1 text-[10px] text-[#5a5852] font-sans truncate w-full text-center">
                     {badge.name}
                   </span>
@@ -120,7 +104,7 @@ function BentoHeroGrid() {
 
           <div className="mt-6 border-t border-[#e6e5e0] pt-3 text-[11px] font-mono text-[#807d72] flex items-center justify-between">
             <span>EXPLORE ALL TOOLS</span>
-            <span className="text-[#F25C1F] font-bold">&rarr;</span>
+            <span className="text-[#D94A10] font-bold">&rarr;</span>
           </div>
         </Link>
 
@@ -129,16 +113,16 @@ function BentoHeroGrid() {
           {/* Card 4: Applied AI & Systems */}
           <Link
             href="/projects"
-            className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 h-full transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
+            className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 h-full transition-all duration-150 hover:border-[#cfcdc4] hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
           >
             <div>
               <div className="mb-3 flex items-center justify-between">
                 <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#1A1A1A]">
                   <Cpu className="size-4 text-[#76b900]" />
                 </div>
-                <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#F25C1F] transition-colors" />
+                <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#D94A10] transition-colors duration-150" />
               </div>
-              <h3 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#F25C1F] transition-colors">
+              <h3 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#D94A10] transition-colors duration-150">
                 Applied AI &amp; Systems
               </h3>
               <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[#5a5852]">
@@ -150,16 +134,16 @@ function BentoHeroGrid() {
           {/* Card 5: Let's Connect */}
           <Link
             href="/contact"
-            className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 h-full transition-all hover:border-[#cfcdc4] hover:-translate-y-0.5"
+            className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 h-full transition-all duration-150 hover:border-[#cfcdc4] hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
           >
             <div>
               <div className="mb-3 flex items-center justify-between">
                 <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#1A1A1A]">
                   <Send className="size-4 text-[#76b900]" />
                 </div>
-                <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#F25C1F] transition-colors" />
+                <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#D94A10] transition-colors duration-150" />
               </div>
-              <h3 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#F25C1F] transition-colors">
+              <h3 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#D94A10] transition-colors duration-150">
                 Let&apos;s Connect
               </h3>
               <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[#5a5852]">
@@ -169,7 +153,7 @@ function BentoHeroGrid() {
           </Link>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -181,155 +165,146 @@ export function Hero() {
     <section className="relative bg-[#F5F4F0] text-[#1A1A1A] overflow-hidden pt-16 pb-[90px]">
       <div className="mx-auto max-w-6xl px-6 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] items-start gap-10 lg:gap-14">
-          {/* LEFT COLUMN — Text Content */}
-          <div className="order-1 flex flex-col items-start text-left">
-            {/* 1. Eyebrow (12px gap to headline) */}
-            <motion.div
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              className="mb-[12px] font-mono text-[13px] font-medium text-[#71717A] uppercase tracking-[1.5px]"
-            >
+          
+          {/* LEFT COLUMN / MOBILE CONTENT CONTAINER */}
+          <div className="order-1 flex flex-col items-start text-left w-full">
+            
+            {/* 1. Eyebrow (12px gap to headline) — order-1 */}
+            <div className="order-1 mb-[12px] font-mono text-[13px] font-medium text-[#71717A] uppercase tracking-[1.5px]">
               HI, I&apos;M PRAJAL JAIN
-            </motion.div>
+            </div>
 
-            {/* 2. Headline: 64px, leading 1.02, tracking -0.03em (28px gap to role line) */}
-            <motion.h1
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.05 }}
-              className="mb-[28px] max-w-xl text-4xl sm:text-5xl lg:text-[64px] font-bold leading-[1.02] tracking-[-0.03em] text-[#1A1A1A]"
-            >
+            {/* 2. Headline: 40px (<768px), 48px (768px-1024px), 64px (≥1024px) (28px gap to role line) — order-2 */}
+            <h1 className="order-2 mb-[28px] max-w-xl text-[40px] md:text-[48px] lg:text-[64px] font-bold leading-[1.02] tracking-[-0.03em] text-[#1A1A1A]">
               I build AI that{' '}
               <span className="text-[#F25C1F] font-bold block">
                 runs on hardware
               </span>
-            </motion.h1>
+            </h1>
 
-            {/* 3. Subtitle / Role Line (16px gap to subhead) */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.08 }}
-              className="mb-[16px] flex flex-wrap items-center gap-[10px] font-mono text-[13px] sm:text-[14px] font-medium text-[#F25C1F]"
-            >
+            {/* 3. Subtitle / Role Line: --accent-text #D94A10 (16px gap to subhead) — order-3 */}
+            <div className="order-3 mb-[16px] flex flex-wrap items-center gap-[10px] font-mono text-[13px] sm:text-[14px] font-medium text-[#D94A10]">
               <span className="size-[7px] shrink-0 rounded-full bg-[#76b900]" />
               <span>AI &amp; Robotics &middot; Embedded Systems &middot; Industrial Data Analytics</span>
-            </motion.div>
+            </div>
 
-            {/* 4. Subhead Paragraph (40px gap to button row) */}
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="mb-[40px] max-w-[48ch] text-[17px] leading-[1.65] text-[#52525B]"
-            >
+            {/* 4. Subhead Paragraph: max-w-[32ch] forces break after "Machines that sort." (40px gap on desktop, 32px on mobile) — order-4 */}
+            <p className="order-4 mb-[32px] lg:mb-[40px] max-w-[32ch] text-[17px] leading-[1.65] text-[#52525B]">
               Drones that see. Machines that sort. Data that tells you what the factory floor won&apos;t.
-            </motion.p>
+            </p>
 
-            {/* 5. Button Row (48px gap to divider rule) */}
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.15 }}
-              className="mb-[48px] flex flex-wrap items-center gap-[12px]"
-            >
+            {/* 5. Proof Strip & Orange Rule: order-5 on mobile (below subhead), order-7 on desktop (below buttons) */}
+            <div className="order-5 lg:order-7 w-full mb-[40px] lg:mb-0">
+              {/* Orange 2px rule: --accent #F25C1F */}
+              <div className="w-full h-[2px] bg-[#F25C1F]" />
+
+              {/* Proof strip: 3 stacked rows (<768px, gap 16px) / 3 columns (≥768px, gap 48px), 20px gap below rule */}
+              <div className="w-full pt-[20px] flex flex-col md:grid md:grid-cols-3 gap-4 md:gap-12 font-mono">
+                <div>
+                  <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#8A8580] block">
+                    INDIAN ARMY
+                  </span>
+                  <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block whitespace-nowrap">
+                    octocopter demo
+                  </span>
+                </div>
+
+                <div>
+                  <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#8A8580] block">
+                    NAVRATRI 2025
+                  </span>
+                  <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block whitespace-nowrap">
+                    5,000+ crowd, live
+                  </span>
+                </div>
+
+                <div>
+                  <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#8A8580] block">
+                    RISHABH INSTRUMENTS
+                  </span>
+                  <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block whitespace-nowrap">
+                    11 dashboards live
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* 6. Button Row: order-6 on mobile (below proof strip), order-5 on desktop (above proof strip, 48px gap to rule) */}
+            <div className="order-6 lg:order-5 mb-[40px] lg:mb-[48px] flex flex-wrap items-center gap-[12px]">
+              {/* Resume button — solid orange #F25C1F, hover darken to #D94A10 */}
               <a
                 href={profile.resumeUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-[8px] bg-[#F25C1F] px-[24px] text-[15px] font-semibold text-white transition-all hover:bg-[#d04200] active:scale-95 shadow-sm"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-[8px] bg-[#F25C1F] px-[24px] text-[15px] font-semibold text-white transition-all duration-150 ease-in-out hover:bg-[#D94A10] active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
               >
                 <FileText className="size-4" />
                 <span>Resume</span>
               </a>
 
+              {/* Let's talk button — outlined, hover background #1A1A1A, text #F5F4F0 */}
               <Link
                 href="/contact"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-[8px] border border-[#e6e5e0] bg-[#ffffff] px-[24px] text-[15px] font-semibold text-[#1A1A1A] transition-all hover:bg-[#fafaf7] hover:border-[#cfcdc4] active:scale-95 shadow-sm"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-[8px] border border-[#e6e5e0] bg-[#ffffff] px-[24px] text-[15px] font-semibold text-[#1A1A1A] transition-all duration-150 ease-in-out hover:bg-[#1A1A1A] hover:text-[#F5F4F0] hover:border-transparent active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
               >
                 <Send className="size-4 text-[#F25C1F]" />
                 <span>Let&apos;s talk</span>
               </Link>
 
-              <a
-                href={githubUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex h-11 items-center justify-center gap-1.5 rounded-[8px] border border-[#e6e5e0] bg-[#ffffff] px-[20px] text-[15px] font-semibold text-[#1A1A1A] transition-all hover:bg-[#fafaf7] hover:border-[#cfcdc4] hover:text-[#F25C1F] active:scale-95 shadow-none"
-              >
-                <span>GitHub</span>
-                <ArrowUpRight className="size-4 text-[#807d72]" />
-              </a>
+              {/* Demoted Plain Text Links: GitHub & LinkedIn (32px gap from "Let's talk", 24px gap between links) */}
+              <div className="flex items-center gap-6 ml-0 sm:ml-5 pt-2 sm:pt-0">
+                <a
+                  href={githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group inline-flex items-center gap-1.5 text-[15px] font-medium text-[#1A1A1A] bg-transparent border-none shadow-none transition-colors duration-150 ease-in-out hover:text-[#D94A10] focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+                >
+                  <span>GitHub</span>
+                  <ArrowUpRight className="size-4 text-[#807d72] transition-transform duration-150 ease-in-out group-hover:translate-x-[2px] group-hover:-translate-y-[2px] group-hover:text-[#D94A10]" />
+                </a>
 
-              <a
-                href={linkedinUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex h-11 items-center justify-center gap-1.5 rounded-[8px] border border-[#e6e5e0] bg-[#ffffff] px-[20px] text-[15px] font-semibold text-[#1A1A1A] transition-all hover:bg-[#fafaf7] hover:border-[#cfcdc4] hover:text-[#F25C1F] active:scale-95 shadow-none"
-              >
-                <span>LinkedIn</span>
-                <ArrowUpRight className="size-4 text-[#807d72]" />
-              </a>
-            </motion.div>
-
-            {/* 6. Orange 2px Divider Rule (100% width of text column) */}
-            <div className="w-full h-[2px] bg-[#F25C1F]" />
-
-            {/* 7. Proof Strip (20px gap after divider, 3 equal columns with gap: 48px / gap-12, single line values) */}
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="w-full pt-[20px] grid grid-cols-1 sm:grid-cols-3 gap-12 font-mono"
-            >
-              <div>
-                <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#8A8580] block">
-                  INDIAN ARMY
-                </span>
-                <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block whitespace-nowrap">
-                  octocopter demo
-                </span>
+                <a
+                  href={linkedinUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group inline-flex items-center gap-1.5 text-[15px] font-medium text-[#1A1A1A] bg-transparent border-none shadow-none transition-colors duration-150 ease-in-out hover:text-[#D94A10] focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+                >
+                  <span>LinkedIn</span>
+                  <ArrowUpRight className="size-4 text-[#807d72] transition-transform duration-150 ease-in-out group-hover:translate-x-[2px] group-hover:-translate-y-[2px] group-hover:text-[#D94A10]" />
+                </a>
               </div>
+            </div>
 
-              <div>
-                <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#8A8580] block">
-                  NAVRATRI 2025
-                </span>
-                <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block whitespace-nowrap">
-                  5,000+ crowd, live
-                </span>
+            {/* 7. Photo Mobile Position — order-7 on mobile (below button row). Hidden <768px, shown 768px-1024px */}
+            <div className="order-7 lg:hidden hidden md:block w-full max-w-[320px] mx-auto pt-4">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[4px]">
+                <Image
+                  src="/images/prajal-headshot.jpg"
+                  alt="Prajal Jain — AI & Robotics Engineer"
+                  fill
+                  sizes="(max-width: 1024px) 320px, 380px"
+                  className="object-cover object-center rounded-[4px]"
+                  priority
+                />
               </div>
+            </div>
 
-              <div>
-                <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#8A8580] block">
-                  RISHABH INSTRUMENTS
-                </span>
-                <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block whitespace-nowrap">
-                  11 dashboards live
-                </span>
-              </div>
-            </motion.div>
           </div>
 
-          {/* RIGHT COLUMN — Photo Treatment (Photo sits alone: rounded-4px, no shadow, no border, no offset block, top edge aligned with eyebrow) */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="order-2 mx-auto w-full max-w-[320px] lg:max-w-[380px] pt-0"
-          >
+          {/* RIGHT COLUMN — Photo Desktop Position (Hidden <1024px, shown ≥1024px, top aligned to eyebrow) */}
+          <div className="order-2 hidden lg:block mx-auto w-full max-w-[380px] pt-0">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[4px]">
               <Image
                 src="/images/prajal-headshot.jpg"
                 alt="Prajal Jain — AI & Robotics Engineer"
                 fill
-                sizes="(max-width: 1024px) 320px, 380px"
+                sizes="380px"
                 className="object-cover object-center rounded-[4px]"
                 priority
               />
             </div>
-          </motion.div>
+          </div>
+
         </div>
 
         {/* Section Bleed at Bottom */}
