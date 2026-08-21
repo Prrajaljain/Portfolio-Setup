@@ -160,7 +160,7 @@ export function Hero() {
   const linkedinUrl = profile.socials.find((s) => s.label === 'LinkedIn')?.href ?? 'https://linkedin.com/in/prajaljain23'
 
   return (
-    <section className="relative bg-[#F5F4F0] text-[#1A1A1A] overflow-hidden pt-16 pb-[80px]">
+    <section className="relative bg-[#F5F4F0] text-[#1A1A1A] overflow-hidden pt-[56px] pb-[32px] min-h-[100vh] box-border">
       <div className="mx-auto max-w-6xl px-6 sm:px-8">
         {/* Main Hero Split Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] items-start gap-10 lg:gap-14">
@@ -228,8 +228,8 @@ export function Hero() {
                 </div>
               </div>
 
-              {/* 8. Scroll Indicator: Left-aligned to text column, 48px below proof strip, hidden below 768px */}
-              <div className="mt-[48px] hidden md:flex items-center gap-[10px] font-mono text-[11px] font-medium uppercase tracking-[0.08em] text-[#8A8580] text-left">
+              {/* 8. Scroll Indicator: Left-aligned to text column, 24px below proof strip, hidden below 768px */}
+              <div className="mt-[24px] hidden md:flex items-center gap-[10px] font-mono text-[11px] font-medium uppercase tracking-[0.08em] text-[#8A8580] text-left">
                 <span className="inline-block animate-arrow-bob select-none">↓</span>
                 <span>Scroll to explore</span>
               </div>
