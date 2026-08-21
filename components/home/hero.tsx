@@ -19,7 +19,7 @@ function BentoHeroGrid() {
   ]
 
   return (
-    <div id="bento-grid" className="mt-6 md:mt-8 w-full text-left">
+    <div id="bento-grid" className="scroll-mt-24 mt-16 md:mt-24 w-full text-left">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
         {/* Left Column: 2 Cards Stacked Vertically */}
         <div className="flex flex-col gap-6 justify-between">
@@ -162,87 +162,44 @@ export function Hero() {
   const linkedinUrl = profile.socials.find((s) => s.label === 'LinkedIn')?.href ?? 'https://linkedin.com/in/prajaljain23'
 
   return (
-    <section className="relative bg-[#F5F4F0] text-[#1A1A1A] overflow-hidden pt-[40px] md:pt-[52px] pb-[40px] md:pb-[56px] box-border">
+    <section className="relative bg-[#F5F4F0] text-[#1A1A1A] overflow-hidden pt-[48px] md:pt-[64px] pb-[56px] md:pb-[80px] box-border">
       <div className="mx-auto max-w-6xl px-6 sm:px-8">
         {/* Main Hero Split Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] items-start gap-10 lg:gap-14">
 
           {/* LEFT COLUMN CONTAINER */}
-          <div className="order-1 flex flex-col items-start text-left w-full">
+          <div className="flex flex-col items-start text-left w-full">
 
-            {/* 1. Eyebrow (12px gap to headline) — order-1 */}
-            <div className="order-1 mb-[12px] font-mono text-[13px] font-medium text-[#71717A] uppercase tracking-[1.5px]">
+            {/* 1. Eyebrow */}
+            <div className="mb-[14px] font-mono text-[12px] sm:text-[13px] font-medium text-[#71717A] uppercase tracking-[1.5px]">
               HI, I&apos;M PRAJAL JAIN
             </div>
 
-            {/* 2. Headline: 40px (<768px), 48px (768px-1024px), 64px (≥1024px) (28px gap to role line) — order-2 */}
-            <h1 className="order-2 mb-[28px] max-w-xl text-[40px] md:text-[48px] lg:text-[64px] font-bold leading-[1.02] tracking-[-0.03em] text-[#1A1A1A]">
+            {/* 2. Headline */}
+            <h1 className="mb-[28px] max-w-xl text-[40px] md:text-[48px] lg:text-[60px] font-bold leading-[1.04] tracking-[-0.03em] text-[#1A1A1A]">
               I build AI that{' '}
               <span className="text-[#F25C1F] font-bold block">
                 runs on hardware
               </span>
             </h1>
 
-            {/* 3. Subtitle / Role Line: (16px gap to subhead) — order-3 */}
-            <div className="order-3 mb-[16px] flex flex-wrap items-center gap-[10px] font-mono text-[13px] sm:text-[14px] font-medium text-[#D94A10]" style={{ color: '#D94A10' }}>
-              <span className="size-[6px] shrink-0 rounded-full bg-[#D94A10]" style={{ backgroundColor: '#D94A10' }} />
-              <span className="text-[#D94A10]" style={{ color: '#D94A10' }}>
+            {/* 3. Subtitle / Role Line */}
+            <div className="mb-[20px] flex flex-wrap items-center gap-[10px] font-mono text-[13px] sm:text-[14px] font-medium text-[#D94A10]">
+              <span className="size-[6px] shrink-0 rounded-full bg-[#D94A10]" />
+              <span>
                 AI &amp; Robotics &middot; Embedded Systems &middot; Industrial Data Analytics
               </span>
             </div>
 
-            {/* 4. Subhead Paragraph: (40px gap to button row) — order-4 */}
-            <p className="order-4 mb-[40px] max-w-[480px] text-[17px] leading-[1.65] text-[#52525B]">
+            {/* 4. Subhead Paragraph */}
+            <p className="mb-[36px] max-w-[480px] text-[17px] leading-[1.65] text-[#52525B]">
               Drones that see. Machines that sort.<br className="hidden sm:block" />
               Data that tells you what the factory floor won&apos;t.
             </p>
 
-            {/* 5. Proof Strip & Orange Rule: order-5 on mobile, order-7 on desktop (20px top padding below divider) */}
-            <div className="order-5 lg:order-7 w-full mb-0">
-              <div className="w-full h-[2px] bg-[#F25C1F]" />
-
-              <div className="w-full pt-[20px] grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 font-mono">
-                <div>
-                  <span className="font-mono text-[11px] font-semibold text-[#8A8580] block">
-                    Indian Army
-                  </span>
-                  <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block whitespace-nowrap">
-                    octocopter demo
-                  </span>
-                </div>
-
-                <div>
-                  <span className="font-mono text-[11px] font-semibold text-[#8A8580] block">
-                    Navratri 2025
-                  </span>
-                  <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block whitespace-nowrap">
-                    5,000+ crowd, live
-                  </span>
-                </div>
-
-                <div>
-                  <span className="font-mono text-[11px] font-semibold text-[#8A8580] block">
-                    Rishabh Instruments
-                  </span>
-                  <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block whitespace-nowrap">
-                    11 dashboards live
-                  </span>
-                </div>
-              </div>
-
-              {/* Scroll Indicator: Left-aligned to text column, interactive link to bento grid */}
-              <a
-                href="#bento-grid"
-                className="mt-[16px] hidden md:inline-flex items-center gap-[10px] font-mono text-[11px] font-medium uppercase tracking-[0.08em] text-[#8A8580] text-left hover:text-[#D94A10] transition-colors cursor-pointer"
-              >
-                <span className="inline-block animate-arrow-bob select-none">↓</span>
-                <span>Scroll to explore</span>
-              </a>
-            </div>
-
-            {/* 6. Button Row: (32px gap to orange divider) */}
-            <div className="order-6 lg:order-5 mb-[32px] flex flex-wrap items-center gap-6">
-              {/* Primary button: Resume — solid orange #F25C1F, white text, FileText icon */}
+            {/* 5. Button Row */}
+            <div className="mb-[40px] flex flex-wrap items-center gap-5 sm:gap-6">
+              {/* Primary button: Resume */}
               <a
                 href={profile.resumeUrl}
                 target="_blank"
@@ -253,7 +210,7 @@ export function Hero() {
                 <span>Resume</span>
               </a>
 
-              {/* Secondary button: Let's talk — white background, 1px border #E0DCD6 */}
+              {/* Secondary button: Let's talk */}
               <Link
                 href="/contact"
                 className="inline-flex w-auto items-center justify-center gap-2 rounded-md border border-[#E0DCD6] bg-[#ffffff] px-[24px] py-[14px] text-[15px] font-semibold text-[#1A1A1A] shadow-none transition-all duration-200 ease-out hover:bg-[#1A1A1A] hover:text-[#F5F4F0] hover:border-[#1A1A1A] hover:shadow-rest active:scale-95 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
@@ -262,8 +219,8 @@ export function Hero() {
                 <span>Let&apos;s talk</span>
               </Link>
 
-              {/* GitHub ↗ and LinkedIn ↗ plain text links */}
-              <div className="inline-flex items-center gap-5">
+              {/* GitHub and LinkedIn links */}
+              <div className="inline-flex items-center gap-5 pt-1 sm:pt-0">
                 <a
                   href={githubUrl}
                   target="_blank"
@@ -286,31 +243,62 @@ export function Hero() {
               </div>
             </div>
 
-            {/* 7. Photo Mobile Position */}
-            <div className="order-7 lg:hidden hidden md:block w-full max-w-[320px] mx-auto pt-4">
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[4px] shadow-rest">
-                <Image
-                  src="/images/prajal-headshot.jpg"
-                  alt="Prajal Jain — AI & Robotics Engineer"
-                  fill
-                  sizes="(max-width: 1024px) 320px, 380px"
-                  className="object-cover object-center rounded-[4px]"
-                  priority
-                />
+            {/* 6. Proof Strip & Orange Rule */}
+            <div className="w-full pt-2">
+              <div className="w-full h-[2px] bg-[#F25C1F]" />
+
+              <div className="w-full pt-[24px] pb-[20px] grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 font-mono">
+                <div>
+                  <span className="font-mono text-[11px] font-semibold text-[#8A8580] uppercase tracking-wider block">
+                    Indian Army
+                  </span>
+                  <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1.5 block">
+                    octocopter demo
+                  </span>
+                </div>
+
+                <div>
+                  <span className="font-mono text-[11px] font-semibold text-[#8A8580] uppercase tracking-wider block">
+                    Navratri 2025
+                  </span>
+                  <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1.5 block">
+                    5,000+ crowd, live
+                  </span>
+                </div>
+
+                <div>
+                  <span className="font-mono text-[11px] font-semibold text-[#8A8580] uppercase tracking-wider block">
+                    Rishabh Instruments
+                  </span>
+                  <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1.5 block">
+                    11 dashboards live
+                  </span>
+                </div>
+              </div>
+
+              {/* Scroll Indicator */}
+              <div className="pt-[20px]">
+                <a
+                  href="#bento-grid"
+                  className="inline-flex items-center gap-[10px] font-mono text-[12px] font-medium uppercase tracking-[0.1em] text-[#8A8580] hover:text-[#D94A10] transition-colors cursor-pointer"
+                >
+                  <span className="inline-block animate-arrow-bob select-none text-[#D94A10]">↓</span>
+                  <span>Scroll to explore</span>
+                </a>
               </div>
             </div>
 
           </div>
 
           {/* RIGHT COLUMN — Photo Desktop Position */}
-          <div className="order-2 hidden lg:block mx-auto w-full max-w-[380px] pt-0">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[4px] shadow-rest">
+          <div className="hidden lg:block mx-auto w-full max-w-[380px] pt-1">
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[8px] border border-[#E8E4DE] bg-white shadow-rest">
               <Image
                 src="/images/prajal-headshot.jpg"
                 alt="Prajal Jain — AI & Robotics Engineer"
                 fill
                 sizes="380px"
-                className="object-cover object-center rounded-[4px]"
+                className="object-cover object-center"
                 priority
               />
             </div>
@@ -324,3 +312,4 @@ export function Hero() {
     </section>
   )
 }
+
