@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowUpRight, User, Briefcase, Code2, Cpu, Send, FileText } from 'lucide-react'
+import { ArrowUpRight, User, Briefcase, Code2, Cpu, ArrowRight, FileText } from 'lucide-react'
 import { profile } from '@/lib/data'
 
 /* ─── Asymmetric 3-Column Bento Grid Section ─── */
@@ -33,7 +33,6 @@ function BentoHeroGrid() {
                 </div>
                 <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#D94A10] transition-colors duration-150" />
               </div>
-              {/* Fix Issue 5: h2 tag for proper document outline */}
               <h2 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#D94A10] transition-colors duration-150">
                 Background &amp; Journey
               </h2>
@@ -55,7 +54,6 @@ function BentoHeroGrid() {
                 </div>
                 <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#D94A10] transition-colors duration-150" />
               </div>
-              {/* Fix Issue 5: h2 tag */}
               <h2 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#D94A10] transition-colors duration-150">
                 Hands-On Experience
               </h2>
@@ -67,7 +65,7 @@ function BentoHeroGrid() {
         </div>
 
         {/* Center Column: 1 Tall Card Spanning Height */}
-        {/* Fix Issue 8 & Issue 13: p-5 padding & mb-3 icon container to align headings perfectly */}
+        {/* Fix Issue 7 & 8: Single top-right arrow signifier, p-5 padding & mb-3 icon container */}
         <Link
           href="/about#skills"
           className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 transition-all duration-150 hover:border-[#cfcdc4] hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
@@ -80,7 +78,6 @@ function BentoHeroGrid() {
               <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#D94A10] transition-colors duration-150" />
             </div>
 
-            {/* Fix Issue 5 & 13: h2 tag aligned across top row */}
             <h2 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#D94A10] transition-colors duration-150">
               Tech Stack &amp; Tools
             </h2>
@@ -88,14 +85,14 @@ function BentoHeroGrid() {
               Technologies and tools I use to build innovative AI &amp; robotics solutions.
             </p>
 
-            {/* 4x2 Icon Grid — Fix Issue 3 & 4: no truncation, text-center leading-tight */}
-            <div className="mt-6 grid grid-cols-4 gap-2 font-mono text-[11px]">
+            {/* 4x2 Icon Grid — Fix Issue 4: neutral tag abbreviations to reduce visual noise */}
+            <div className="mt-5 grid grid-cols-4 gap-2 font-mono text-[11px]">
               {techBadges.map((badge) => (
                 <div
                   key={badge.name}
                   className="flex flex-col items-center justify-center rounded-sm border border-[#e6e5e0] bg-[#fafaf7] p-2 text-[#1A1A1A] transition-colors duration-150 group-hover:border-[#cfcdc4]"
                 >
-                  <span className="font-bold text-[#D94A10]">{badge.tag || badge.fontTag}</span>
+                  <span className="font-bold text-[#5a5852]">{badge.tag || badge.fontTag}</span>
                   <span className="mt-1 text-[11px] text-[#5a5852] font-sans leading-tight text-center w-full block">
                     {badge.name}
                   </span>
@@ -104,9 +101,10 @@ function BentoHeroGrid() {
             </div>
           </div>
 
-          <div className="mt-6 border-t border-[#e6e5e0] pt-3 text-[11px] font-mono text-[#807d72] flex items-center justify-between">
-            <span>EXPLORE ALL TOOLS</span>
-            <span className="text-[#D94A10] font-bold">&rarr;</span>
+          {/* Fix Issue 2 & 5: Sentence case "Explore all tools" with generous vertical spacing (mt-8 pt-4) */}
+          <div className="mt-8 border-t border-[#e6e5e0] pt-4 text-[12px] font-mono text-[#807d72] flex items-center justify-between group-hover:text-[#D94A10]">
+            <span className="font-medium">Explore all tools</span>
+            <ArrowRight className="size-3.5 transition-transform duration-150 group-hover:translate-x-1" />
           </div>
         </Link>
 
@@ -141,7 +139,7 @@ function BentoHeroGrid() {
             <div>
               <div className="mb-3 flex items-center justify-between">
                 <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#1A1A1A]">
-                  <Send className="size-4 text-[#76b900]" />
+                  <ArrowUpRight className="size-4 text-[#76b900]" />
                 </div>
                 <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#D94A10] transition-colors duration-150" />
               </div>
@@ -184,12 +182,12 @@ export function Hero() {
               </span>
             </h1>
 
-            {/* 3. Subtitle / Role Line: Fix Issue 6 (consistent middle dots) & Fix 2 (--accent-text #D94A10) — order-3 */}
+            {/* 3. Subtitle / Role Line — order-3 */}
             <div className="order-3 mb-[16px] flex flex-wrap items-center gap-[10px] font-mono text-[13px] sm:text-[14px] font-medium text-[#D94A10]">
               <span>AI &amp; Robotics &middot; Embedded Systems &middot; Industrial Data Analytics</span>
             </div>
 
-            {/* 4. Subhead Paragraph: Fix 1 (<br className="hidden sm:block" /> after "Machines that sort.", max-w-[480px]) — order-4 */}
+            {/* 4. Subhead Paragraph — order-4 */}
             <p className="order-4 mb-[32px] lg:mb-[40px] max-w-[480px] text-[17px] leading-[1.65] text-[#52525B]">
               Drones that see. Machines that sort.<br className="hidden sm:block" />
               Data that tells you what the factory floor won&apos;t.
@@ -197,13 +195,10 @@ export function Hero() {
 
             {/* 5. Proof Strip & Orange Rule: order-5 on mobile (below subhead), order-7 on desktop (below buttons) */}
             <div className="order-5 lg:order-7 w-full mb-[40px] lg:mb-0">
-              {/* Orange 2px rule: --accent #F25C1F */}
               <div className="w-full h-[2px] bg-[#F25C1F]" />
 
-              {/* Proof strip: 3 stacked rows (<768px, gap 16px) / 3 columns (≥768px, gap 48px), 20px gap below rule */}
               <div className="w-full pt-[20px] flex flex-col md:grid md:grid-cols-3 gap-4 md:gap-12 font-mono">
                 <div>
-                  {/* Fix Issue 2: Title case / normal casing */}
                   <span className="font-mono text-[11px] font-semibold text-[#8A8580] block">
                     Indian Army
                   </span>
@@ -213,7 +208,6 @@ export function Hero() {
                 </div>
 
                 <div>
-                  {/* Fix Issue 2 */}
                   <span className="font-mono text-[11px] font-semibold text-[#8A8580] block">
                     Navratri 2025
                   </span>
@@ -223,7 +217,6 @@ export function Hero() {
                 </div>
 
                 <div>
-                  {/* Fix Issue 2 */}
                   <span className="font-mono text-[11px] font-semibold text-[#8A8580] block">
                     Rishabh Instruments
                   </span>
@@ -234,48 +227,48 @@ export function Hero() {
               </div>
             </div>
 
-            {/* 6. Button Row: Fix Issue 10 & 11 (Get in touch is primary orange, Resume is secondary outlined) */}
-            <div className="order-6 lg:order-5 mb-[40px] lg:mb-[48px] flex flex-wrap items-center gap-[12px]">
-              {/* Primary Contact CTA — solid orange #F25C1F, hover darken to #D94A10 */}
+            {/* 6. Button Row: Fix Issues 3, 6, 9, 10, 11 (uniform gap-4, rounded-md, matching ArrowUpRight icon) */}
+            <div className="order-6 lg:order-5 mb-[40px] lg:mb-[48px] flex flex-wrap items-center gap-4">
+              {/* Primary Contact CTA — Fix Issue 6 & 9: rounded-md, ArrowUpRight icon on right matching Header CTA */}
               <Link
                 href="/contact"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-[8px] bg-[#F25C1F] px-[24px] text-[15px] font-semibold text-white transition-all duration-150 ease-in-out hover:bg-[#D94A10] active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[#F25C1F] px-5 text-[15px] font-semibold text-white transition-colors duration-150 hover:bg-[#D94A10] active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
               >
-                <Send className="size-4" />
                 <span>Get in touch</span>
+                <ArrowUpRight className="size-4" />
               </Link>
 
-              {/* Secondary Resume button — outlined */}
+              {/* Secondary Resume button — Fix Issue 6: rounded-md */}
               <a
                 href={profile.resumeUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-[8px] border border-[#e6e5e0] bg-[#ffffff] px-[24px] text-[15px] font-semibold text-[#1A1A1A] transition-all duration-150 ease-in-out hover:bg-[#1A1A1A] hover:text-[#F5F4F0] hover:border-transparent active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-[#e6e5e0] bg-[#ffffff] px-5 text-[15px] font-semibold text-[#1A1A1A] transition-colors duration-150 hover:bg-[#1A1A1A] hover:text-[#F5F4F0] hover:border-transparent active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
               >
                 <FileText className="size-4 text-[#F25C1F]" />
                 <span>Resume</span>
               </a>
 
-              {/* Demoted Plain Text Links: GitHub & LinkedIn */}
-              <div className="flex items-center gap-6 ml-0 sm:ml-4 pt-2 sm:pt-0">
+              {/* GitHub & LinkedIn Links — Fix Issue 3, 10, 11: perfect baseline & midline alignment with buttons */}
+              <div className="inline-flex h-11 items-center gap-5">
                 <a
                   href={githubUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="group inline-flex items-center gap-1.5 text-[15px] font-medium text-[#1A1A1A] bg-transparent border-none shadow-none transition-colors duration-150 ease-in-out hover:text-[#D94A10] focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+                  className="group inline-flex items-center gap-1.5 text-[15px] font-medium text-[#1A1A1A] transition-colors duration-150 hover:text-[#D94A10] focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
                 >
                   <span>GitHub</span>
-                  <ArrowUpRight className="size-4 text-[#807d72] transition-transform duration-150 ease-in-out group-hover:translate-x-[2px] group-hover:-translate-y-[2px] group-hover:text-[#D94A10]" />
+                  <ArrowUpRight className="size-4 text-[#807d72] transition-transform duration-150 group-hover:translate-x-[2px] group-hover:-translate-y-[2px] group-hover:text-[#D94A10]" />
                 </a>
 
                 <a
                   href={linkedinUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="group inline-flex items-center gap-1.5 text-[15px] font-medium text-[#1A1A1A] bg-transparent border-none shadow-none transition-colors duration-150 ease-in-out hover:text-[#D94A10] focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+                  className="group inline-flex items-center gap-1.5 text-[15px] font-medium text-[#1A1A1A] transition-colors duration-150 hover:text-[#D94A10] focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
                 >
                   <span>LinkedIn</span>
-                  <ArrowUpRight className="size-4 text-[#807d72] transition-transform duration-150 ease-in-out group-hover:translate-x-[2px] group-hover:-translate-y-[2px] group-hover:text-[#D94A10]" />
+                  <ArrowUpRight className="size-4 text-[#807d72] transition-transform duration-150 group-hover:translate-x-[2px] group-hover:-translate-y-[2px] group-hover:text-[#D94A10]" />
                 </a>
               </div>
             </div>

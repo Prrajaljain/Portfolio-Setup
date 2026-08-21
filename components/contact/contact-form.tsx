@@ -2,15 +2,12 @@
 
 import { useState, type FormEvent } from 'react'
 import { Loader2, CheckCircle2, AlertCircle, Send } from 'lucide-react'
-import { profile } from '@/lib/data'
 
 type Status = 'idle' | 'submitting' | 'success' | 'error'
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>('idle')
   const [errorMessage, setErrorMessage] = useState('')
-
-  const linkedinUrl = profile.socials.find((s) => s.label === 'LinkedIn')?.href ?? 'https://linkedin.com/in/prajaljain23'
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -142,27 +139,6 @@ export function ContactForm() {
           </>
         )}
       </button>
-
-      {/* Alternative Quick-Connect Option */}
-      <p className="mt-1 text-center text-xs text-[#5a5852] leading-relaxed">
-        Prefer a direct chat? Find me on{' '}
-        <a
-          href={linkedinUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="font-semibold text-[#D94A10] underline underline-offset-4 transition-colors hover:text-[#F25C1F]"
-        >
-          LinkedIn
-        </a>{' '}
-        or drop me an{' '}
-        <a
-          href={`mailto:${profile.email}`}
-          className="font-semibold text-[#D94A10] underline underline-offset-4 transition-colors hover:text-[#F25C1F]"
-        >
-          Email
-        </a>
-        .
-      </p>
     </form>
   )
 }
