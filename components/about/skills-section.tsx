@@ -1,17 +1,18 @@
 import { skillGroups } from '@/lib/data'
 import { Cpu, Eye, Bot, Terminal, CheckCircle } from 'lucide-react'
+import { SectionWrapper } from '@/components/section-wrapper'
 
 const groupIcons = [Cpu, Eye, Bot, Terminal]
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="relative mx-auto max-w-5xl px-6 py-16 text-left">
+    <SectionWrapper id="tech-stack" className="relative mx-auto max-w-6xl px-6 py-16 text-left">
       <div className="mb-12 space-y-2">
-        <span className="font-mono text-xs font-semibold text-[#807d72] uppercase tracking-wider">
-          CORE COMPETENCIES
+        <span className="font-mono text-xs font-semibold text-[#8A8580] uppercase tracking-wider">
+          CORE COMPETENCIES &amp; TOOLS
         </span>
-        <h2 className="text-3xl font-normal tracking-tight text-[#26251e] sm:text-4xl">
-          Engineering <span className="font-semibold text-[#f54e00]">Capabilities</span>
+        <h2 className="text-3xl font-bold tracking-tight text-[#1A1A1A] sm:text-4xl">
+          Tech Stack &amp; <span className="font-bold text-[#F25C1F]">Capabilities</span>
         </h2>
       </div>
 
@@ -21,25 +22,24 @@ export function SkillsSection() {
           return (
             <div
               key={group.title}
-              className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 transition-all duration-200 hover:border-[#cfcdc4] hover:-translate-y-0.5"
+              className="group relative flex flex-col justify-between rounded-[8px] border border-[#E8E4DE] bg-[#FFFFFF] p-5 shadow-rest transition-all duration-200 ease-out hover:border-[#D94A10] hover:shadow-hover hover:-translate-y-[3px]"
             >
-              <div className="nvidia-corner-square" />
               <div>
                 <div className="mb-4 flex items-center justify-between">
-                  <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#26251e]">
-                    <Icon className="size-4 text-[#76b900]" />
+                  <div className="flex size-9 items-center justify-center rounded-sm bg-[#FDF3EE] text-[#D94A10]">
+                    <Icon className="size-4 text-[#D94A10]" />
                   </div>
-                  <span className="font-mono text-xs font-semibold text-[#807d72]">0{idx + 1}</span>
+                  <span className="font-mono text-xs font-semibold text-[#8A8580]">0{idx + 1}</span>
                 </div>
 
-                <h3 className="text-base font-semibold text-[#26251e]">
+                <h3 className="text-base font-semibold text-[#1A1A1A]">
                   {group.title}
                 </h3>
 
                 <ul className="mt-4 flex flex-col gap-2 font-mono text-xs">
                   {group.skills.map((skill) => (
-                    <li key={skill} className="flex items-center gap-2 text-[#5a5852]">
-                      <CheckCircle className="size-3.5 text-[#76b900]" />
+                    <li key={skill} className="flex items-center gap-2 text-[#52525B]">
+                      <CheckCircle className="size-3.5 text-[#D94A10]" />
                       <span>{skill}</span>
                     </li>
                   ))}
@@ -49,6 +49,6 @@ export function SkillsSection() {
           )
         })}
       </div>
-    </section>
+    </SectionWrapper>
   )
 }

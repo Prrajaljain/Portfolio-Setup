@@ -270,8 +270,8 @@ export const projects = [
 
 export const navItems = [
   { label: 'Home', href: '/' },
-  { label: 'Projects', href: '/projects' },
-  { label: 'Experience', href: '/experience' },
-  { label: 'About', href: '/about' },
-  { label: 'Tech Stack', href: '/about#skills' },
+  { label: 'Projects', href: '/#projects' },
+  { label: 'Experience', href: '/#experience' },
+  { label: 'About', href: '/#about' },
+  { label: 'Tech Stack', href: '/#tech-stack' },
 ]
