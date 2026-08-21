@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight, User, Briefcase, Code2, Cpu, ArrowRight, FileText, Send } from 'lucide-react'
@@ -17,7 +19,7 @@ function BentoHeroGrid() {
   ]
 
   return (
-    <div className="mt-14 w-full text-left">
+    <div id="bento-grid" className="mt-14 w-full text-left">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
         {/* Left Column: 2 Cards Stacked Vertically */}
         <div className="flex flex-col gap-4 justify-between">
@@ -307,10 +309,21 @@ export function Hero() {
 
         </div>
 
-        {/* Centered Scroll Indicator */}
-        <div className="mt-[24px] hidden md:flex items-center justify-center gap-[10px] font-mono text-[11px] font-medium uppercase tracking-[0.08em] text-[#8A8580] text-center w-full">
-          <span className="inline-block animate-arrow-bob select-none">↓</span>
-          <span>Scroll to explore</span>
+        {/* Centered Visually Premium Scroll Indicator */}
+        <div className="mt-8 hidden md:flex items-center justify-center w-full">
+          <a
+            href="#bento-grid"
+            onClick={(e) => {
+              e.preventDefault()
+              document.getElementById('bento-grid')?.scrollIntoView({ behavior: 'smooth' })
+            }}
+            className="group inline-flex items-center gap-2.5 rounded-full border border-[#E2DDD5] bg-[#ffffff] px-4 py-2 text-[12px] font-mono font-medium uppercase tracking-[0.1em] text-[#52525B] shadow-[0_1px_2px_rgba(0,0,0,0.05)] transition-all duration-200 hover:border-[#F25C1F] hover:text-[#1A1A1A] hover:shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A]"
+          >
+            <span className="inline-block text-[#F25C1F] font-bold animate-arrow-bob select-none transition-transform group-hover:translate-y-0.5">
+              ↓
+            </span>
+            <span>Scroll to explore</span>
+          </a>
         </div>
 
         {/* Bento Grid Section */}
