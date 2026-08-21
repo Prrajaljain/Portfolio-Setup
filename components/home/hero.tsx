@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowUpRight, User, Briefcase, Code2, Cpu, ArrowRight, FileText } from 'lucide-react'
+import { ArrowUpRight, User, Briefcase, Code2, Cpu, ArrowRight, FileText, Send } from 'lucide-react'
 import { profile } from '@/lib/data'
 
 /* ─── Asymmetric 3-Column Bento Grid Section ─── */
@@ -129,7 +129,7 @@ function BentoHeroGrid() {
             </div>
           </Link>
 
-          {/* Card 5: Work With Me — Fix Copy Issue 3: Rename title from "Let's Connect" to "Work With Me" */}
+          {/* Card 5: Work With Me */}
           <Link
             href="/contact"
             className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 h-full transition-all duration-150 hover:border-[#cfcdc4] hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
@@ -180,8 +180,9 @@ export function Hero() {
               </span>
             </h1>
 
-            {/* 3. Subtitle / Role Line — order-3 */}
+            {/* 3. Subtitle / Role Line: Literal #D94A10 color & 6px bullet circle with 10px gap — order-3 */}
             <div className="order-3 mb-[16px] flex flex-wrap items-center gap-[10px] font-mono text-[13px] sm:text-[14px] font-medium text-[#D94A10]">
+              <span className="size-[6px] shrink-0 rounded-full bg-[#D94A10]" />
               <span>AI &amp; Robotics &middot; Embedded Systems &middot; Industrial Data Analytics</span>
             </div>
 
@@ -225,26 +226,29 @@ export function Hero() {
               </div>
             </div>
 
-            {/* 6. Button Row */}
+            {/* 6. Button Row: Resume is primary solid orange #F25C1F, Let's talk is secondary white with #E0DCD6 border */}
             <div className="order-6 lg:order-5 mb-[40px] lg:mb-[48px] flex flex-wrap items-center gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[#F25C1F] px-5 text-[15px] font-semibold text-white transition-colors duration-150 hover:bg-[#D94A10] active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
-              >
-                <span>Get in touch</span>
-                <ArrowUpRight className="size-4" />
-              </Link>
-
+              {/* Primary button: Resume — solid orange #F25C1F, white text, FileText icon, no arrow */}
               <a
                 href={profile.resumeUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-[#e6e5e0] bg-[#ffffff] px-5 text-[15px] font-semibold text-[#1A1A1A] transition-colors duration-150 hover:bg-[#1A1A1A] hover:text-[#F5F4F0] hover:border-transparent active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[#F25C1F] px-5 text-[15px] font-semibold text-white transition-colors duration-150 hover:bg-[#D94A10] active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
               >
-                <FileText className="size-4 text-[#F25C1F]" />
+                <FileText className="size-4" />
                 <span>Resume</span>
               </a>
 
+              {/* Secondary button: Let's talk — white background, 1px border #E0DCD6, dark text, Send icon */}
+              <Link
+                href="/contact"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-[#E0DCD6] bg-[#ffffff] px-5 text-[15px] font-semibold text-[#1A1A1A] transition-colors duration-150 hover:bg-[#1A1A1A] hover:text-[#F5F4F0] hover:border-transparent active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+              >
+                <Send className="size-4 text-[#F25C1F]" />
+                <span>Let&apos;s talk</span>
+              </Link>
+
+              {/* GitHub ↗ and LinkedIn ↗ plain text links */}
               <div className="inline-flex h-11 items-center gap-5">
                 <a
                   href={githubUrl}
