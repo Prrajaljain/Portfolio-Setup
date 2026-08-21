@@ -1,59 +1,7 @@
-'use client'
-
-import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowUpRight, User, Briefcase, Code2, Cpu, ArrowRight, FileText, Send, Eye, Download } from 'lucide-react'
+import { ArrowUpRight, User, Briefcase, Code2, Cpu, ArrowRight, FileText, Send } from 'lucide-react'
 import { profile } from '@/lib/data'
-
-/* ─── Premium Fixed-Width Split Resume Button (Zero Layout Shift, Perfect Padding) ─── */
-function ResumeSplitButton() {
-  const [hovered, setHovered] = useState(false)
-
-  return (
-    <div
-      className="relative inline-flex h-11 w-[215px] items-center shrink-0"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
-      {!hovered ? (
-        <button
-          type="button"
-          className="inline-flex h-full w-full items-center justify-center gap-2 rounded-md bg-[#F25C1F] text-[15px] font-semibold text-white transition-all duration-150 hover:bg-[#D94A10] active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
-        >
-          <FileText className="size-4" />
-          <span>Resume</span>
-        </button>
-      ) : (
-        <div className="inline-flex h-full w-full items-center overflow-hidden rounded-md bg-[#F25C1F] p-0.5 shadow-md transition-all duration-150">
-          {/* View Button */}
-          <a
-            href={profile.resumeUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="flex h-full flex-1 items-center justify-center gap-1.5 px-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#D94A10] rounded-l-[4px]"
-          >
-            <Eye className="size-4" />
-            <span>View</span>
-          </a>
-
-          {/* 1px Vertical Divider */}
-          <div className="h-5 w-[1px] bg-white/40 shrink-0" />
-
-          {/* Download Button */}
-          <a
-            href={profile.resumeUrl}
-            download="Resume-Prajal-Jain.pdf"
-            className="flex h-full flex-1 items-center justify-center gap-1.5 px-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#D94A10] rounded-r-[4px]"
-          >
-            <Download className="size-4" />
-            <span>Download</span>
-          </a>
-        </div>
-      )}
-    </div>
-  )
-}
 
 /* ─── Asymmetric 3-Column Bento Grid Section ─── */
 function BentoHeroGrid() {
@@ -232,10 +180,12 @@ export function Hero() {
               </span>
             </h1>
 
-            {/* 3. Subtitle / Role Line: Literal #D94A10 color & 6px bullet circle with 10px gap — order-3 */}
-            <div className="order-3 mb-[16px] flex flex-wrap items-center gap-[10px] font-mono text-[13px] sm:text-[14px] font-medium text-[#D94A10]">
-              <span className="size-[6px] shrink-0 rounded-full bg-[#D94A10]" />
-              <span>AI &amp; Robotics &middot; Embedded Systems &middot; Industrial Data Analytics</span>
+            {/* 3. Subtitle / Role Line: Explicit literal #D94A10 color & 6px bullet circle with 10px gap — order-3 */}
+            <div className="order-3 mb-[16px] flex flex-wrap items-center gap-[10px] font-mono text-[13px] sm:text-[14px] font-medium text-[#D94A10]" style={{ color: '#D94A10' }}>
+              <span className="size-[6px] shrink-0 rounded-full bg-[#D94A10]" style={{ backgroundColor: '#D94A10' }} />
+              <span className="text-[#D94A10]" style={{ color: '#D94A10' }}>
+                AI &amp; Robotics &middot; Embedded Systems &middot; Industrial Data Analytics
+              </span>
             </div>
 
             {/* 4. Subhead Paragraph — order-4 */}
@@ -278,22 +228,30 @@ export function Hero() {
               </div>
             </div>
 
-            {/* 6. Button Row: Polished Button System */}
-            <div className="order-6 lg:order-5 mb-[40px] lg:mb-[48px] flex flex-wrap items-center gap-4">
-              {/* Primary button: 215px fixed width split button */}
-              <ResumeSplitButton />
+            {/* 6. Button Row: Identical 14px 24px padding, width: auto, 24px gap */}
+            <div className="order-6 lg:order-5 mb-[40px] lg:mb-[48px] flex flex-wrap items-center gap-6">
+              {/* Primary button: Resume — solid orange #F25C1F, white text, FileText icon, no arrow, width: auto, 14px 24px padding */}
+              <a
+                href={profile.resumeUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex w-auto items-center justify-center gap-2 rounded-md bg-[#F25C1F] px-[24px] py-[14px] text-[15px] font-semibold text-white transition-colors duration-150 hover:bg-[#D94A10] active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+              >
+                <FileText className="size-4" />
+                <span>Resume</span>
+              </a>
 
-              {/* Secondary button: Let's talk */}
+              {/* Secondary button: Let's talk — white background, 1px border #E0DCD6, dark text, Send icon, width: auto, 14px 24px padding */}
               <Link
                 href="/contact"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-[#E0DCD6] bg-[#ffffff] px-5 text-[15px] font-semibold text-[#1A1A1A] transition-all duration-150 ease-in-out hover:bg-[#1A1A1A] hover:text-[#F5F4F0] hover:border-transparent active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+                className="inline-flex w-auto items-center justify-center gap-2 rounded-md border border-[#E0DCD6] bg-[#ffffff] px-[24px] py-[14px] text-[15px] font-semibold text-[#1A1A1A] transition-colors duration-150 hover:bg-[#1A1A1A] hover:text-[#F5F4F0] hover:border-transparent active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
               >
                 <Send className="size-4 text-[#F25C1F]" />
                 <span>Let&apos;s talk</span>
               </Link>
 
               {/* GitHub ↗ and LinkedIn ↗ plain text links */}
-              <div className="inline-flex h-11 items-center gap-5">
+              <div className="inline-flex items-center gap-5">
                 <a
                   href={githubUrl}
                   target="_blank"
