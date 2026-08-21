@@ -162,7 +162,7 @@ export function Hero() {
   const linkedinUrl = profile.socials.find((s) => s.label === 'LinkedIn')?.href ?? 'https://linkedin.com/in/prajaljain23'
 
   return (
-    <section className="relative bg-[#F5F4F0] text-[#1A1A1A] overflow-hidden pt-[56px] pb-[32px] min-h-[100vh] box-border">
+    <section className="relative bg-[#F5F4F0] text-[#1A1A1A] overflow-hidden pt-[56px] pb-[16px] min-h-[100vh] box-border">
       <div className="mx-auto max-w-6xl px-6 sm:px-8">
         {/* Main Hero Split Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] items-start gap-10 lg:gap-14">
@@ -228,6 +228,12 @@ export function Hero() {
                     11 dashboards live
                   </span>
                 </div>
+              </div>
+
+              {/* Scroll Indicator: Left-aligned to text column, 24px below proof strip, plain text on cream bg */}
+              <div className="mt-[24px] hidden md:flex items-center gap-[10px] font-mono text-[11px] font-medium uppercase tracking-[0.08em] text-[#8A8580] text-left">
+                <span className="inline-block animate-arrow-bob select-none">↓</span>
+                <span>Scroll to explore</span>
               </div>
             </div>
 
@@ -307,23 +313,6 @@ export function Hero() {
             </div>
           </div>
 
-        </div>
-
-        {/* Centered Visually Premium Scroll Indicator */}
-        <div className="mt-8 hidden md:flex items-center justify-center w-full">
-          <a
-            href="#bento-grid"
-            onClick={(e) => {
-              e.preventDefault()
-              document.getElementById('bento-grid')?.scrollIntoView({ behavior: 'smooth' })
-            }}
-            className="group inline-flex items-center gap-2.5 rounded-full border border-[#E2DDD5] bg-[#ffffff] px-4 py-2 text-[12px] font-mono font-medium uppercase tracking-[0.1em] text-[#52525B] shadow-[0_1px_2px_rgba(0,0,0,0.05)] transition-all duration-200 hover:border-[#F25C1F] hover:text-[#1A1A1A] hover:shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A]"
-          >
-            <span className="inline-block text-[#F25C1F] font-bold animate-arrow-bob select-none transition-transform group-hover:translate-y-0.5">
-              ↓
-            </span>
-            <span>Scroll to explore</span>
-          </a>
         </div>
 
         {/* Bento Grid Section */}
