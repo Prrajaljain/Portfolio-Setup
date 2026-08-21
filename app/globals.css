@@ -100,21 +100,21 @@
   }
 }
 
-@keyframes scroll-wheel {
-  0% {
+@keyframes arrow-bob {
+  0%, 100% {
     transform: translateY(0);
-    opacity: 1;
   }
   50% {
-    transform: translateY(6px);
-    opacity: 0.3;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
+    transform: translateY(4px);
   }
 }
 
-.animate-scroll-wheel {
-  animation: scroll-wheel 1.8s ease-in-out infinite;
+.animate-arrow-bob {
+  animation: arrow-bob 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-arrow-bob {
+    animation: none !important;
+  }
 }

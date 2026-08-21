@@ -196,7 +196,7 @@ export function Hero() {
             </p>
 
             {/* 5. Proof Strip & Orange Rule: order-5 on mobile, order-7 on desktop (20px top padding below divider) */}
-            <div className="order-5 lg:order-7 w-full mb-[40px] lg:mb-0">
+            <div className="order-5 lg:order-7 w-full mb-0">
               <div className="w-full h-[2px] bg-[#F25C1F]" />
 
               <div className="w-full pt-[20px] grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 font-mono">
@@ -226,6 +226,12 @@ export function Hero() {
                     11 dashboards live
                   </span>
                 </div>
+              </div>
+
+              {/* 8. Scroll Indicator: Left-aligned to text column, 48px below proof strip, hidden below 768px */}
+              <div className="mt-[48px] hidden md:flex items-center gap-[10px] font-mono text-[11px] font-medium uppercase tracking-[0.08em] text-[#8A8580] text-left">
+                <span className="inline-block animate-arrow-bob select-none">↓</span>
+                <span>Scroll to explore</span>
               </div>
             </div>
 
