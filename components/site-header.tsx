@@ -53,13 +53,13 @@ export function SiteHeader() {
             })}
           </nav>
 
-          {/* Right Action CTA Button — "Contact me" linking to contact form */}
+          {/* Right Action CTA Button — "Get in touch" linking to contact form */}
           <div className="hidden items-center gap-3 md:flex">
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 rounded-md bg-[#F25C1F] px-5 py-2.5 text-[15px] font-semibold text-white transition-colors duration-150 hover:bg-[#D94A10] active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
             >
-              <span>Contact me</span>
+              <span>Get in touch</span>
               <ArrowUpRight className="size-4.5" />
             </Link>
           </div>
@@ -104,7 +104,7 @@ export function SiteHeader() {
                   onClick={() => setOpen(false)}
                   className="block rounded-md bg-[#F25C1F] px-5 py-3 text-center text-base font-semibold text-white transition-colors duration-150 hover:bg-[#D94A10] focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
                 >
-                  Contact me
+                  Get in touch
                 </Link>
               </li>
             </ul>
