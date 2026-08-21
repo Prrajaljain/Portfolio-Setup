@@ -33,9 +33,10 @@ function BentoHeroGrid() {
                 </div>
                 <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#D94A10] transition-colors duration-150" />
               </div>
-              <h3 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#D94A10] transition-colors duration-150">
+              {/* Fix Issue 5: h2 tag for proper document outline */}
+              <h2 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#D94A10] transition-colors duration-150">
                 Background &amp; Journey
-              </h3>
+              </h2>
               <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[#5a5852]">
                 My education in AI &amp; Mechatronics engineering, core background, and journey.
               </p>
@@ -47,7 +48,6 @@ function BentoHeroGrid() {
             href="/experience"
             className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 h-full transition-all duration-150 hover:border-[#cfcdc4] hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
           >
-            <div className="nvidia-corner-square" />
             <div>
               <div className="mb-3 flex items-center justify-between">
                 <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#1A1A1A]">
@@ -55,9 +55,10 @@ function BentoHeroGrid() {
                 </div>
                 <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#D94A10] transition-colors duration-150" />
               </div>
-              <h3 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#D94A10] transition-colors duration-150">
+              {/* Fix Issue 5: h2 tag */}
+              <h2 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#D94A10] transition-colors duration-150">
                 Hands-On Experience
-              </h3>
+              </h2>
               <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[#5a5852]">
                 Industry experience in computer vision, edge deployment &amp; embedded AI systems.
               </p>
@@ -66,27 +67,28 @@ function BentoHeroGrid() {
         </div>
 
         {/* Center Column: 1 Tall Card Spanning Height */}
+        {/* Fix Issue 8 & Issue 13: p-5 padding & mb-3 icon container to align headings perfectly */}
         <Link
           href="/about#skills"
-          className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-6 transition-all duration-150 hover:border-[#cfcdc4] hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+          className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 transition-all duration-150 hover:border-[#cfcdc4] hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
         >
-          <div className="nvidia-corner-square" />
           <div>
-            <div className="mb-4 flex items-center justify-between">
+            <div className="mb-3 flex items-center justify-between">
               <div className="flex size-9 items-center justify-center rounded-sm bg-[#fafaf7] border border-[#e6e5e0] text-[#1A1A1A]">
                 <Code2 className="size-4 text-[#76b900]" />
               </div>
               <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#D94A10] transition-colors duration-150" />
             </div>
 
-            <h3 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#D94A10] transition-colors duration-150">
+            {/* Fix Issue 5 & 13: h2 tag aligned across top row */}
+            <h2 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#D94A10] transition-colors duration-150">
               Tech Stack &amp; Tools
-            </h3>
+            </h2>
             <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[#5a5852]">
               Technologies and tools I use to build innovative AI &amp; robotics solutions.
             </p>
 
-            {/* 4x2 Icon Grid */}
+            {/* 4x2 Icon Grid — Fix Issue 3 & 4: no truncation, text-center leading-tight */}
             <div className="mt-6 grid grid-cols-4 gap-2 font-mono text-[11px]">
               {techBadges.map((badge) => (
                 <div
@@ -94,7 +96,7 @@ function BentoHeroGrid() {
                   className="flex flex-col items-center justify-center rounded-sm border border-[#e6e5e0] bg-[#fafaf7] p-2 text-[#1A1A1A] transition-colors duration-150 group-hover:border-[#cfcdc4]"
                 >
                   <span className="font-bold text-[#D94A10]">{badge.tag || badge.fontTag}</span>
-                  <span className="mt-1 text-[10px] text-[#5a5852] font-sans truncate w-full text-center">
+                  <span className="mt-1 text-[11px] text-[#5a5852] font-sans leading-tight text-center w-full block">
                     {badge.name}
                   </span>
                 </div>
@@ -122,9 +124,9 @@ function BentoHeroGrid() {
                 </div>
                 <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#D94A10] transition-colors duration-150" />
               </div>
-              <h3 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#D94A10] transition-colors duration-150">
+              <h2 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#D94A10] transition-colors duration-150">
                 Applied AI &amp; Systems
-              </h3>
+              </h2>
               <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[#5a5852]">
                 Computer vision on embedded hardware, payload drones, and industrial analytics.
               </p>
@@ -143,9 +145,9 @@ function BentoHeroGrid() {
                 </div>
                 <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#D94A10] transition-colors duration-150" />
               </div>
-              <h3 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#D94A10] transition-colors duration-150">
+              <h2 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#D94A10] transition-colors duration-150">
                 Let&apos;s Connect
-              </h3>
+              </h2>
               <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[#5a5852]">
                 Available for AI &amp; Autonomous Systems engineering projects worldwide.
               </p>
@@ -182,13 +184,12 @@ export function Hero() {
               </span>
             </h1>
 
-            {/* 3. Subtitle / Role Line: --accent-text #D94A10 for text and preceding bullet dot — order-3 */}
+            {/* 3. Subtitle / Role Line: Fix Issue 6 (consistent middle dots) & Fix 2 (--accent-text #D94A10) — order-3 */}
             <div className="order-3 mb-[16px] flex flex-wrap items-center gap-[10px] font-mono text-[13px] sm:text-[14px] font-medium text-[#D94A10]">
-              <span className="size-[7px] shrink-0 rounded-full bg-[#D94A10]" />
               <span>AI &amp; Robotics &middot; Embedded Systems &middot; Industrial Data Analytics</span>
             </div>
 
-            {/* 4. Subhead Paragraph: Explicit <br /> after "Machines that sort.", max-w-[480px] safety bound (40px gap on desktop, 32px on mobile) — order-4 */}
+            {/* 4. Subhead Paragraph: Fix 1 (<br className="hidden sm:block" /> after "Machines that sort.", max-w-[480px]) — order-4 */}
             <p className="order-4 mb-[32px] lg:mb-[40px] max-w-[480px] text-[17px] leading-[1.65] text-[#52525B]">
               Drones that see. Machines that sort.<br className="hidden sm:block" />
               Data that tells you what the factory floor won&apos;t.
@@ -202,8 +203,9 @@ export function Hero() {
               {/* Proof strip: 3 stacked rows (<768px, gap 16px) / 3 columns (≥768px, gap 48px), 20px gap below rule */}
               <div className="w-full pt-[20px] flex flex-col md:grid md:grid-cols-3 gap-4 md:gap-12 font-mono">
                 <div>
-                  <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#8A8580] block">
-                    INDIAN ARMY
+                  {/* Fix Issue 2: Title case / normal casing */}
+                  <span className="font-mono text-[11px] font-semibold text-[#8A8580] block">
+                    Indian Army
                   </span>
                   <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block whitespace-nowrap">
                     octocopter demo
@@ -211,8 +213,9 @@ export function Hero() {
                 </div>
 
                 <div>
-                  <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#8A8580] block">
-                    NAVRATRI 2025
+                  {/* Fix Issue 2 */}
+                  <span className="font-mono text-[11px] font-semibold text-[#8A8580] block">
+                    Navratri 2025
                   </span>
                   <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block whitespace-nowrap">
                     5,000+ crowd, live
@@ -220,8 +223,9 @@ export function Hero() {
                 </div>
 
                 <div>
-                  <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#8A8580] block">
-                    RISHABH INSTRUMENTS
+                  {/* Fix Issue 2 */}
+                  <span className="font-mono text-[11px] font-semibold text-[#8A8580] block">
+                    Rishabh Instruments
                   </span>
                   <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block whitespace-nowrap">
                     11 dashboards live
@@ -230,30 +234,30 @@ export function Hero() {
               </div>
             </div>
 
-            {/* 6. Button Row: order-6 on mobile (below proof strip), order-5 on desktop (above proof strip, 48px gap to rule) */}
+            {/* 6. Button Row: Fix Issue 10 & 11 (Get in touch is primary orange, Resume is secondary outlined) */}
             <div className="order-6 lg:order-5 mb-[40px] lg:mb-[48px] flex flex-wrap items-center gap-[12px]">
-              {/* Resume button — solid orange #F25C1F, hover darken to #D94A10 */}
+              {/* Primary Contact CTA — solid orange #F25C1F, hover darken to #D94A10 */}
+              <Link
+                href="/contact"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-[8px] bg-[#F25C1F] px-[24px] text-[15px] font-semibold text-white transition-all duration-150 ease-in-out hover:bg-[#D94A10] active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+              >
+                <Send className="size-4" />
+                <span>Get in touch</span>
+              </Link>
+
+              {/* Secondary Resume button — outlined */}
               <a
                 href={profile.resumeUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-[8px] bg-[#F25C1F] px-[24px] text-[15px] font-semibold text-white transition-all duration-150 ease-in-out hover:bg-[#D94A10] active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-[8px] border border-[#e6e5e0] bg-[#ffffff] px-[24px] text-[15px] font-semibold text-[#1A1A1A] transition-all duration-150 ease-in-out hover:bg-[#1A1A1A] hover:text-[#F5F4F0] hover:border-transparent active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
               >
-                <FileText className="size-4" />
+                <FileText className="size-4 text-[#F25C1F]" />
                 <span>Resume</span>
               </a>
 
-              {/* Let's talk button — outlined, hover background #1A1A1A, text #F5F4F0 */}
-              <Link
-                href="/contact"
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-[8px] border border-[#e6e5e0] bg-[#ffffff] px-[24px] text-[15px] font-semibold text-[#1A1A1A] transition-all duration-150 ease-in-out hover:bg-[#1A1A1A] hover:text-[#F5F4F0] hover:border-transparent active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
-              >
-                <Send className="size-4 text-[#F25C1F]" />
-                <span>Let&apos;s talk</span>
-              </Link>
-
-              {/* Demoted Plain Text Links: GitHub & LinkedIn (32px gap from "Let's talk", 24px gap between links) */}
-              <div className="flex items-center gap-6 ml-0 sm:ml-5 pt-2 sm:pt-0">
+              {/* Demoted Plain Text Links: GitHub & LinkedIn */}
+              <div className="flex items-center gap-6 ml-0 sm:ml-4 pt-2 sm:pt-0">
                 <a
                   href={githubUrl}
                   target="_blank"
@@ -276,7 +280,7 @@ export function Hero() {
               </div>
             </div>
 
-            {/* 7. Photo Mobile Position — order-7 on mobile (below button row). Hidden <768px, shown 768px-1024px */}
+            {/* 7. Photo Mobile Position */}
             <div className="order-7 lg:hidden hidden md:block w-full max-w-[320px] mx-auto pt-4">
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[4px]">
                 <Image
@@ -292,7 +296,7 @@ export function Hero() {
 
           </div>
 
-          {/* RIGHT COLUMN — Photo Desktop Position (Hidden <1024px, shown ≥1024px, top aligned to eyebrow) */}
+          {/* RIGHT COLUMN — Photo Desktop Position */}
           <div className="order-2 hidden lg:block mx-auto w-full max-w-[380px] pt-0">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[4px]">
               <Image

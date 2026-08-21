@@ -49,16 +49,16 @@ export function ContactForm() {
 
   if (status === 'success') {
     return (
-      <div className="flex flex-col items-center gap-3 rounded-md border border-[#e6e5e0] bg-[#ffffff] p-8 text-center">
+      <div className="flex flex-col items-center gap-3 rounded-md border border-[#c4c2bc] bg-[#ffffff] p-8 text-center">
         <CheckCircle2 className="size-10 text-[#76b900]" />
-        <h3 className="text-xl font-semibold tracking-tight text-[#26251e]">Message Sent Successfully!</h3>
+        <h3 className="text-xl font-semibold tracking-tight text-[#1A1A1A]">Message Sent Successfully!</h3>
         <p className="max-w-sm text-xs leading-relaxed text-[#5a5852]">
           Thank you for reaching out &mdash; I&apos;ll get back to you within 24 business hours.
         </p>
         <button
           type="button"
           onClick={() => setStatus('idle')}
-          className="mt-2 rounded-md bg-[#26251e] px-5 py-2 text-xs font-medium text-white transition-all hover:bg-[#000000]"
+          className="mt-2 rounded-md bg-[#1A1A1A] px-5 py-2 text-xs font-medium text-white transition-all hover:bg-[#000000]"
         >
           Send Another Message
         </button>
@@ -68,10 +68,10 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-5 text-left w-full">
-      {/* Name Field */}
-      <div className="flex flex-col gap-1.5">
-        <label htmlFor="name" className="text-xs font-semibold text-[#26251e] tracking-wide">
-          Your Name <span className="text-[#f54e00]">*</span>
+      {/* Name Field — Fix Issue 7 (gap-2.5) & Fix Issue 14 (border-[#c4c2bc]) */}
+      <div className="flex flex-col gap-2.5">
+        <label htmlFor="name" className="text-xs font-semibold text-[#1A1A1A] tracking-wide">
+          Your Name <span className="text-[#D94A10]">*</span>
         </label>
         <input
           id="name"
@@ -80,14 +80,14 @@ export function ContactForm() {
           required
           minLength={2}
           maxLength={100}
-          className="w-full rounded-md border border-[#e6e5e0] bg-[#ffffff] px-4 py-3 text-sm text-[#26251e] placeholder-[#807d72] outline-none transition-colors focus:border-[#f54e00]"
+          className="w-full rounded-md border border-[#c4c2bc] bg-[#ffffff] px-4 py-3 text-sm text-[#1A1A1A] placeholder-[#807d72] outline-none transition-colors focus:border-[#F25C1F] focus:ring-1 focus:ring-[#F25C1F]"
         />
       </div>
 
-      {/* Email Field */}
-      <div className="flex flex-col gap-1.5">
-        <label htmlFor="email" className="text-xs font-semibold text-[#26251e] tracking-wide">
-          Your Email <span className="text-[#f54e00]">*</span>
+      {/* Email Field — Fix Issue 7 (gap-2.5) & Fix Issue 14 (border-[#c4c2bc]) */}
+      <div className="flex flex-col gap-2.5">
+        <label htmlFor="email" className="text-xs font-semibold text-[#1A1A1A] tracking-wide">
+          Your Email <span className="text-[#D94A10]">*</span>
         </label>
         <input
           id="email"
@@ -96,14 +96,14 @@ export function ContactForm() {
           placeholder="your.email@domain.com"
           required
           maxLength={200}
-          className="w-full rounded-md border border-[#e6e5e0] bg-[#ffffff] px-4 py-3 text-sm text-[#26251e] placeholder-[#807d72] outline-none transition-colors focus:border-[#f54e00]"
+          className="w-full rounded-md border border-[#c4c2bc] bg-[#ffffff] px-4 py-3 text-sm text-[#1A1A1A] placeholder-[#807d72] outline-none transition-colors focus:border-[#F25C1F] focus:ring-1 focus:ring-[#F25C1F]"
         />
       </div>
 
-      {/* Message Field (Exact Placeholder) */}
-      <div className="flex flex-col gap-1.5">
-        <label htmlFor="message" className="text-xs font-semibold text-[#26251e] tracking-wide">
-          Your Message <span className="text-[#f54e00]">*</span>
+      {/* Message Field — Fix Issue 7 (gap-2.5) & Fix Issue 14 (border-[#c4c2bc]) */}
+      <div className="flex flex-col gap-2.5">
+        <label htmlFor="message" className="text-xs font-semibold text-[#1A1A1A] tracking-wide">
+          Your Message <span className="text-[#D94A10]">*</span>
         </label>
         <textarea
           id="message"
@@ -113,7 +113,7 @@ export function ContactForm() {
           minLength={10}
           maxLength={5000}
           rows={4}
-          className="w-full rounded-md border border-[#e6e5e0] bg-[#ffffff] p-4 text-sm text-[#26251e] placeholder-[#807d72] outline-none transition-colors focus:border-[#f54e00]"
+          className="w-full rounded-md border border-[#c4c2bc] bg-[#ffffff] p-4 text-sm text-[#1A1A1A] placeholder-[#807d72] outline-none transition-colors focus:border-[#F25C1F] focus:ring-1 focus:ring-[#F25C1F]"
         />
       </div>
 
@@ -124,11 +124,11 @@ export function ContactForm() {
         </div>
       )}
 
-      {/* Submit Button */}
+      {/* Submit Button — Fix Issue 15 (consistent spacing rhythm) */}
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className="mt-1 w-full rounded-md bg-[#f54e00] px-6 py-3.5 text-sm font-medium text-white transition-all hover:bg-[#d04200] disabled:pointer-events-none disabled:opacity-60 flex items-center justify-center gap-2"
+        className="w-full rounded-md bg-[#F25C1F] px-6 py-3.5 text-sm font-semibold text-white transition-all hover:bg-[#D94A10] disabled:pointer-events-none disabled:opacity-60 flex items-center justify-center gap-2"
       >
         {status === 'submitting' ? (
           <>
@@ -144,20 +144,20 @@ export function ContactForm() {
       </button>
 
       {/* Alternative Quick-Connect Option */}
-      <p className="mt-2 text-center text-xs text-[#5a5852] leading-relaxed">
+      <p className="mt-1 text-center text-xs text-[#5a5852] leading-relaxed">
         Prefer a direct chat? Find me on{' '}
         <a
           href={linkedinUrl}
           target="_blank"
           rel="noreferrer"
-          className="font-semibold text-[#f54e00] underline underline-offset-4 transition-colors hover:text-[#d04200]"
+          className="font-semibold text-[#D94A10] underline underline-offset-4 transition-colors hover:text-[#F25C1F]"
         >
           LinkedIn
         </a>{' '}
         or drop me an{' '}
         <a
           href={`mailto:${profile.email}`}
-          className="font-semibold text-[#f54e00] underline underline-offset-4 transition-colors hover:text-[#d04200]"
+          className="font-semibold text-[#D94A10] underline underline-offset-4 transition-colors hover:text-[#F25C1F]"
         >
           Email
         </a>
