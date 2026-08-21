@@ -17,7 +17,7 @@ function BentoHeroGrid() {
   ]
 
   return (
-    <div className="mt-8 w-full text-left">
+    <div className="mt-14 w-full text-left">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
         {/* Left Column: 2 Cards Stacked Vertically */}
         <div className="flex flex-col gap-4 justify-between">
@@ -160,51 +160,51 @@ export function Hero() {
   const linkedinUrl = profile.socials.find((s) => s.label === 'LinkedIn')?.href ?? 'https://linkedin.com/in/prajaljain23'
 
   return (
-    <section className="relative bg-[#F5F4F0] text-[#1A1A1A] overflow-hidden pt-6 lg:pt-8 pb-10 lg:pb-12">
+    <section className="relative bg-[#F5F4F0] text-[#1A1A1A] overflow-hidden pt-16 pb-[80px]">
       <div className="mx-auto max-w-6xl px-6 sm:px-8">
         {/* Main Hero Split Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] items-start gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] items-start gap-10 lg:gap-14">
           
           {/* LEFT COLUMN CONTAINER */}
           <div className="order-1 flex flex-col items-start text-left w-full">
             
-            {/* 1. Eyebrow — order-1 */}
-            <div className="order-1 mb-2 font-mono text-[13px] font-medium text-[#71717A] uppercase tracking-[1.5px]">
+            {/* 1. Eyebrow (12px gap to headline) — order-1 */}
+            <div className="order-1 mb-[12px] font-mono text-[13px] font-medium text-[#71717A] uppercase tracking-[1.5px]">
               HI, I&apos;M PRAJAL JAIN
             </div>
 
-            {/* 2. Headline: 40px (<768px), 48px (768px-1024px), 64px (≥1024px) — order-2 */}
-            <h1 className="order-2 mb-4 max-w-xl text-[38px] md:text-[46px] lg:text-[56px] xl:text-[60px] font-bold leading-[1.02] tracking-[-0.03em] text-[#1A1A1A]">
+            {/* 2. Headline: 40px (<768px), 48px (768px-1024px), 64px (≥1024px) (28px gap to role line) — order-2 */}
+            <h1 className="order-2 mb-[28px] max-w-xl text-[40px] md:text-[48px] lg:text-[64px] font-bold leading-[1.02] tracking-[-0.03em] text-[#1A1A1A]">
               I build AI that{' '}
               <span className="text-[#F25C1F] font-bold block">
                 runs on hardware
               </span>
             </h1>
 
-            {/* 3. Subtitle / Role Line: Explicit literal #D94A10 color & 6px bullet circle — order-3 */}
-            <div className="order-3 mb-3.5 flex flex-wrap items-center gap-[10px] font-mono text-[13px] sm:text-[14px] font-medium text-[#D94A10]" style={{ color: '#D94A10' }}>
+            {/* 3. Subtitle / Role Line: (16px gap to subhead) — order-3 */}
+            <div className="order-3 mb-[16px] flex flex-wrap items-center gap-[10px] font-mono text-[13px] sm:text-[14px] font-medium text-[#D94A10]" style={{ color: '#D94A10' }}>
               <span className="size-[6px] shrink-0 rounded-full bg-[#D94A10]" style={{ backgroundColor: '#D94A10' }} />
               <span className="text-[#D94A10]" style={{ color: '#D94A10' }}>
                 AI &amp; Robotics &middot; Embedded Systems &middot; Industrial Data Analytics
               </span>
             </div>
 
-            {/* 4. Subhead Paragraph — order-4 */}
-            <p className="order-4 mb-5 lg:mb-6 max-w-[480px] text-[16px] sm:text-[17px] leading-[1.6] text-[#52525B]">
+            {/* 4. Subhead Paragraph: (40px gap to button row) — order-4 */}
+            <p className="order-4 mb-[40px] max-w-[480px] text-[17px] leading-[1.65] text-[#52525B]">
               Drones that see. Machines that sort.<br className="hidden sm:block" />
               Data that tells you what the factory floor won&apos;t.
             </p>
 
-            {/* 5. Proof Strip & Orange Rule: order-5 on mobile, order-7 on desktop */}
-            <div className="order-5 lg:order-7 w-full mb-5 lg:mb-0">
+            {/* 5. Proof Strip & Orange Rule: order-5 on mobile, order-7 on desktop (20px top padding below divider) */}
+            <div className="order-5 lg:order-7 w-full mb-[40px] lg:mb-0">
               <div className="w-full h-[2px] bg-[#F25C1F]" />
 
-              <div className="w-full pt-[14px] grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 font-mono">
+              <div className="w-full pt-[20px] grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 font-mono">
                 <div>
                   <span className="font-mono text-[11px] font-semibold text-[#8A8580] block">
                     Indian Army
                   </span>
-                  <span className="font-mono text-[14px] sm:text-[15px] font-medium text-[#1A1A1A] mt-0.5 block whitespace-nowrap">
+                  <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block whitespace-nowrap">
                     octocopter demo
                   </span>
                 </div>
@@ -213,7 +213,7 @@ export function Hero() {
                   <span className="font-mono text-[11px] font-semibold text-[#8A8580] block">
                     Navratri 2025
                   </span>
-                  <span className="font-mono text-[14px] sm:text-[15px] font-medium text-[#1A1A1A] mt-0.5 block whitespace-nowrap">
+                  <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block whitespace-nowrap">
                     5,000+ crowd, live
                   </span>
                 </div>
@@ -222,21 +222,21 @@ export function Hero() {
                   <span className="font-mono text-[11px] font-semibold text-[#8A8580] block">
                     Rishabh Instruments
                   </span>
-                  <span className="font-mono text-[14px] sm:text-[15px] font-medium text-[#1A1A1A] mt-0.5 block whitespace-nowrap">
+                  <span className="font-mono text-[15px] font-medium text-[#1A1A1A] mt-1 block whitespace-nowrap">
                     11 dashboards live
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* 6. Button Row: Identical 14px 24px padding, width: auto, 24px gap */}
-            <div className="order-6 lg:order-5 mb-5 lg:mb-6 flex flex-wrap items-center gap-5 sm:gap-6">
+            {/* 6. Button Row: (48px gap to orange divider) */}
+            <div className="order-6 lg:order-5 mb-[48px] flex flex-wrap items-center gap-6">
               {/* Primary button: Resume — solid orange #F25C1F, white text, FileText icon */}
               <a
                 href={profile.resumeUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex w-auto items-center justify-center gap-2 rounded-md bg-[#F25C1F] px-[24px] py-[13px] text-[15px] font-semibold text-white transition-colors duration-150 hover:bg-[#D94A10] active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+                className="inline-flex w-auto items-center justify-center gap-2 rounded-md bg-[#F25C1F] px-[24px] py-[14px] text-[15px] font-semibold text-white transition-colors duration-150 hover:bg-[#D94A10] active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
               >
                 <FileText className="size-4" />
                 <span>Resume</span>
@@ -245,7 +245,7 @@ export function Hero() {
               {/* Secondary button: Let's talk — white background, 1px border #E0DCD6 */}
               <Link
                 href="/contact"
-                className="inline-flex w-auto items-center justify-center gap-2 rounded-md border border-[#E0DCD6] bg-[#ffffff] px-[24px] py-[13px] text-[15px] font-semibold text-[#1A1A1A] transition-colors duration-150 hover:bg-[#1A1A1A] hover:text-[#F5F4F0] hover:border-transparent active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+                className="inline-flex w-auto items-center justify-center gap-2 rounded-md border border-[#E0DCD6] bg-[#ffffff] px-[24px] py-[14px] text-[15px] font-semibold text-[#1A1A1A] transition-colors duration-150 hover:bg-[#1A1A1A] hover:text-[#F5F4F0] hover:border-transparent active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
               >
                 <Send className="size-4 text-[#F25C1F]" />
                 <span>Let&apos;s talk</span>
@@ -276,7 +276,7 @@ export function Hero() {
             </div>
 
             {/* 7. Photo Mobile Position */}
-            <div className="order-7 lg:hidden hidden md:block w-full max-w-[320px] mx-auto pt-3">
+            <div className="order-7 lg:hidden hidden md:block w-full max-w-[320px] mx-auto pt-4">
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[4px]">
                 <Image
                   src="/images/prajal-headshot.jpg"
@@ -292,7 +292,7 @@ export function Hero() {
           </div>
 
           {/* RIGHT COLUMN — Photo Desktop Position */}
-          <div className="order-2 hidden lg:block mx-auto w-full max-w-[360px] xl:max-w-[380px] pt-0">
+          <div className="order-2 hidden lg:block mx-auto w-full max-w-[380px] pt-0">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[4px]">
               <Image
                 src="/images/prajal-headshot.jpg"
