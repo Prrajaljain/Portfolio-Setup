@@ -17,7 +17,7 @@ function BentoHeroGrid() {
   ]
 
   return (
-    <div className="mt-14 w-full text-left">
+    <div className="mt-10 w-full text-left">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
         {/* Left Column: 2 Cards Stacked Vertically */}
         <div className="flex flex-col gap-4 justify-between">
@@ -304,6 +304,16 @@ export function Hero() {
             </div>
           </div>
 
+        </div>
+
+        {/* Scroll to Explore Indicator */}
+        <div className="mt-14 mb-2 flex flex-col items-center justify-center gap-2 text-center">
+          <span className="font-mono text-[12px] font-medium text-[#71717A] tracking-wider uppercase">
+            Scroll to explore
+          </span>
+          <div className="flex h-7 w-4 justify-center rounded-full border-2 border-[#1A1A1A]/30 p-0.5">
+            <div className="h-2 w-1 rounded-full bg-[#F25C1F] animate-scroll-wheel" />
+          </div>
         </div>
 
         {/* Section Bleed at Bottom */}

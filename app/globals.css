@@ -93,3 +93,22 @@
     background-color: #76b900;
   }
 }
+
+@keyframes scroll-wheel {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-scroll-wheel {
+  animation: scroll-wheel 1.8s ease-in-out infinite;
+}
