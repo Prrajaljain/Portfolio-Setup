@@ -307,16 +307,6 @@ export function Hero() {
 
         </div>
 
-        {/* Visible Scroll to Explore Indicator in First Fold */}
-        <div className="mt-6 mb-2 flex flex-col items-center justify-center gap-1.5 text-center">
-          <span className="font-mono text-[11px] sm:text-[12px] font-medium text-[#71717A] tracking-wider uppercase">
-            Scroll to explore
-          </span>
-          <div className="flex h-7 w-4 justify-center rounded-full border-2 border-[#1A1A1A]/30 p-0.5">
-            <div className="h-2 w-1 rounded-full bg-[#F25C1F] animate-scroll-wheel" />
-          </div>
-        </div>
-
         {/* Bento Grid Section */}
         <BentoHeroGrid />
       </div>
