@@ -6,34 +6,34 @@ import Link from 'next/link'
 import { ArrowUpRight, User, Briefcase, Code2, Cpu, ArrowRight, FileText, Send, Eye, Download } from 'lucide-react'
 import { profile } from '@/lib/data'
 
-/* ─── Interactive Split Resume Button (Morphs to View | Download on hover) ─── */
+/* ─── Fixed-Width Split Resume Button (Zero Layout Shift) ─── */
 function ResumeSplitButton() {
   const [hovered, setHovered] = useState(false)
 
   return (
     <div
-      className="relative inline-flex items-center"
+      className="relative inline-flex h-11 w-[195px] items-center shrink-0"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
       {!hovered ? (
         <button
           type="button"
-          className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[#F25C1F] px-5 text-[15px] font-semibold text-white transition-all duration-200 hover:bg-[#D94A10] active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+          className="inline-flex h-full w-full items-center justify-center gap-2 rounded-md bg-[#F25C1F] text-[15px] font-semibold text-white transition-all duration-150 hover:bg-[#D94A10] active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
         >
           <FileText className="size-4" />
           <span>Resume</span>
         </button>
       ) : (
-        <div className="inline-flex h-11 items-center overflow-hidden rounded-md bg-[#F25C1F] p-0.5 shadow-md transition-all duration-200">
+        <div className="inline-flex h-full w-full items-center overflow-hidden rounded-md bg-[#F25C1F] p-0.5 shadow-md transition-all duration-150">
           {/* View Button */}
           <a
             href={profile.resumeUrl}
             target="_blank"
             rel="noreferrer"
-            className="flex h-full items-center gap-2 px-4 text-[14px] font-semibold text-white transition-colors hover:bg-[#D94A10] rounded-l-[4px]"
+            className="flex h-full flex-1 items-center justify-center gap-1.5 px-2 text-[13.5px] font-semibold text-white transition-colors hover:bg-[#D94A10] rounded-l-[4px]"
           >
-            <Eye className="size-4" />
+            <Eye className="size-3.5" />
             <span>View</span>
           </a>
 
@@ -44,9 +44,9 @@ function ResumeSplitButton() {
           <a
             href={profile.resumeUrl}
             download="Resume-Prajal-Jain.pdf"
-            className="flex h-full items-center gap-2 px-4 text-[14px] font-semibold text-white transition-colors hover:bg-[#D94A10] rounded-r-[4px]"
+            className="flex h-full flex-1 items-center justify-center gap-1.5 px-2 text-[13.5px] font-semibold text-white transition-colors hover:bg-[#D94A10] rounded-r-[4px]"
           >
-            <Download className="size-4" />
+            <Download className="size-3.5" />
             <span>Download</span>
           </a>
         </div>
@@ -278,9 +278,9 @@ export function Hero() {
               </div>
             </div>
 
-            {/* 6. Button Row: Resume Split Button (View | Download on hover) & Let's Talk */}
+            {/* 6. Button Row: Fixed Width Resume Button (195px) & Let's Talk */}
             <div className="order-6 lg:order-5 mb-[40px] lg:mb-[48px] flex flex-wrap items-center gap-4">
-              {/* Primary button: Morphs to [ View | Download ] split pair on hover */}
+              {/* Primary button: Fixed 195px width, morphs to [ View | Download ] without extending layout */}
               <ResumeSplitButton />
 
               {/* Secondary button: Let's talk */}
