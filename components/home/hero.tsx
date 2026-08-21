@@ -3,63 +3,54 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowUpRight, User, Briefcase, Code2, Cpu, ArrowRight, FileText, Send, Eye, Download, ChevronDown } from 'lucide-react'
+import { ArrowUpRight, User, Briefcase, Code2, Cpu, ArrowRight, FileText, Send, Eye, Download } from 'lucide-react'
 import { profile } from '@/lib/data'
 
-/* ─── Interactive Resume Hover / Click Dropdown Button ─── */
-function ResumeDropdown() {
-  const [open, setOpen] = useState(false)
+/* ─── Interactive Split Resume Button (Morphs to View | Download on hover) ─── */
+function ResumeSplitButton() {
+  const [hovered, setHovered] = useState(false)
 
   return (
     <div
-      className="relative inline-block text-left"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
+      className="relative inline-flex items-center"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
-      <button
-        type="button"
-        onClick={() => setOpen((prev) => !prev)}
-        className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[#F25C1F] px-5 text-[15px] font-semibold text-white transition-colors duration-150 hover:bg-[#D94A10] active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
-        aria-expanded={open}
-        aria-haspopup="true"
-      >
-        <FileText className="size-4" />
-        <span>Resume</span>
-        <ChevronDown className={`size-3.5 transition-transform duration-150 ${open ? 'rotate-180' : ''}`} />
-      </button>
-
-      {/* Hover / Focus Floating Action Popover */}
-      <div
-        className={`absolute top-full left-0 mt-2 z-40 w-48 rounded-md border border-[#e6e5e0] bg-[#ffffff] p-1.5 shadow-xl transition-all duration-150 origin-top-left ${
-          open
-            ? 'opacity-100 scale-100 pointer-events-auto'
-            : 'opacity-0 scale-95 pointer-events-none'
-        }`}
-      >
-        {/* View Resume Option */}
-        <a
-          href={profile.resumeUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="flex items-center gap-2.5 rounded-sm px-3 py-2 text-xs font-semibold text-[#1A1A1A] transition-colors hover:bg-[#F5F4F0] hover:text-[#D94A10]"
-          onClick={() => setOpen(false)}
+      {!hovered ? (
+        <button
+          type="button"
+          className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[#F25C1F] px-5 text-[15px] font-semibold text-white transition-all duration-200 hover:bg-[#D94A10] active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
         >
-          <Eye className="size-4 text-[#F25C1F]" />
-          <span>View Resume</span>
-          <ArrowUpRight className="size-3.5 ml-auto text-[#807d72]" />
-        </a>
+          <FileText className="size-4" />
+          <span>Resume</span>
+        </button>
+      ) : (
+        <div className="inline-flex h-11 items-center overflow-hidden rounded-md bg-[#F25C1F] p-0.5 shadow-md transition-all duration-200">
+          {/* View Button */}
+          <a
+            href={profile.resumeUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="flex h-full items-center gap-2 px-4 text-[14px] font-semibold text-white transition-colors hover:bg-[#D94A10] rounded-l-[4px]"
+          >
+            <Eye className="size-4" />
+            <span>View</span>
+          </a>
 
-        {/* Download Resume Option */}
-        <a
-          href={profile.resumeUrl}
-          download="Resume-Prajal-Jain.pdf"
-          className="flex items-center gap-2.5 rounded-sm px-3 py-2 text-xs font-semibold text-[#1A1A1A] transition-colors hover:bg-[#F5F4F0] hover:text-[#D94A10]"
-          onClick={() => setOpen(false)}
-        >
-          <Download className="size-4 text-[#F25C1F]" />
-          <span>Download Resume</span>
-        </a>
-      </div>
+          {/* 1px Vertical Divider */}
+          <div className="h-5 w-[1px] bg-white/40 shrink-0" />
+
+          {/* Download Button */}
+          <a
+            href={profile.resumeUrl}
+            download="Resume-Prajal-Jain.pdf"
+            className="flex h-full items-center gap-2 px-4 text-[14px] font-semibold text-white transition-colors hover:bg-[#D94A10] rounded-r-[4px]"
+          >
+            <Download className="size-4" />
+            <span>Download</span>
+          </a>
+        </div>
+      )}
     </div>
   )
 }
@@ -287,10 +278,10 @@ export function Hero() {
               </div>
             </div>
 
-            {/* 6. Button Row: Resume Dropdown (View & Download) & Let's Talk */}
+            {/* 6. Button Row: Resume Split Button (View | Download on hover) & Let's Talk */}
             <div className="order-6 lg:order-5 mb-[40px] lg:mb-[48px] flex flex-wrap items-center gap-4">
-              {/* Primary button with Hover Dropdown: View & Download Resume */}
-              <ResumeDropdown />
+              {/* Primary button: Morphs to [ View | Download ] split pair on hover */}
+              <ResumeSplitButton />
 
               {/* Secondary button: Let's talk */}
               <Link
