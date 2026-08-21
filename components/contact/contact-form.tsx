@@ -46,16 +46,16 @@ export function ContactForm() {
 
   if (status === 'success') {
     return (
-      <div className="flex flex-col items-center gap-3 rounded-md border border-[#c4c2bc] bg-[#ffffff] p-8 text-center">
-        <CheckCircle2 className="size-10 text-[#76b900]" />
+      <div className="flex flex-col items-center gap-3 rounded-[8px] border border-[#E8E4DE] bg-[#FFFFFF] p-8 text-center shadow-rest">
+        <CheckCircle2 className="size-10 text-[#D94A10]" />
         <h3 className="text-xl font-semibold tracking-tight text-[#1A1A1A]">Message Sent Successfully!</h3>
-        <p className="max-w-sm text-xs leading-relaxed text-[#5a5852]">
+        <p className="max-w-sm text-xs leading-relaxed text-[#52525B]">
           Thank you for reaching out &mdash; I&apos;ll get back to you within 24 business hours.
         </p>
         <button
           type="button"
           onClick={() => setStatus('idle')}
-          className="mt-2 rounded-md bg-[#1A1A1A] px-5 py-2 text-xs font-medium text-white transition-all hover:bg-[#000000]"
+          className="mt-2 rounded-md bg-[#1A1A1A] px-5 py-2 text-xs font-medium text-white shadow-rest transition-all duration-200 hover:bg-[#000000] hover:shadow-hover active:translate-y-0 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
         >
           Send Another Message
         </button>
@@ -65,7 +65,7 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-5 text-left w-full">
-      {/* Name Field — Fix Copy Issue 1: Helpful example placeholder "e.g. Alex Rivera" */}
+      {/* Name Field */}
       <div className="flex flex-col gap-2.5">
         <label htmlFor="name" className="text-xs font-semibold text-[#1A1A1A] tracking-wide">
           Your Name <span className="text-[#D94A10]">*</span>
@@ -77,7 +77,7 @@ export function ContactForm() {
           required
           minLength={2}
           maxLength={100}
-          className="w-full rounded-md border border-[#c4c2bc] bg-[#ffffff] px-4 py-3 text-sm text-[#1A1A1A] placeholder-[#807d72] outline-none transition-colors focus:border-[#F25C1F] focus:ring-1 focus:ring-[#F25C1F]"
+          className="w-full rounded-md border border-[#E8E4DE] bg-[#FFFFFF] px-4 py-3 text-sm text-[#1A1A1A] placeholder-[#8A8580] outline-none transition-colors focus:border-[#D94A10] focus:ring-1 focus:ring-[#D94A10] focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
         />
       </div>
 
@@ -93,7 +93,7 @@ export function ContactForm() {
           placeholder="your.email@domain.com"
           required
           maxLength={200}
-          className="w-full rounded-md border border-[#c4c2bc] bg-[#ffffff] px-4 py-3 text-sm text-[#1A1A1A] placeholder-[#807d72] outline-none transition-colors focus:border-[#F25C1F] focus:ring-1 focus:ring-[#F25C1F]"
+          className="w-full rounded-md border border-[#E8E4DE] bg-[#FFFFFF] px-4 py-3 text-sm text-[#1A1A1A] placeholder-[#8A8580] outline-none transition-colors focus:border-[#D94A10] focus:ring-1 focus:ring-[#D94A10] focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
         />
       </div>
 
@@ -110,7 +110,7 @@ export function ContactForm() {
           minLength={10}
           maxLength={5000}
           rows={4}
-          className="w-full rounded-md border border-[#c4c2bc] bg-[#ffffff] p-4 text-sm text-[#1A1A1A] placeholder-[#807d72] outline-none transition-colors focus:border-[#F25C1F] focus:ring-1 focus:ring-[#F25C1F]"
+          className="w-full rounded-md border border-[#E8E4DE] bg-[#FFFFFF] p-4 text-sm text-[#1A1A1A] placeholder-[#8A8580] outline-none transition-colors focus:border-[#D94A10] focus:ring-1 focus:ring-[#D94A10] focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
         />
       </div>
 
@@ -125,7 +125,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className="w-full rounded-md bg-[#F25C1F] px-6 py-3.5 text-sm font-semibold text-white transition-all hover:bg-[#D94A10] disabled:pointer-events-none disabled:opacity-60 flex items-center justify-center gap-2"
+        className="w-full rounded-md bg-[#F25C1F] px-6 py-3.5 text-sm font-semibold text-white shadow-rest transition-all duration-200 ease-out hover:bg-[#D94A10] hover:shadow-hover hover:-translate-y-[1px] active:translate-y-0 active:shadow-press disabled:pointer-events-none disabled:opacity-60 flex items-center justify-center gap-2 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
       >
         {status === 'submitting' ? (
           <>

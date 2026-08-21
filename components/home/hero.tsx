@@ -26,7 +26,7 @@ function BentoHeroGrid() {
           {/* Card 1: Background & Journey */}
           <Link
             href="/about"
-            className="group relative flex flex-col justify-between rounded-[8px] border border-[#E8E4DE] bg-[#FFFFFF] p-[28px] h-full shadow-none transition-all duration-200 ease-out hover:border-[#D94A10] hover:-translate-y-[2px] focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+            className="group relative flex flex-col justify-between rounded-[8px] border border-[#E8E4DE] bg-[#FFFFFF] p-[28px] h-full shadow-rest transition-all duration-200 ease-out hover:border-[#D94A10] hover:shadow-hover hover:-translate-y-[3px] active:shadow-press active:translate-y-0 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
           >
             <div>
               <div className="mb-4 flex items-center justify-between">
@@ -47,7 +47,7 @@ function BentoHeroGrid() {
           {/* Card 2: Hands-On Experience */}
           <Link
             href="/experience"
-            className="group relative flex flex-col justify-between rounded-[8px] border border-[#E8E4DE] bg-[#FFFFFF] p-[28px] h-full shadow-none transition-all duration-200 ease-out hover:border-[#D94A10] hover:-translate-y-[2px] focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+            className="group relative flex flex-col justify-between rounded-[8px] border border-[#E8E4DE] bg-[#FFFFFF] p-[28px] h-full shadow-rest transition-all duration-200 ease-out hover:border-[#D94A10] hover:shadow-hover hover:-translate-y-[3px] active:shadow-press active:translate-y-0 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
           >
             <div>
               <div className="mb-4 flex items-center justify-between">
@@ -69,7 +69,7 @@ function BentoHeroGrid() {
         {/* Center Column: 1 Tall Card Spanning Height */}
         <Link
           href="/about#skills"
-          className="group relative flex flex-col justify-between rounded-[8px] border border-[#E8E4DE] bg-[#FFFFFF] p-[28px] shadow-none transition-all duration-200 ease-out hover:border-[#D94A10] hover:-translate-y-[2px] focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+          className="group relative flex flex-col justify-between rounded-[8px] border border-[#E8E4DE] bg-[#FFFFFF] p-[28px] shadow-rest transition-all duration-200 ease-out hover:border-[#D94A10] hover:shadow-hover hover:-translate-y-[3px] active:shadow-press active:translate-y-0 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
         >
           <div>
             <div className="mb-4 flex items-center justify-between">
@@ -91,7 +91,7 @@ function BentoHeroGrid() {
               {techBadges.map((badge) => (
                 <div
                   key={badge.name}
-                  className="flex flex-col items-center justify-center rounded-[4px] border border-[#E8E4DE] bg-transparent p-2 text-[#1A1A1A] transition-colors duration-150 hover:border-[#D94A10]"
+                  className="flex flex-col items-center justify-center rounded-[4px] border border-[#E8E4DE] bg-transparent p-2 text-[#1A1A1A] shadow-rest transition-all duration-200 ease-out hover:shadow-hover hover:border-[#D94A10] hover:-translate-y-[2px]"
                 >
                   <span className="font-mono text-[10px] uppercase text-[#8A8580] font-medium">{badge.tag || badge.fontTag}</span>
                   <span className="mt-1 text-[12px] text-[#1A1A1A] font-sans leading-tight text-center w-full block">
@@ -113,7 +113,7 @@ function BentoHeroGrid() {
           {/* Card 4: Applied AI & Systems */}
           <Link
             href="/projects"
-            className="group relative flex flex-col justify-between rounded-[8px] border border-[#E8E4DE] bg-[#FFFFFF] p-[28px] h-full shadow-none transition-all duration-200 ease-out hover:border-[#D94A10] hover:-translate-y-[2px] focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+            className="group relative flex flex-col justify-between rounded-[8px] border border-[#E8E4DE] bg-[#FFFFFF] p-[28px] h-full shadow-rest transition-all duration-200 ease-out hover:border-[#D94A10] hover:shadow-hover hover:-translate-y-[3px] active:shadow-press active:translate-y-0 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
           >
             <div>
               <div className="mb-4 flex items-center justify-between">
@@ -134,7 +134,7 @@ function BentoHeroGrid() {
           {/* Card 5: Work With Me */}
           <Link
             href="/contact"
-            className="group relative flex flex-col justify-between rounded-[8px] border border-[#E8E4DE] bg-[#FFFFFF] p-[28px] h-full shadow-none transition-all duration-200 ease-out hover:border-[#D94A10] hover:-translate-y-[2px] focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+            className="group relative flex flex-col justify-between rounded-[8px] border border-[#E8E4DE] bg-[#FFFFFF] p-[28px] h-full shadow-rest transition-all duration-200 ease-out hover:border-[#D94A10] hover:shadow-hover hover:-translate-y-[3px] active:shadow-press active:translate-y-0 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
           >
             <div>
               <div className="mb-4 flex items-center justify-between">
@@ -244,7 +244,7 @@ export function Hero() {
                 href={profile.resumeUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex w-auto items-center justify-center gap-2 rounded-md bg-[#F25C1F] px-[24px] py-[14px] text-[15px] font-semibold text-white transition-colors duration-150 hover:bg-[#D94A10] active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+                className="inline-flex w-auto items-center justify-center gap-2 rounded-md bg-[#F25C1F] px-[24px] py-[14px] text-[15px] font-semibold text-white shadow-rest transition-all duration-200 ease-out hover:bg-[#D94A10] hover:shadow-hover hover:-translate-y-[1px] active:translate-y-0 active:shadow-press focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
               >
                 <FileText className="size-4" />
                 <span>Resume</span>
@@ -253,7 +253,7 @@ export function Hero() {
               {/* Secondary button: Let's talk — white background, 1px border #E0DCD6 */}
               <Link
                 href="/contact"
-                className="inline-flex w-auto items-center justify-center gap-2 rounded-md border border-[#E0DCD6] bg-[#ffffff] px-[24px] py-[14px] text-[15px] font-semibold text-[#1A1A1A] transition-colors duration-150 hover:bg-[#1A1A1A] hover:text-[#F5F4F0] hover:border-transparent active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+                className="inline-flex w-auto items-center justify-center gap-2 rounded-md border border-[#E0DCD6] bg-[#ffffff] px-[24px] py-[14px] text-[15px] font-semibold text-[#1A1A1A] shadow-none transition-all duration-200 ease-out hover:bg-[#1A1A1A] hover:text-[#F5F4F0] hover:border-[#1A1A1A] hover:shadow-rest active:scale-95 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
               >
                 <Send className="size-4 text-[#F25C1F]" />
                 <span>Let&apos;s talk</span>
@@ -285,7 +285,7 @@ export function Hero() {
 
             {/* 7. Photo Mobile Position */}
             <div className="order-7 lg:hidden hidden md:block w-full max-w-[320px] mx-auto pt-4">
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[4px]">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[4px] shadow-rest">
                 <Image
                   src="/images/prajal-headshot.jpg"
                   alt="Prajal Jain — AI & Robotics Engineer"
@@ -301,7 +301,7 @@ export function Hero() {
 
           {/* RIGHT COLUMN — Photo Desktop Position */}
           <div className="order-2 hidden lg:block mx-auto w-full max-w-[380px] pt-0">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[4px]">
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[4px] shadow-rest">
               <Image
                 src="/images/prajal-headshot.jpg"
                 alt="Prajal Jain — AI & Robotics Engineer"

@@ -6,7 +6,6 @@
   --font-sans: var(--font-sans), 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: var(--font-mono), 'JetBrains Mono', ui-monospace, monospace;
 
-  /* Hybrid Cursor x NVIDIA Design System Tokens */
   --color-canvas: #f7f7f4;
   --color-canvas-soft: #fafaf7;
   --color-surface-card: #ffffff;
@@ -22,11 +21,6 @@
   --color-hairline-soft: #efeee8;
   --color-hairline-strong: #cfcdc4;
 
-  --color-cursor-orange: #f54e00;
-  --color-cursor-orange-active: #d04200;
-  --color-nvidia-green: #76b900;
-  --color-nvidia-green-dark: #5a8d00;
-
   --color-background: #f7f7f4;
   --color-foreground: #26251e;
   --color-card: #ffffff;
@@ -41,26 +35,45 @@
   --foreground: #26251e;
   --card: #ffffff;
   --card-foreground: #26251e;
-  --primary: #f54e00;
+  --primary: #F25C1F;
   --primary-foreground: #ffffff;
   --secondary: #e6e5e0;
   --secondary-foreground: #26251e;
   --muted: #807d72;
   --muted-foreground: #807d72;
-  --accent: #76b900;
-  --border: #e6e5e0;
+  --accent: #D94A10;
+  --border: #E8E4DE;
   --radius: 0.5rem;
+
+  /* Elevation Tokens */
+  --shadow-rest: 0 1px 2px rgba(26, 26, 26, 0.04), 0 2px 8px rgba(26, 26, 26, 0.03);
+  --shadow-hover: 0 2px 4px rgba(26, 26, 26, 0.06), 0 8px 24px rgba(26, 26, 26, 0.06);
+  --shadow-press: 0 1px 2px rgba(26, 26, 26, 0.06);
+
+  /* Motion Tokens */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur-base: 200ms;
+  --dur-slow: 320ms;
+
+  /* Radii Tokens */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  --bg-page: #F5F4F0;
+  --bg-card: #FFFFFF;
+  --accent-text: #D94A10;
+  --border-strong: #1A1A1A;
 }
 
 @layer base {
   * {
-    @apply border-[#e6e5e0] outline-none;
-    box-shadow: none !important; /* Strictly Hairline depth, NO drop shadows */
+    @apply border-[#E8E4DE] outline-none;
   }
   html {
     scroll-behavior: smooth !important;
-    background-color: #f7f7f4;
-    color: #26251e;
+    background-color: #F5F4F0;
+    color: #1A1A1A;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE and Edge */
   }
@@ -69,10 +82,23 @@
     display: none; /* Chrome, Safari, Opera */
   }
   body {
-    background-color: #f7f7f4;
-    color: #26251e;
+    background-color: #F5F4F0;
+    color: #1A1A1A;
     font-family: var(--font-sans), 'Inter', sans-serif;
-    @apply antialiased selection:bg-[#f54e00]/20 selection:text-[#f54e00];
+    @apply antialiased selection:bg-[#F25C1F]/20 selection:text-[#F25C1F];
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  :focus-visible {
+    outline: 2px solid #1A1A1A !important;
+    outline-offset: 3px !important;
   }
 }
 
@@ -80,23 +106,28 @@
   .font-mono-code {
     font-family: var(--font-mono), 'JetBrains Mono', monospace;
   }
-  .cursor-hairline-card {
-    background-color: #ffffff;
-    border: 1px solid #e6e5e0;
-    border-radius: 8px;
-    transition: border-color 0.2s ease, transform 0.2s ease;
+  .shadow-rest {
+    box-shadow: var(--shadow-rest);
   }
-  .cursor-hairline-card:hover {
-    border-color: #cfcdc4;
-    transform: translateY(-1px);
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
   }
-  .nvidia-corner-square {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    width: 10px;
-    height: 10px;
-    background-color: #76b900;
+  .shadow-press {
+    box-shadow: var(--shadow-press);
+  }
+  .card-elevation {
+    box-shadow: var(--shadow-rest);
+    transition: box-shadow var(--dur-base) var(--ease), border-color var(--dur-base) var(--ease), transform var(--dur-base) var(--ease);
+  }
+  .card-elevation:hover {
+    box-shadow: var(--shadow-hover);
+    border-color: #D94A10;
+    transform: translateY(-3px);
+  }
+  .card-elevation:active {
+    box-shadow: var(--shadow-press);
+    transform: translateY(0);
+    transition-duration: var(--dur-fast);
   }
 }
 
