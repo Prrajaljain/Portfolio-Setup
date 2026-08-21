@@ -65,7 +65,6 @@ function BentoHeroGrid() {
         </div>
 
         {/* Center Column: 1 Tall Card Spanning Height */}
-        {/* Fix Issue 7 & 8: Single top-right arrow signifier, p-5 padding & mb-3 icon container */}
         <Link
           href="/about#skills"
           className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 transition-all duration-150 hover:border-[#cfcdc4] hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
@@ -85,7 +84,7 @@ function BentoHeroGrid() {
               Technologies and tools I use to build innovative AI &amp; robotics solutions.
             </p>
 
-            {/* 4x2 Icon Grid — Fix Issue 4: neutral tag abbreviations to reduce visual noise */}
+            {/* 4x2 Icon Grid */}
             <div className="mt-5 grid grid-cols-4 gap-2 font-mono text-[11px]">
               {techBadges.map((badge) => (
                 <div
@@ -101,7 +100,6 @@ function BentoHeroGrid() {
             </div>
           </div>
 
-          {/* Fix Issue 2 & 5: Sentence case "Explore all tools" with generous vertical spacing (mt-8 pt-4) */}
           <div className="mt-8 border-t border-[#e6e5e0] pt-4 text-[12px] font-mono text-[#807d72] flex items-center justify-between group-hover:text-[#D94A10]">
             <span className="font-medium">Explore all tools</span>
             <ArrowRight className="size-3.5 transition-transform duration-150 group-hover:translate-x-1" />
@@ -131,7 +129,7 @@ function BentoHeroGrid() {
             </div>
           </Link>
 
-          {/* Card 5: Let's Connect */}
+          {/* Card 5: Work With Me — Fix Copy Issue 3: Rename title from "Let's Connect" to "Work With Me" */}
           <Link
             href="/contact"
             className="group relative flex flex-col justify-between rounded-md border border-[#e6e5e0] bg-[#ffffff] p-5 h-full transition-all duration-150 hover:border-[#cfcdc4] hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
@@ -144,7 +142,7 @@ function BentoHeroGrid() {
                 <ArrowUpRight className="size-4 text-[#807d72] group-hover:text-[#D94A10] transition-colors duration-150" />
               </div>
               <h2 className="text-[18px] font-semibold tracking-tight text-[#1A1A1A] group-hover:text-[#D94A10] transition-colors duration-150">
-                Let&apos;s Connect
+                Work With Me
               </h2>
               <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[#5a5852]">
                 Available for AI &amp; Autonomous Systems engineering projects worldwide.
@@ -227,9 +225,8 @@ export function Hero() {
               </div>
             </div>
 
-            {/* 6. Button Row: Fix Issues 3, 6, 9, 10, 11 (uniform gap-4, rounded-md, matching ArrowUpRight icon) */}
+            {/* 6. Button Row */}
             <div className="order-6 lg:order-5 mb-[40px] lg:mb-[48px] flex flex-wrap items-center gap-4">
-              {/* Primary Contact CTA — Fix Issue 6 & 9: rounded-md, ArrowUpRight icon on right matching Header CTA */}
               <Link
                 href="/contact"
                 className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-[#F25C1F] px-5 text-[15px] font-semibold text-white transition-colors duration-150 hover:bg-[#D94A10] active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
@@ -238,7 +235,6 @@ export function Hero() {
                 <ArrowUpRight className="size-4" />
               </Link>
 
-              {/* Secondary Resume button — Fix Issue 6: rounded-md */}
               <a
                 href={profile.resumeUrl}
                 target="_blank"
@@ -249,7 +245,6 @@ export function Hero() {
                 <span>Resume</span>
               </a>
 
-              {/* GitHub & LinkedIn Links — Fix Issue 3, 10, 11: perfect baseline & midline alignment with buttons */}
               <div className="inline-flex h-11 items-center gap-5">
                 <a
                   href={githubUrl}

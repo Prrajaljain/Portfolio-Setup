@@ -65,7 +65,7 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-5 text-left w-full">
-      {/* Name Field — Fix Issue 7 (gap-2.5) & Fix Issue 14 (border-[#c4c2bc]) */}
+      {/* Name Field — Fix Copy Issue 1: Helpful example placeholder "e.g. Alex Rivera" */}
       <div className="flex flex-col gap-2.5">
         <label htmlFor="name" className="text-xs font-semibold text-[#1A1A1A] tracking-wide">
           Your Name <span className="text-[#D94A10]">*</span>
@@ -73,7 +73,7 @@ export function ContactForm() {
         <input
           id="name"
           name="name"
-          placeholder="Your Name"
+          placeholder="e.g. Alex Rivera"
           required
           minLength={2}
           maxLength={100}
@@ -81,7 +81,7 @@ export function ContactForm() {
         />
       </div>
 
-      {/* Email Field — Fix Issue 7 (gap-2.5) & Fix Issue 14 (border-[#c4c2bc]) */}
+      {/* Email Field */}
       <div className="flex flex-col gap-2.5">
         <label htmlFor="email" className="text-xs font-semibold text-[#1A1A1A] tracking-wide">
           Your Email <span className="text-[#D94A10]">*</span>
@@ -97,7 +97,7 @@ export function ContactForm() {
         />
       </div>
 
-      {/* Message Field — Fix Issue 7 (gap-2.5) & Fix Issue 14 (border-[#c4c2bc]) */}
+      {/* Message Field */}
       <div className="flex flex-col gap-2.5">
         <label htmlFor="message" className="text-xs font-semibold text-[#1A1A1A] tracking-wide">
           Your Message <span className="text-[#D94A10]">*</span>
@@ -121,7 +121,7 @@ export function ContactForm() {
         </div>
       )}
 
-      {/* Submit Button — Fix Issue 15 (consistent spacing rhythm) */}
+      {/* Submit Button */}
       <button
         type="submit"
         disabled={status === 'submitting'}

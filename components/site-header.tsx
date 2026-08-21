@@ -31,7 +31,7 @@ export function SiteHeader() {
             </span>
           </Link>
 
-          {/* Desktop Navigation: Nav items 2px underline in #F25C1F grows left to right over 150ms */}
+          {/* Desktop Navigation */}
           <nav className="hidden items-center gap-2 sm:gap-3 md:flex">
             {navItems.map((item) => {
               const active = pathname === item.href
@@ -53,13 +53,13 @@ export function SiteHeader() {
             })}
           </nav>
 
-          {/* Right Action CTA Button */}
+          {/* Right Action CTA Button — Fix Copy Issue 2: Differentiate header CTA phrasing to "Contact" */}
           <div className="hidden items-center gap-3 md:flex">
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 rounded-md bg-[#F25C1F] px-5 py-2.5 text-[15px] font-semibold text-white transition-colors duration-150 hover:bg-[#D94A10] active:scale-95 shadow-sm focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
             >
-              <span>Get in touch</span>
+              <span>Contact</span>
               <ArrowUpRight className="size-4.5" />
             </Link>
           </div>
@@ -104,7 +104,7 @@ export function SiteHeader() {
                   onClick={() => setOpen(false)}
                   className="block rounded-md bg-[#F25C1F] px-5 py-3 text-center text-base font-semibold text-white transition-colors duration-150 hover:bg-[#D94A10] focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
                 >
-                  Get in touch
+                  Contact
                 </Link>
               </li>
             </ul>
