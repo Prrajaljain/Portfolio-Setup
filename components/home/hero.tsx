@@ -172,12 +172,12 @@ export function Hero() {
           <div className="flex flex-col items-start text-left w-full">
 
             {/* 1. Eyebrow */}
-            <div className="mb-[14px] font-mono text-[12px] sm:text-[13px] font-medium text-[#71717A] uppercase tracking-[1.5px]">
+            <div className="mb-[12px] font-mono text-[13px] font-medium text-[#71717A] uppercase tracking-[1.5px]">
               HI, I&apos;M PRAJAL JAIN
             </div>
 
             {/* 2. Headline */}
-            <h1 className="mb-[24px] max-w-xl text-[40px] md:text-[48px] lg:text-[58px] font-bold leading-[1.04] tracking-[-0.03em] text-[#1A1A1A]">
+            <h1 className="mb-[28px] max-w-xl text-[40px] md:text-[48px] lg:text-[64px] font-bold leading-[1.02] tracking-[-0.03em] text-[#1A1A1A]">
               I build AI that{' '}
               <span className="text-[#F25C1F] font-bold block">
                 runs on hardware
@@ -185,7 +185,7 @@ export function Hero() {
             </h1>
 
             {/* 3. Subtitle / Role Line */}
-            <div className="mb-[18px] flex flex-wrap items-center gap-[10px] font-mono text-[13px] sm:text-[14px] font-medium text-[#D94A10]">
+            <div className="mb-[16px] flex flex-wrap items-center gap-[10px] font-mono text-[13px] sm:text-[14px] font-medium text-[#D94A10]">
               <span className="size-[6px] shrink-0 rounded-full bg-[#D94A10]" />
               <span>
                 AI &amp; Robotics &middot; Embedded Systems &middot; Industrial Data Analytics
@@ -193,19 +193,19 @@ export function Hero() {
             </div>
 
             {/* 4. Subhead Paragraph */}
-            <p className="mb-[32px] max-w-[480px] text-[16px] sm:text-[17px] leading-[1.65] text-[#52525B]">
+            <p className="mb-[40px] max-w-[480px] text-[17px] leading-[1.65] text-[#52525B]">
               Drones that see. Machines that sort.<br className="hidden sm:block" />
               Data that tells you what the factory floor won&apos;t.
             </p>
 
             {/* 5. Button Row */}
-            <div className="mb-[36px] flex flex-wrap items-center gap-5 sm:gap-6">
+            <div className="mb-[48px] flex flex-wrap items-center gap-6">
               {/* Primary button: Resume */}
               <a
                 href={profile.resumeUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex w-auto items-center justify-center gap-2 rounded-md bg-[#F25C1F] px-[24px] py-[13px] text-[15px] font-semibold text-white shadow-rest transition-all duration-200 ease-out hover:bg-[#D94A10] hover:shadow-hover hover:-translate-y-[1px] active:translate-y-0 active:shadow-press focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+                className="inline-flex w-auto items-center justify-center gap-2 rounded-md bg-[#F25C1F] px-[24px] py-[14px] text-[15px] font-semibold text-white shadow-rest transition-all duration-200 ease-out hover:bg-[#D94A10] hover:shadow-hover hover:-translate-y-[1px] active:translate-y-0 active:shadow-press focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
               >
                 <FileText className="size-4" />
                 <span>Resume</span>
@@ -214,7 +214,7 @@ export function Hero() {
               {/* Secondary button: Let's talk */}
               <Link
                 href="/contact"
-                className="inline-flex w-auto items-center justify-center gap-2 rounded-md border border-[#E0DCD6] bg-[#ffffff] px-[24px] py-[13px] text-[15px] font-semibold text-[#1A1A1A] shadow-none transition-all duration-200 ease-out hover:bg-[#1A1A1A] hover:text-[#F5F4F0] hover:border-[#1A1A1A] hover:shadow-rest active:scale-95 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
+                className="inline-flex w-auto items-center justify-center gap-2 rounded-md border border-[#E0DCD6] bg-[#ffffff] px-[24px] py-[14px] text-[15px] font-semibold text-[#1A1A1A] shadow-none transition-all duration-200 ease-out hover:bg-[#1A1A1A] hover:text-[#F5F4F0] hover:border-[#1A1A1A] hover:shadow-rest active:scale-95 focus-visible:outline-2 focus-visible:outline-[#1A1A1A] focus-visible:outline-offset-[3px]"
               >
                 <Send className="size-4 text-[#F25C1F]" />
                 <span>Let&apos;s talk</span>
