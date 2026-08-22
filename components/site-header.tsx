@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation'
 import { Menu, X, ArrowUpRight } from 'lucide-react'
 import { navItems, profile } from '@/lib/data'
 import { cn } from '@/lib/utils'
-import { ScrollProgress } from '@/components/scroll-progress'
 
 export function SiteHeader() {
   const pathname = usePathname()
@@ -23,9 +22,7 @@ export function SiteHeader() {
   }, [])
 
   return (
-    <>
-      <ScrollProgress />
-      <header
+    <header
         className={cn(
           'sticky top-0 z-50 border-b border-[#E8E4DE] transition-all duration-200 ease-out',
           scrolled
@@ -129,6 +126,5 @@ export function SiteHeader() {
           </nav>
         )}
       </header>
-    </>
   )
 }

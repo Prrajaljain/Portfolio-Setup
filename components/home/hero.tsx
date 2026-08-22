@@ -229,15 +229,6 @@ export function Hero() {
                   </span>
                 </div>
               </div>
-
-              {/* Scroll Indicator: Left-aligned to text column, interactive link to bento grid */}
-              <a
-                href="#bento-grid"
-                className="mt-[16px] hidden md:inline-flex items-center gap-[10px] font-mono text-[11px] font-medium uppercase tracking-[0.08em] text-[#8A8580] text-left hover:text-[#D94A10] transition-colors cursor-pointer"
-              >
-                <span className="inline-block animate-arrow-bob select-none">↓</span>
-                <span>Scroll to explore</span>
-              </a>
             </div>
 
             {/* 6. Button Row: (32px gap to orange divider) */}
