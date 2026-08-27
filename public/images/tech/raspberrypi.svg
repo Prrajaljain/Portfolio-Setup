@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="24" height="24">
+  <!-- Green Leaves -->
+  <path fill="#74B72E" stroke="#000000" stroke-width="3" stroke-linejoin="round" d="M 50 30 C 40 10 10 5 10 20 C 10 35 35 35 50 30 Z"/>
+  <path fill="#74B72E" stroke="#000000" stroke-width="3" stroke-linejoin="round" d="M 50 30 C 60 10 90 5 90 20 C 90 35 65 35 50 30 Z"/>
+  <!-- Red Raspberry body -->
+  <g fill="#C51A4A" stroke="#000000" stroke-width="3">
+    <circle cx="35" cy="40" r="14"/>
+    <circle cx="65" cy="40" r="14"/>
+    <circle cx="20" cy="55" r="13"/>
+    <circle cx="50" cy="53" r="14"/>
+    <circle cx="80" cy="55" r="13"/>
+    <circle cx="30" cy="72" r="13"/>
+    <circle cx="70" cy="72" r="13"/>
+    <circle cx="50" cy="84" r="12"/>
+  </g>
+</svg>
