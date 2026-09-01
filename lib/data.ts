@@ -5,7 +5,7 @@ export const profile = {
   heroSubtitle: 'Computer vision on embedded hardware, robotics, and industrial data.',
   heroDescription:
     "Hi, I'm Prajal Jain — an AI & Robotics engineering student. Most interested in computer vision, robotics and embedded systems.",
-  resumeUrl: '/resume-prajal-jain.pdf',
+  resumeUrl: '/Prajal_Jain_Artificial_Intelligence.pdf',
   location: 'Nashik, India',
   email: 'prrajal.jain@gmail.com',
   phone: '+91 8766679311',
