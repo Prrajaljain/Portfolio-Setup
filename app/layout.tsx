@@ -54,7 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${plusJakartaSans.variable} ${jetbrainsMono.variable}`}>
-      <body className="bg-[#f7f7f4] font-sans antialiased text-[#26251e]">
+      <body className="bg-[#f7f7f4] font-sans antialiased text-[#26251e]" suppressHydrationWarning>
         <div className="relative flex min-h-screen flex-col">
           <SiteHeader />
           <main className="flex-1">{children}</main>
