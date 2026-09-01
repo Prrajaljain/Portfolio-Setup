@@ -79,7 +79,7 @@ export const skillGroups = [
   {
     title: '04 · Data & Tooling',
     skills: [
-      'Google Looker Studio',
+      'Power BI',
       'SQL',
       'Pandas / NumPy',
       'Streamlit',
@@ -138,7 +138,7 @@ export const techCategories = [
     label: 'Data & Tooling',
     icon: '🗄️',
     skills: [
-      { name: 'Google Looker Studio', desc: '11 shop-floor telemetry monitoring dashboards and automated reporting.' },
+      { name: 'Power BI', desc: '11 shop-floor telemetry monitoring dashboards and automated reporting.' },
       { name: 'SQL', desc: 'Relational database querying, aggregation, schema design, and data joins.' },
       { name: 'Pandas / NumPy', desc: 'Dataframe manipulation, vectorized numerical computing, and data cleaning.' },
       { name: 'Git', desc: 'Version control, branch management, pull requests, and code collaboration.' },
@@ -167,7 +167,7 @@ export const experience = [
     location: 'Nashik, India · On-site',
     isCurrent: true,
     metrics: [
-      '11 Looker Studio Dashboards',
+      '11 Power BI Dashboards',
       '7.5 hrs/wk manual work saved',
       'Real-time Telemetry Analytics',
       'Cold-chain Environmental ML',
@@ -175,11 +175,11 @@ export const experience = [
     summary:
       'Applied AI and analytics to manufacturing operations at an industrial instruments manufacturer, building monitoring dashboards and predictive models on machine telemetry.',
     highlights: [
-      'Built 11 interactive Google Looker Studio dashboards for real-time shop-floor monitoring, replacing ~7.5 hours of manual reporting weekly',
+      'Built 11 interactive Power BI dashboards for real-time shop-floor monitoring, replacing ~7.5 hours of manual reporting weekly',
       'Developed predictive models on machine telemetry to flag calibration drift before it caused downtime',
       'Analysed voltage, current, temperature and humidity data to characterise environmental effects on instrument accuracy — applied to cold-chain monitoring for temperature-sensitive goods',
     ],
-    tags: ['Python', 'Pandas', 'Google Looker Studio', 'SQL', 'Excel'],
+    tags: ['Python', 'Pandas', 'Power BI', 'SQL', 'Excel'],
   },
   {
     role: 'Machine Learning Engineer Intern',
@@ -447,7 +447,7 @@ export const techStack = [
   'Arduino',
   'Embedded C++',
   'MPU-6050',
-  'Google Looker Studio',
+  'Power BI',
   'SQL',
   'Pandas',
   'NumPy',

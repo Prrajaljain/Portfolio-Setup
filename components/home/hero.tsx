@@ -12,7 +12,7 @@ function BentoHeroGrid() {
     { name: 'YOLOv8', tag: 'YOLO', icon: '/images/tech/yolo.svg' },
     { name: 'TensorFlow', tag: 'TF', icon: '/images/tech/tensorflow.svg' },
     { name: 'OpenCV', tag: 'CV', icon: '/images/tech/opencv.svg' },
-    { name: 'Looker Studio', tag: 'GLS', icon: '/images/tech/lookerstudio.svg' },
+    { name: 'Power BI', tag: 'PBI', icon: '/images/tech/powerbi.svg' },
     { name: 'MediaPipe', tag: 'MP', icon: '/images/tech/mediapipe.svg' },
     { name: 'Raspberry Pi', tag: 'PI', icon: '/images/tech/raspberrypi.svg' },
     { name: 'Arduino', tag: 'ARD', icon: '/images/tech/arduino.svg' },
