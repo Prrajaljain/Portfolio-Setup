@@ -138,7 +138,7 @@ export const techCategories = [
     label: 'Data & Tooling',
     icon: '🗄️',
     skills: [
-      { name: 'Power BI', desc: '11 shop-floor telemetry monitoring dashboards and automated reporting.' },
+      { name: 'Power BI', desc: '11 real-time analytics dashboards and automated reporting.' },
       { name: 'SQL', desc: 'Relational database querying, aggregation, schema design, and data joins.' },
       { name: 'Pandas / NumPy', desc: 'Dataframe manipulation, vectorized numerical computing, and data cleaning.' },
       { name: 'Git', desc: 'Version control, branch management, pull requests, and code collaboration.' },
@@ -167,19 +167,20 @@ export const experience = [
     location: 'Nashik, India · On-site',
     isCurrent: true,
     metrics: [
-      '11 Power BI Dashboards',
+      'LLM Forecasting Agent',
+      '11 Real-Time Dashboards',
       '7.5 hrs/wk manual work saved',
-      'Real-time Telemetry Analytics',
-      'Cold-chain Environmental ML',
+      'Anomaly Detection Pipeline',
     ],
     summary:
-      'Applied AI and analytics to manufacturing operations at an industrial instruments manufacturer, building monitoring dashboards and predictive models on machine telemetry.',
+      'Forecasting and analytics systems over high-volume transactional data at an industrial instruments manufacturer.',
     highlights: [
-      'Built 11 interactive Power BI dashboards for real-time shop-floor monitoring, replacing ~7.5 hours of manual reporting weekly',
-      'Developed predictive models on machine telemetry to flag calibration drift before it caused downtime',
-      'Analysed voltage, current, temperature and humidity data to characterise environmental effects on instrument accuracy — applied to cold-chain monitoring for temperature-sensitive goods',
+      'Built a demand-forecasting agent in Python with a locally hosted LLM, predicting stock requirements from historical transaction data and generating recommended actions from pricing and demand signals',
+      'Engineered the ingestion pipeline over high-volume transactional records — deduplication, normalisation and time-series aggregation',
+      'Implemented anomaly detection in the ingestion path, flagging malformed and inconsistent records before they propagate into downstream reporting',
+      'Built 11 real-time analytics dashboards on that pipeline, surfacing fulfilment delays, target variance and regional demand trends — replacing roughly 7.5 hours of manual reporting per week',
     ],
-    tags: ['Python', 'Pandas', 'Power BI', 'SQL', 'Excel'],
+    tags: ['Python', 'Local LLM', 'Power BI', 'SQL', 'Pandas'],
   },
   {
     role: 'Machine Learning Engineer Intern',

@@ -60,7 +60,7 @@ function BentoHeroGrid() {
                 Hands-On Experience
               </h2>
               <p className="mt-2 text-[15px] leading-[1.5] text-[#2B2927]">
-                Rishabh Instruments and Navikshaa &mdash; dashboards, RL agents, research image classification.
+                Rishabh Instruments and Navikshaa &mdash; LLM forecasting, data pipelines, RL agents, research image classification.
               </p>
             </div>
           </Link>
